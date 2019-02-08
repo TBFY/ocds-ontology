@@ -1,0 +1,849 @@
+@prefix : <http://www.sintef.no/ontology/ocds##> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ocds: <http://www.sintef.no/ontology/ocds#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.sintef.no/ontology/ocds#> .
+
+<http://www.sintef.no/ontology/ocds#> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.sintef.no/ontology/ocds#hasAddress
+ocds:hasAddress rdf:type owl:ObjectProperty ;
+                rdfs:domain ocds:Organisation ;
+                rdfs:range ocds:Address .
+
+
+###  http://www.sintef.no/ontology/ocds#hasAmendment
+ocds:hasAmendment rdf:type owl:ObjectProperty ;
+                  rdfs:domain [ rdf:type owl:Class ;
+                                owl:unionOf ( ocds:Award
+                                              ocds:Contract
+                                              ocds:Tender
+                                            )
+                              ] ;
+                  rdfs:range ocds:Amendment .
+
+
+###  http://www.sintef.no/ontology/ocds#hasAwardPeriod
+ocds:hasAwardPeriod rdf:type owl:ObjectProperty ;
+                    rdfs:domain ocds:Tender ;
+                    rdfs:range ocds:Period .
+
+
+###  http://www.sintef.no/ontology/ocds#hasAwardValue
+ocds:hasAwardValue rdf:type owl:ObjectProperty ;
+                   rdfs:domain ocds:Award ;
+                   rdfs:range ocds:Value .
+
+
+###  http://www.sintef.no/ontology/ocds#hasAwardedContractPeriod
+ocds:hasAwardedContractPeriod rdf:type owl:ObjectProperty ;
+                              rdfs:domain ocds:Award ;
+                              rdfs:range ocds:Period .
+
+
+###  http://www.sintef.no/ontology/ocds#hasAwardedItem
+ocds:hasAwardedItem rdf:type owl:ObjectProperty ;
+                    rdfs:domain ocds:Award ;
+                    rdfs:range ocds:Item .
+
+
+###  http://www.sintef.no/ontology/ocds#hasBudget
+ocds:hasBudget rdf:type owl:ObjectProperty ;
+               rdfs:domain ocds:Plan ;
+               rdfs:range ocds:Budget .
+
+
+###  http://www.sintef.no/ontology/ocds#hasContactPoint
+ocds:hasContactPoint rdf:type owl:ObjectProperty ;
+                     rdfs:domain ocds:Organisation ;
+                     rdfs:range ocds:ContactPoint .
+
+
+###  http://www.sintef.no/ontology/ocds#hasContractPeriod
+ocds:hasContractPeriod rdf:type owl:ObjectProperty ;
+                       rdfs:domain ocds:Contract ;
+                       rdfs:range ocds:Period .
+
+
+###  http://www.sintef.no/ontology/ocds#hasContractValue
+ocds:hasContractValue rdf:type owl:ObjectProperty ;
+                      rdfs:domain ocds:Contract ;
+                      rdfs:range ocds:Value .
+
+
+###  http://www.sintef.no/ontology/ocds#hasContractedItem
+ocds:hasContractedItem rdf:type owl:ObjectProperty ;
+                       rdfs:domain ocds:Contract ;
+                       rdfs:range ocds:Item .
+
+
+###  http://www.sintef.no/ontology/ocds#hasDocument
+ocds:hasDocument rdf:type owl:ObjectProperty ;
+                 rdfs:domain [ rdf:type owl:Class ;
+                               owl:unionOf ( ocds:Award
+                                             ocds:Contract
+                                             ocds:Implementation
+                                             ocds:Milestone
+                                             ocds:Plan
+                                             ocds:Tender
+                                           )
+                             ] ;
+                 rdfs:range ocds:Document .
+
+
+###  http://www.sintef.no/ontology/ocds#hasEnquiryPeriod
+ocds:hasEnquiryPeriod rdf:type owl:ObjectProperty ;
+                      rdfs:domain ocds:Tender ;
+                      rdfs:range ocds:Period .
+
+
+###  http://www.sintef.no/ontology/ocds#hasEstimatedContractPeriod
+ocds:hasEstimatedContractPeriod rdf:type owl:ObjectProperty ;
+                                rdfs:domain ocds:Tender ;
+                                rdfs:range ocds:Period .
+
+
+###  http://www.sintef.no/ontology/ocds#hasImplementation
+ocds:hasImplementation rdf:type owl:ObjectProperty ;
+                       rdfs:domain ocds:Contract ;
+                       rdfs:range ocds:Implementation .
+
+
+###  http://www.sintef.no/ontology/ocds#hasItemToBeProcured
+ocds:hasItemToBeProcured rdf:type owl:ObjectProperty ;
+                         rdfs:domain ocds:Tender ;
+                         rdfs:range ocds:Item .
+
+
+###  http://www.sintef.no/ontology/ocds#hasMaxEstimatedValue
+ocds:hasMaxEstimatedValue rdf:type owl:ObjectProperty ;
+                          rdfs:domain ocds:Tender ;
+                          rdfs:range ocds:Value .
+
+
+###  http://www.sintef.no/ontology/ocds#hasMilestone
+ocds:hasMilestone rdf:type owl:ObjectProperty ;
+                  rdfs:domain [ rdf:type owl:Class ;
+                                owl:unionOf ( ocds:Contract
+                                              ocds:Implementation
+                                              ocds:Plan
+                                              ocds:Tender
+                                            )
+                              ] ;
+                  rdfs:range ocds:Milestone .
+
+
+###  http://www.sintef.no/ontology/ocds#hasMinEstimatedValue
+ocds:hasMinEstimatedValue rdf:type owl:ObjectProperty ;
+                          rdfs:domain ocds:Tender ;
+                          rdfs:range ocds:Value .
+
+
+###  http://www.sintef.no/ontology/ocds#hasPlan
+ocds:hasPlan rdf:type owl:ObjectProperty ;
+             rdfs:domain ocds:ContractingProcess ;
+             rdfs:range ocds:Plan .
+
+
+###  http://www.sintef.no/ontology/ocds#hasRelatedFrameworkProcess
+ocds:hasRelatedFrameworkProcess rdf:type owl:ObjectProperty ;
+                                rdfs:subPropertyOf ocds:hasRelatedProcess .
+
+
+###  http://www.sintef.no/ontology/ocds#hasRelatedParentProcess
+ocds:hasRelatedParentProcess rdf:type owl:ObjectProperty ;
+                             rdfs:subPropertyOf ocds:hasRelatedProcess .
+
+
+###  http://www.sintef.no/ontology/ocds#hasRelatedPlanningProcess
+ocds:hasRelatedPlanningProcess rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf ocds:hasRelatedProcess .
+
+
+###  http://www.sintef.no/ontology/ocds#hasRelatedPriorProcess
+ocds:hasRelatedPriorProcess rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf ocds:hasRelatedProcess .
+
+
+###  http://www.sintef.no/ontology/ocds#hasRelatedProcess
+ocds:hasRelatedProcess rdf:type owl:ObjectProperty ;
+                       rdfs:domain [ rdf:type owl:Class ;
+                                     owl:unionOf ( ocds:Contract
+                                                   ocds:ContractingProcess
+                                                 )
+                                   ] ;
+                       rdfs:range ocds:ContractingProcess .
+
+
+###  http://www.sintef.no/ontology/ocds#hasRelatedRenewalProcess
+ocds:hasRelatedRenewalProcess rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf ocds:hasRelatedProcess .
+
+
+###  http://www.sintef.no/ontology/ocds#hasRelatedReplacementProcess
+ocds:hasRelatedReplacementProcess rdf:type owl:ObjectProperty ;
+                                  rdfs:subPropertyOf ocds:hasRelatedProcess .
+
+
+###  http://www.sintef.no/ontology/ocds#hasRelatedSubContract
+ocds:hasRelatedSubContract rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf ocds:hasRelatedProcess .
+
+
+###  http://www.sintef.no/ontology/ocds#hasRelatedUnsuccessfulProcess
+ocds:hasRelatedUnsuccessfulProcess rdf:type owl:ObjectProperty ;
+                                   rdfs:subPropertyOf ocds:hasRelatedProcess .
+
+
+###  http://www.sintef.no/ontology/ocds#hasReservedValue
+ocds:hasReservedValue rdf:type owl:ObjectProperty ;
+                      rdfs:domain ocds:Budget ;
+                      rdfs:range ocds:Value .
+
+
+###  http://www.sintef.no/ontology/ocds#hasTenderPeriod
+ocds:hasTenderPeriod rdf:type owl:ObjectProperty ;
+                     rdfs:domain ocds:Tender ;
+                     rdfs:range ocds:Period .
+
+
+###  http://www.sintef.no/ontology/ocds#hasTransaction
+ocds:hasTransaction rdf:type owl:ObjectProperty ;
+                    rdfs:domain ocds:Implementation ;
+                    rdfs:range ocds:Transaction .
+
+
+###  http://www.sintef.no/ontology/ocds#hasTransactionValue
+ocds:hasTransactionValue rdf:type owl:ObjectProperty ;
+                         rdfs:domain ocds:Transaction ;
+                         rdfs:range ocds:Value .
+
+
+###  http://www.sintef.no/ontology/ocds#isBuyerFor
+ocds:isBuyerFor rdf:type owl:ObjectProperty ;
+                rdfs:domain ocds:Organisation ;
+                rdfs:range ocds:Tender .
+
+
+###  http://www.sintef.no/ontology/ocds#isIssuedFor
+ocds:isIssuedFor rdf:type owl:ObjectProperty ;
+                 rdfs:domain ocds:Contract ;
+                 rdfs:range ocds:Award .
+
+
+###  http://www.sintef.no/ontology/ocds#isPayeeFor
+ocds:isPayeeFor rdf:type owl:ObjectProperty ;
+                rdfs:domain ocds:Organisation ;
+                rdfs:range ocds:Transaction .
+
+
+###  http://www.sintef.no/ontology/ocds#isPayerFor
+ocds:isPayerFor rdf:type owl:ObjectProperty ;
+                rdfs:domain ocds:Organisation ;
+                rdfs:range ocds:Transaction .
+
+
+###  http://www.sintef.no/ontology/ocds#isProcuringEntityFor
+ocds:isProcuringEntityFor rdf:type owl:ObjectProperty ;
+                          rdfs:domain ocds:Organisation ;
+                          rdfs:range ocds:Tender .
+
+
+###  http://www.sintef.no/ontology/ocds#isSupplierFor
+ocds:isSupplierFor rdf:type owl:ObjectProperty ;
+                   rdfs:domain ocds:Organisation ;
+                   rdfs:range ocds:Award .
+
+
+###  http://www.sintef.no/ontology/ocds#isTendererFor
+ocds:isTendererFor rdf:type owl:ObjectProperty ;
+                   rdfs:domain ocds:Organisation ;
+                   rdfs:range ocds:Tender .
+
+
+###  http://www.sintef.no/ontology/ocds#playsRoleIn
+ocds:playsRoleIn rdf:type owl:ObjectProperty ;
+                 rdfs:domain ocds:Organisation ;
+                 rdfs:range ocds:ContractingProcess .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.sintef.no/ontology/ocds#additionalItemClassification
+ocds:additionalItemClassification rdf:type owl:DatatypeProperty ;
+                                  rdfs:domain ocds:Item ;
+                                  rdfs:range xsd:string .
+
+
+###  http://www.sintef.no/ontology/ocds#additionalOrganizationId
+ocds:additionalOrganizationId rdf:type owl:DatatypeProperty ;
+                              rdfs:domain ocds:Organisation ;
+                              rdfs:range xsd:string .
+
+
+###  http://www.sintef.no/ontology/ocds#additionalProcurementCategories
+ocds:additionalProcurementCategories rdf:type owl:DatatypeProperty ;
+                                     rdfs:domain ocds:Tender ;
+                                     rdfs:range xsd:string .
+
+
+###  http://www.sintef.no/ontology/ocds#amendmentDate
+ocds:amendmentDate rdf:type owl:DatatypeProperty ;
+                   rdfs:domain ocds:Amendment ;
+                   rdfs:range xsd:dateTime .
+
+
+###  http://www.sintef.no/ontology/ocds#amendmentDescription
+ocds:amendmentDescription rdf:type owl:DatatypeProperty ;
+                          rdfs:domain ocds:Amendment ;
+                          rdfs:range xsd:string .
+
+
+###  http://www.sintef.no/ontology/ocds#amendmentId
+ocds:amendmentId rdf:type owl:DatatypeProperty ;
+                 rdfs:domain ocds:Amendment ;
+                 rdfs:range xsd:string .
+
+
+###  http://www.sintef.no/ontology/ocds#amendmentRationale
+ocds:amendmentRationale rdf:type owl:DatatypeProperty ;
+                        rdfs:domain ocds:Amendment ;
+                        rdfs:range xsd:string .
+
+
+###  http://www.sintef.no/ontology/ocds#amount
+ocds:amount rdf:type owl:DatatypeProperty ;
+            rdfs:domain ocds:Value ;
+            rdfs:range xsd:decimal .
+
+
+###  http://www.sintef.no/ontology/ocds#awardCriteria
+ocds:awardCriteria rdf:type owl:DatatypeProperty ;
+                   rdfs:domain ocds:Tender ;
+                   rdfs:range xsd:string .
+
+
+###  http://www.sintef.no/ontology/ocds#awardCriteriaDetails
+ocds:awardCriteriaDetails rdf:type owl:DatatypeProperty ;
+                          rdfs:domain ocds:Tender ;
+                          rdfs:range xsd:string .
+
+
+###  http://www.sintef.no/ontology/ocds#awardDate
+ocds:awardDate rdf:type owl:DatatypeProperty ;
+               rdfs:domain ocds:Award ;
+               rdfs:range xsd:string .
+
+
+###  http://www.sintef.no/ontology/ocds#awardDescription
+ocds:awardDescription rdf:type owl:DatatypeProperty ;
+                      rdfs:domain ocds:Award ;
+                      rdfs:range xsd:string .
+
+
+###  http://www.sintef.no/ontology/ocds#awardId
+ocds:awardId rdf:type owl:DatatypeProperty ;
+             rdfs:domain ocds:Award ;
+             rdfs:range xsd:string .
+
+
+###  http://www.sintef.no/ontology/ocds#awardStatus
+ocds:awardStatus rdf:type owl:DatatypeProperty ;
+                 rdfs:domain ocds:Award ;
+                 rdfs:range xsd:string .
+
+
+###  http://www.sintef.no/ontology/ocds#awardTitle
+ocds:awardTitle rdf:type owl:DatatypeProperty ;
+                rdfs:domain ocds:Award ;
+                rdfs:range xsd:string .
+
+
+###  http://www.sintef.no/ontology/ocds#budgetId
+ocds:budgetId rdf:type owl:DatatypeProperty ;
+              rdfs:domain ocds:Budget ;
+              rdfs:range xsd:string .
+
+
+###  http://www.sintef.no/ontology/ocds#budgetInfo
+ocds:budgetInfo rdf:type owl:DatatypeProperty ;
+                rdfs:domain ocds:Budget ;
+                rdfs:range xsd:anyURI .
+
+
+###  http://www.sintef.no/ontology/ocds#budgetSource
+ocds:budgetSource rdf:type owl:DatatypeProperty ;
+                  rdfs:domain ocds:Budget ;
+                  rdfs:range xsd:string .
+
+
+###  http://www.sintef.no/ontology/ocds#commonName
+ocds:commonName rdf:type owl:DatatypeProperty ;
+                rdfs:domain ocds:Organisation ;
+                rdfs:range xsd:string .
+
+
+###  http://www.sintef.no/ontology/ocds#contactPointName
+ocds:contactPointName rdf:type owl:DatatypeProperty ;
+                      rdfs:domain ocds:ContactPoint ;
+                      rdfs:range xsd:string .
+
+
+###  http://www.sintef.no/ontology/ocds#contractDescription
+ocds:contractDescription rdf:type owl:DatatypeProperty ;
+                         rdfs:domain ocds:Contract ;
+                         rdfs:range xsd:string .
+
+
+###  http://www.sintef.no/ontology/ocds#contractId
+ocds:contractId rdf:type owl:DatatypeProperty ;
+                rdfs:domain ocds:Contract ;
+                rdfs:range xsd:string .
+
+
+###  http://www.sintef.no/ontology/ocds#contractStatus
+ocds:contractStatus rdf:type owl:DatatypeProperty ;
+                    rdfs:domain ocds:Contract ;
+                    rdfs:range xsd:string .
+
+
+###  http://www.sintef.no/ontology/ocds#contractTitle
+ocds:contractTitle rdf:type owl:DatatypeProperty ;
+                   rdfs:domain ocds:Contract ;
+                   rdfs:range xsd:string .
+
+
+###  http://www.sintef.no/ontology/ocds#countryName
+ocds:countryName rdf:type owl:DatatypeProperty ;
+                 rdfs:domain ocds:Address ;
+                 rdfs:range xsd:string .
+
+
+###  http://www.sintef.no/ontology/ocds#currency
+ocds:currency rdf:type owl:DatatypeProperty ;
+              rdfs:domain ocds:Value ;
+              rdfs:range xsd:string .
+
+
+###  http://www.sintef.no/ontology/ocds#datePublished
+ocds:datePublished rdf:type owl:DatatypeProperty ;
+                   rdfs:domain ocds:Document ;
+                   rdfs:range xsd:dateTime .
+
+
+###  http://www.sintef.no/ontology/ocds#dateSigned
+ocds:dateSigned rdf:type owl:DatatypeProperty ;
+                rdfs:domain ocds:Contract ;
+                rdfs:range xsd:dateTime .
+
+
+###  http://www.sintef.no/ontology/ocds#documentDateModified
+ocds:documentDateModified rdf:type owl:DatatypeProperty ;
+                          rdfs:domain ocds:Document ;
+                          rdfs:range xsd:dateTime .
+
+
+###  http://www.sintef.no/ontology/ocds#documentDescription
+ocds:documentDescription rdf:type owl:DatatypeProperty ;
+                         rdfs:domain ocds:Document ;
+                         rdfs:range xsd:string .
+
+
+###  http://www.sintef.no/ontology/ocds#documentFormat
+ocds:documentFormat rdf:type owl:DatatypeProperty ;
+                    rdfs:domain ocds:Document ;
+                    rdfs:range xsd:string .
+
+
+###  http://www.sintef.no/ontology/ocds#documentId
+ocds:documentId rdf:type owl:DatatypeProperty ;
+                rdfs:domain ocds:Document ;
+                rdfs:range xsd:string .
+
+
+###  http://www.sintef.no/ontology/ocds#documentTitle
+ocds:documentTitle rdf:type owl:DatatypeProperty ;
+                   rdfs:domain ocds:Document ;
+                   rdfs:range xsd:string .
+
+
+###  http://www.sintef.no/ontology/ocds#documentType
+ocds:documentType rdf:type owl:DatatypeProperty ;
+                  rdfs:domain ocds:Document ;
+                  rdfs:range xsd:string .
+
+
+###  http://www.sintef.no/ontology/ocds#durationInDays
+ocds:durationInDays rdf:type owl:DatatypeProperty ;
+                    rdfs:domain ocds:Period ;
+                    rdfs:range xsd:integer .
+
+
+###  http://www.sintef.no/ontology/ocds#eligibilityCriteria
+ocds:eligibilityCriteria rdf:type owl:DatatypeProperty ;
+                         rdfs:domain ocds:Tender ;
+                         rdfs:range xsd:string .
+
+
+###  http://www.sintef.no/ontology/ocds#email
+ocds:email rdf:type owl:DatatypeProperty ;
+           rdfs:domain ocds:ContactPoint ;
+           rdfs:range xsd:string .
+
+
+###  http://www.sintef.no/ontology/ocds#endDate
+ocds:endDate rdf:type owl:DatatypeProperty ;
+             rdfs:domain ocds:Period ;
+             rdfs:range xsd:dateTime .
+
+
+###  http://www.sintef.no/ontology/ocds#enquiry
+ocds:enquiry rdf:type owl:DatatypeProperty ;
+             rdfs:domain ocds:Tender ;
+             rdfs:range xsd:boolean .
+
+
+###  http://www.sintef.no/ontology/ocds#faxNumber
+ocds:faxNumber rdf:type owl:DatatypeProperty ;
+               rdfs:domain ocds:ContactPoint ;
+               rdfs:range xsd:string .
+
+
+###  http://www.sintef.no/ontology/ocds#itemClassification
+ocds:itemClassification rdf:type owl:DatatypeProperty ;
+                        rdfs:domain ocds:Item ;
+                        rdfs:range xsd:string .
+
+
+###  http://www.sintef.no/ontology/ocds#itemDescription
+ocds:itemDescription rdf:type owl:DatatypeProperty ;
+                     rdfs:domain ocds:Item ;
+                     rdfs:range xsd:string .
+
+
+###  http://www.sintef.no/ontology/ocds#itemId
+ocds:itemId rdf:type owl:DatatypeProperty ;
+            rdfs:domain ocds:Item ;
+            rdfs:range xsd:string .
+
+
+###  http://www.sintef.no/ontology/ocds#language
+ocds:language rdf:type owl:DatatypeProperty ;
+              rdfs:domain ocds:Document ;
+              rdfs:range xsd:string .
+
+
+###  http://www.sintef.no/ontology/ocds#locality
+ocds:locality rdf:type owl:DatatypeProperty ;
+              rdfs:domain ocds:Address ;
+              rdfs:range xsd:string .
+
+
+###  http://www.sintef.no/ontology/ocds#mainProcurementCategory
+ocds:mainProcurementCategory rdf:type owl:DatatypeProperty ;
+                             rdfs:domain ocds:Tender ;
+                             rdfs:range xsd:string .
+
+
+###  http://www.sintef.no/ontology/ocds#maxExtentDate
+ocds:maxExtentDate rdf:type owl:DatatypeProperty ;
+                   rdfs:domain ocds:Period ;
+                   rdfs:range xsd:dateTime .
+
+
+###  http://www.sintef.no/ontology/ocds#mileStoneStatus
+ocds:mileStoneStatus rdf:type owl:DatatypeProperty ;
+                     rdfs:domain ocds:Milestone ;
+                     rdfs:range xsd:string .
+
+
+###  http://www.sintef.no/ontology/ocds#milestoneCode
+ocds:milestoneCode rdf:type owl:DatatypeProperty ;
+                   rdfs:domain ocds:Milestone ;
+                   rdfs:range xsd:string .
+
+
+###  http://www.sintef.no/ontology/ocds#milestoneDateMet
+ocds:milestoneDateMet rdf:type owl:DatatypeProperty ;
+                      rdfs:domain ocds:Milestone ;
+                      rdfs:range xsd:dateTime .
+
+
+###  http://www.sintef.no/ontology/ocds#milestoneDateModified
+ocds:milestoneDateModified rdf:type owl:DatatypeProperty ;
+                           rdfs:domain ocds:Milestone ;
+                           rdfs:range xsd:dateTime .
+
+
+###  http://www.sintef.no/ontology/ocds#milestoneDescription
+ocds:milestoneDescription rdf:type owl:DatatypeProperty ;
+                          rdfs:domain ocds:Milestone ;
+                          rdfs:range xsd:string .
+
+
+###  http://www.sintef.no/ontology/ocds#milestoneDueDate
+ocds:milestoneDueDate rdf:type owl:DatatypeProperty ;
+                      rdfs:domain ocds:Milestone ;
+                      rdfs:range xsd:dateTime .
+
+
+###  http://www.sintef.no/ontology/ocds#milestoneId
+ocds:milestoneId rdf:type owl:DatatypeProperty ;
+                 rdfs:domain ocds:Milestone ;
+                 rdfs:range xsd:string .
+
+
+###  http://www.sintef.no/ontology/ocds#milestoneTitle
+ocds:milestoneTitle rdf:type owl:DatatypeProperty ;
+                    rdfs:domain ocds:Milestone ;
+                    rdfs:range xsd:string .
+
+
+###  http://www.sintef.no/ontology/ocds#milestoneType
+ocds:milestoneType rdf:type owl:DatatypeProperty ;
+                   rdfs:domain ocds:Milestone ;
+                   rdfs:range xsd:string .
+
+
+###  http://www.sintef.no/ontology/ocds#numberOfTenderers
+ocds:numberOfTenderers rdf:type owl:DatatypeProperty ;
+                       rdfs:domain ocds:Tender ;
+                       rdfs:range xsd:integer .
+
+
+###  http://www.sintef.no/ontology/ocds#postalCode
+ocds:postalCode rdf:type owl:DatatypeProperty ;
+                rdfs:domain ocds:Address ;
+                rdfs:range xsd:string .
+
+
+###  http://www.sintef.no/ontology/ocds#primaryOrganizationId
+ocds:primaryOrganizationId rdf:type owl:DatatypeProperty ;
+                           rdfs:domain ocds:Organisation ;
+                           rdfs:range xsd:string .
+
+
+###  http://www.sintef.no/ontology/ocds#procurementMethod
+ocds:procurementMethod rdf:type owl:DatatypeProperty ;
+                       rdfs:domain ocds:Tender ;
+                       rdfs:range xsd:string .
+
+
+###  http://www.sintef.no/ontology/ocds#procurementMethodDetails
+ocds:procurementMethodDetails rdf:type owl:DatatypeProperty ;
+                              rdfs:domain ocds:Tender ;
+                              rdfs:range xsd:string .
+
+
+###  http://www.sintef.no/ontology/ocds#procurementMethodRationale
+ocds:procurementMethodRationale rdf:type owl:DatatypeProperty ;
+                                rdfs:domain ocds:Tender ;
+                                rdfs:range xsd:string .
+
+
+###  http://www.sintef.no/ontology/ocds#procurementRationale
+ocds:procurementRationale rdf:type owl:DatatypeProperty ;
+                          rdfs:domain ocds:Plan ;
+                          rdfs:range xsd:string .
+
+
+###  http://www.sintef.no/ontology/ocds#projectId
+ocds:projectId rdf:type owl:DatatypeProperty ;
+               rdfs:domain ocds:Budget ;
+               rdfs:range xsd:string .
+
+
+###  http://www.sintef.no/ontology/ocds#projectTitle
+ocds:projectTitle rdf:type owl:DatatypeProperty ;
+                  rdfs:domain ocds:Budget ;
+                  rdfs:range xsd:string .
+
+
+###  http://www.sintef.no/ontology/ocds#quantity
+ocds:quantity rdf:type owl:DatatypeProperty ;
+              rdfs:domain ocds:Item ;
+              rdfs:range xsd:integer .
+
+
+###  http://www.sintef.no/ontology/ocds#region
+ocds:region rdf:type owl:DatatypeProperty ;
+            rdfs:domain ocds:Address ;
+            rdfs:range xsd:string .
+
+
+###  http://www.sintef.no/ontology/ocds#startDate
+ocds:startDate rdf:type owl:DatatypeProperty ;
+               rdfs:domain ocds:Period ;
+               rdfs:range xsd:dateTime .
+
+
+###  http://www.sintef.no/ontology/ocds#streetAddress
+ocds:streetAddress rdf:type owl:DatatypeProperty ;
+                   rdfs:domain ocds:Address ;
+                   rdfs:range xsd:string .
+
+
+###  http://www.sintef.no/ontology/ocds#submissionMethod
+ocds:submissionMethod rdf:type owl:DatatypeProperty ;
+                      rdfs:domain ocds:Tender ;
+                      rdfs:range xsd:string .
+
+
+###  http://www.sintef.no/ontology/ocds#submissionMethodDetails
+ocds:submissionMethodDetails rdf:type owl:DatatypeProperty ;
+                             rdfs:domain ocds:Tender ;
+                             rdfs:range xsd:string .
+
+
+###  http://www.sintef.no/ontology/ocds#telephone
+ocds:telephone rdf:type owl:DatatypeProperty ;
+               rdfs:domain ocds:ContactPoint ;
+               rdfs:range xsd:string .
+
+
+###  http://www.sintef.no/ontology/ocds#tenderDescription
+ocds:tenderDescription rdf:type owl:DatatypeProperty ;
+                       rdfs:domain ocds:Tender ;
+                       rdfs:range xsd:string .
+
+
+###  http://www.sintef.no/ontology/ocds#tenderId
+ocds:tenderId rdf:type owl:DatatypeProperty ;
+              rdfs:domain ocds:Tender ;
+              rdfs:range xsd:string .
+
+
+###  http://www.sintef.no/ontology/ocds#tenderStatus
+ocds:tenderStatus rdf:type owl:DatatypeProperty ;
+                  rdfs:domain ocds:Tender ;
+                  rdfs:range xsd:string .
+
+
+###  http://www.sintef.no/ontology/ocds#tenderTitle
+ocds:tenderTitle rdf:type owl:DatatypeProperty ;
+                 rdfs:domain ocds:Tender ;
+                 rdfs:range xsd:string .
+
+
+###  http://www.sintef.no/ontology/ocds#transactionDataSource
+ocds:transactionDataSource rdf:type owl:DatatypeProperty ;
+                           rdfs:domain ocds:Transaction ;
+                           rdfs:range xsd:anyURI .
+
+
+###  http://www.sintef.no/ontology/ocds#transactionDate
+ocds:transactionDate rdf:type owl:DatatypeProperty ;
+                     rdfs:domain ocds:Transaction ;
+                     rdfs:range xsd:dateTime .
+
+
+###  http://www.sintef.no/ontology/ocds#transactionId
+ocds:transactionId rdf:type owl:DatatypeProperty ;
+                   rdfs:domain ocds:Transaction ;
+                   rdfs:range xsd:string .
+
+
+###  http://www.sintef.no/ontology/ocds#transactionSpendingInfo
+ocds:transactionSpendingInfo rdf:type owl:DatatypeProperty ;
+                             rdfs:domain ocds:Transaction ;
+                             rdfs:range xsd:anyURI .
+
+
+###  http://www.sintef.no/ontology/ocds#unit
+ocds:unit rdf:type owl:DatatypeProperty ;
+          rdfs:domain ocds:Item ;
+          rdfs:range xsd:string .
+
+
+###  http://www.sintef.no/ontology/ocds#url
+ocds:url rdf:type owl:DatatypeProperty ;
+         rdfs:domain [ rdf:type owl:Class ;
+                       owl:unionOf ( ocds:ContactPoint
+                                     ocds:Document
+                                   )
+                     ] ;
+         rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.sintef.no/ontology/ocds#Address
+ocds:Address rdf:type owl:Class .
+
+
+###  http://www.sintef.no/ontology/ocds#Amendment
+ocds:Amendment rdf:type owl:Class .
+
+
+###  http://www.sintef.no/ontology/ocds#Award
+ocds:Award rdf:type owl:Class .
+
+
+###  http://www.sintef.no/ontology/ocds#Budget
+ocds:Budget rdf:type owl:Class .
+
+
+###  http://www.sintef.no/ontology/ocds#ContactPoint
+ocds:ContactPoint rdf:type owl:Class .
+
+
+###  http://www.sintef.no/ontology/ocds#Contract
+ocds:Contract rdf:type owl:Class .
+
+
+###  http://www.sintef.no/ontology/ocds#ContractingProcess
+ocds:ContractingProcess rdf:type owl:Class .
+
+
+###  http://www.sintef.no/ontology/ocds#Document
+ocds:Document rdf:type owl:Class .
+
+
+###  http://www.sintef.no/ontology/ocds#Implementation
+ocds:Implementation rdf:type owl:Class .
+
+
+###  http://www.sintef.no/ontology/ocds#Item
+ocds:Item rdf:type owl:Class .
+
+
+###  http://www.sintef.no/ontology/ocds#Milestone
+ocds:Milestone rdf:type owl:Class .
+
+
+###  http://www.sintef.no/ontology/ocds#Organisation
+ocds:Organisation rdf:type owl:Class .
+
+
+###  http://www.sintef.no/ontology/ocds#Period
+ocds:Period rdf:type owl:Class .
+
+
+###  http://www.sintef.no/ontology/ocds#Plan
+ocds:Plan rdf:type owl:Class .
+
+
+###  http://www.sintef.no/ontology/ocds#Tender
+ocds:Tender rdf:type owl:Class .
+
+
+###  http://www.sintef.no/ontology/ocds#Transaction
+ocds:Transaction rdf:type owl:Class .
+
+
+###  http://www.sintef.no/ontology/ocds#Value
+ocds:Value rdf:type owl:Class .
+
+
+###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi

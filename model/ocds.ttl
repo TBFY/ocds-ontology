@@ -405,7 +405,6 @@ dc:title rdf:type owl:DatatypeProperty ;
 
 ###  http://schema.org/addressCountry
 <http://schema.org/addressCountry> rdf:type owl:DatatypeProperty ;
-                                   rdfs:domain ocds:Address ;
                                    rdfs:range xsd:string ;
                                    rdfs:comment "Use in OCDS ontology: Address." ;
                                    rdfs:isDefinedBy "OCDS schema v1.1: Address <countryName>." ,
@@ -414,8 +413,8 @@ dc:title rdf:type owl:DatatypeProperty ;
 
 ###  http://schema.org/addressLocality
 <http://schema.org/addressLocality> rdf:type owl:DatatypeProperty ;
-                                    rdfs:domain ocds:Address ;
                                     rdfs:range xsd:string ;
+                                    rdfs:comment "Use in OCDS ontology: Address." ;
                                     rdfs:isDefinedBy "OCDS schema v1.1: Address <locality>." ,
                                                      "http://schema.org/addressLocality" .
 
@@ -445,15 +444,14 @@ dc:title rdf:type owl:DatatypeProperty ;
 
 ###  http://schema.org/postalCode
 <http://schema.org/postalCode> rdf:type owl:DatatypeProperty ;
-                               rdfs:domain ocds:Address ;
                                rdfs:range xsd:string ;
+                               rdfs:comment "Use in OCDS ontology: Address." ;
                                rdfs:isDefinedBy "OCDS schema v1.1: Address <postalCode>." ,
                                                 "http://schema.org/postalCode" .
 
 
 ###  http://schema.org/streetAddress
 <http://schema.org/streetAddress> rdf:type owl:DatatypeProperty ;
-                                  rdfs:domain ocds:Address ;
                                   rdfs:range xsd:string ;
                                   rdfs:comment "Use in OCDS ontology: Address." ;
                                   rdfs:isDefinedBy "OCDS schema v1.1: Address <streetAddress>." ,
@@ -1148,8 +1146,12 @@ org:identifier rdf:type owl:DatatypeProperty ;
 
 ###  http://www.sintef.no/ontology/ocds/Address
 ocds:Address rdf:type owl:Class ;
-             ocds:usesDataProperty ocds:region ;
-             rdfs:comment "Uses also the following data type properties: region." ;
+             ocds:usesDataProperty <http://schema.org/addressCountry> ,
+                                   <http://schema.org/addressLocality> ,
+                                   <http://schema.org/postalCode> ,
+                                   <http://schema.org/streetAddress> ,
+                                   ocds:region ;
+             rdfs:comment "Uses also the following data type properties: addressCountry, addressLocality, postalCode, streeAddress, region." ;
              rdfs:isDefinedBy "OCDS schema v1.1: Adress." .
 
 

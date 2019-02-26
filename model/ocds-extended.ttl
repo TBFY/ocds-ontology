@@ -335,6 +335,13 @@ ocds:hasRelatedUnsuccessfulProcess rdf:type owl:ObjectProperty ;
                                    rdfs:subPropertyOf ocds:hasRelatedProcess .
 
 
+###  http://www.sintef.no/ontology/ocds/hasRequirement
+ocds:hasRequirement rdf:type owl:ObjectProperty ;
+                    rdfs:domain ocds:Tender ;
+                    rdfs:range ocds:Requirement ;
+                    rdfs:isDefinedBy "OCDS schema v1.1: Requirements extension." .
+
+
 ###  http://www.sintef.no/ontology/ocds/hasReservedValue
 ocds:hasReservedValue rdf:type owl:ObjectProperty ;
                       rdfs:domain ocds:Budget ;

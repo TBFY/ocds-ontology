@@ -439,6 +439,19 @@ ocds:isProcuringEntityFor rdf:type owl:ObjectProperty ;
                           rdfs:isDefinedBy "OCDS schema v1.1: Tender <procuringEntity>." .
 
 
+###  http://www.sintef.no/ontology/ocds/isRelatedToLot
+ocds:isRelatedToLot rdf:type owl:ObjectProperty ;
+                    rdfs:domain [ rdf:type owl:Class ;
+                                  owl:unionOf ( ocds:Award
+                                                ocds:Document
+                                                ocds:Item
+                                                ocds:Milestone
+                                              )
+                                ] ;
+                    rdfs:range ocds:Lot ;
+                    rdfs:isDefinedBy "OCDS schema v1.1: Lots extension." .
+
+
 ###  http://www.sintef.no/ontology/ocds/isSignatoryForContract
 ocds:isSignatoryForContract rdf:type owl:ObjectProperty ;
                             rdfs:domain ocds:Organisation ;

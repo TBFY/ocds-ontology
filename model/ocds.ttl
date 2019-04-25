@@ -1,23 +1,23 @@
-@prefix : <http://www.sintef.no/ontology/ocds/> .
+@prefix : <https://theybuyforyou.eu/ontology/ocds/> .
 @prefix dc: <http://purl.org/dc/terms/> .
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix ocds: <http://www.sintef.no/ontology/ocds/> .
+@prefix ocds: <https://theybuyforyou.eu/ontology/ocds/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
-@base <http://www.sintef.no/ontology/ocds/> .
+@base <https://theybuyforyou.eu/ontology/ocds/> .
 
-<http://www.sintef.no/ontology/ocds/> rdf:type owl:Ontology ;
-                                       owl:imports <http://www.w3.org/2004/02/skos/core> .
+<https://theybuyforyou.eu/ontology/ocds/> rdf:type owl:Ontology ;
+                                           owl:imports <http://www.w3.org/2004/02/skos/core> .
 
 #################################################################
 #    Annotation properties
 #################################################################
 
-###  http://www.sintef.no/ontology/ocds/usesDataProperty
+###  https://theybuyforyou.eu/ontology/ocds/usesDataProperty
 ocds:usesDataProperty rdf:type owl:AnnotationProperty .
 
 
@@ -25,21 +25,21 @@ ocds:usesDataProperty rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
-###  http://www.sintef.no/ontology/ocds/hasAdditionalClassification
+###  https://theybuyforyou.eu/ontology/ocds/hasAdditionalClassification
 ocds:hasAdditionalClassification rdf:type owl:ObjectProperty ;
                                  rdfs:domain ocds:Item ;
                                  rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> ;
                                  rdfs:isDefinedBy "OCDS schema v1.1: Item <aditionalClassification>." .
 
 
-###  http://www.sintef.no/ontology/ocds/hasAddress
+###  https://theybuyforyou.eu/ontology/ocds/hasAddress
 ocds:hasAddress rdf:type owl:ObjectProperty ;
                 rdfs:domain ocds:Organisation ;
                 rdfs:range ocds:Address ;
                 rdfs:isDefinedBy "OCDS schema v1.1: Organization <address>." .
 
 
-###  http://www.sintef.no/ontology/ocds/hasAmendment
+###  https://theybuyforyou.eu/ontology/ocds/hasAmendment
 ocds:hasAmendment rdf:type owl:ObjectProperty ;
                   rdfs:domain [ rdf:type owl:Class ;
                                 owl:unionOf ( ocds:Award
@@ -51,98 +51,98 @@ ocds:hasAmendment rdf:type owl:ObjectProperty ;
                   rdfs:isDefinedBy "OCDS schema v1.1: Tender, Award, Contract <amendments>." .
 
 
-###  http://www.sintef.no/ontology/ocds/hasAward
+###  https://theybuyforyou.eu/ontology/ocds/hasAward
 ocds:hasAward rdf:type owl:ObjectProperty ;
               rdfs:domain ocds:ContractingProcess ;
               rdfs:range ocds:Award ;
               rdfs:isDefinedBy "OCDS schema v1.1." .
 
 
-###  http://www.sintef.no/ontology/ocds/hasAwardPeriod
+###  https://theybuyforyou.eu/ontology/ocds/hasAwardPeriod
 ocds:hasAwardPeriod rdf:type owl:ObjectProperty ;
                     rdfs:domain ocds:Tender ;
                     rdfs:range ocds:Period ;
                     rdfs:isDefinedBy "OCDS schema v1.1: Tender <awardPeriod>." .
 
 
-###  http://www.sintef.no/ontology/ocds/hasAwardValue
+###  https://theybuyforyou.eu/ontology/ocds/hasAwardValue
 ocds:hasAwardValue rdf:type owl:ObjectProperty ;
                    rdfs:domain ocds:Award ;
                    rdfs:range ocds:Value ;
                    rdfs:isDefinedBy "OCDS schema v1.1: Award <value>." .
 
 
-###  http://www.sintef.no/ontology/ocds/hasAwardedContractPeriod
+###  https://theybuyforyou.eu/ontology/ocds/hasAwardedContractPeriod
 ocds:hasAwardedContractPeriod rdf:type owl:ObjectProperty ;
                               rdfs:domain ocds:Award ;
                               rdfs:range ocds:Period ;
                               rdfs:isDefinedBy "OCDS schema v1.1: Award <contractPeriod>." .
 
 
-###  http://www.sintef.no/ontology/ocds/hasAwardedItem
+###  https://theybuyforyou.eu/ontology/ocds/hasAwardedItem
 ocds:hasAwardedItem rdf:type owl:ObjectProperty ;
                     rdfs:domain ocds:Award ;
                     rdfs:range ocds:Item ;
                     rdfs:isDefinedBy "OCDS schema v1.1: Award <item>." .
 
 
-###  http://www.sintef.no/ontology/ocds/hasBudget
+###  https://theybuyforyou.eu/ontology/ocds/hasBudget
 ocds:hasBudget rdf:type owl:ObjectProperty ;
                rdfs:domain ocds:Plan ;
                rdfs:range ocds:Budget ;
                rdfs:isDefinedBy "OCDS schema v1.1: Plan <budget>." .
 
 
-###  http://www.sintef.no/ontology/ocds/hasClassification
+###  https://theybuyforyou.eu/ontology/ocds/hasClassification
 ocds:hasClassification rdf:type owl:ObjectProperty ;
                        rdfs:domain ocds:Item ;
                        rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> ;
                        rdfs:isDefinedBy "OCDS schema v1.1: Item <classification>." .
 
 
-###  http://www.sintef.no/ontology/ocds/hasContactPoint
+###  https://theybuyforyou.eu/ontology/ocds/hasContactPoint
 ocds:hasContactPoint rdf:type owl:ObjectProperty ;
                      rdfs:domain ocds:Organisation ;
                      rdfs:range ocds:ContactPoint ;
                      rdfs:isDefinedBy "OCDS schema v1.1: Organization <contactPoint>." .
 
 
-###  http://www.sintef.no/ontology/ocds/hasContract
+###  https://theybuyforyou.eu/ontology/ocds/hasContract
 ocds:hasContract rdf:type owl:ObjectProperty ;
                  rdfs:domain ocds:ContractingProcess ;
                  rdfs:range ocds:Contract ;
                  rdfs:isDefinedBy "OCDS schema v1.1." .
 
 
-###  http://www.sintef.no/ontology/ocds/hasContractImplementation
+###  https://theybuyforyou.eu/ontology/ocds/hasContractImplementation
 ocds:hasContractImplementation rdf:type owl:ObjectProperty ;
                                rdfs:domain ocds:Contract ;
                                rdfs:range ocds:Implementation ;
                                rdfs:isDefinedBy "OCDS schema v1.1: Contract <implementation>." .
 
 
-###  http://www.sintef.no/ontology/ocds/hasContractPeriod
+###  https://theybuyforyou.eu/ontology/ocds/hasContractPeriod
 ocds:hasContractPeriod rdf:type owl:ObjectProperty ;
                        rdfs:domain ocds:Contract ;
                        rdfs:range ocds:Period ;
                        rdfs:isDefinedBy "OCDS schema v1.1: Contract <period>." .
 
 
-###  http://www.sintef.no/ontology/ocds/hasContractValue
+###  https://theybuyforyou.eu/ontology/ocds/hasContractValue
 ocds:hasContractValue rdf:type owl:ObjectProperty ;
                       rdfs:domain ocds:Contract ;
                       rdfs:range ocds:Value ;
                       rdfs:isDefinedBy "OCDS schema v1.1: Contract <value>." .
 
 
-###  http://www.sintef.no/ontology/ocds/hasContractedItem
+###  https://theybuyforyou.eu/ontology/ocds/hasContractedItem
 ocds:hasContractedItem rdf:type owl:ObjectProperty ;
                        rdfs:domain ocds:Contract ;
                        rdfs:range ocds:Item ;
                        rdfs:isDefinedBy "OCDS schema v1.1: Contract <items>." .
 
 
-###  http://www.sintef.no/ontology/ocds/hasDocument
+###  https://theybuyforyou.eu/ontology/ocds/hasDocument
 ocds:hasDocument rdf:type owl:ObjectProperty ;
                  rdfs:domain [ rdf:type owl:Class ;
                                owl:unionOf ( ocds:Award
@@ -156,35 +156,35 @@ ocds:hasDocument rdf:type owl:ObjectProperty ;
                  rdfs:isDefinedBy "OCDS schema v1.1: Plan, Tender, Award, Contract, Implementation <documents>." .
 
 
-###  http://www.sintef.no/ontology/ocds/hasEnquiryPeriod
+###  https://theybuyforyou.eu/ontology/ocds/hasEnquiryPeriod
 ocds:hasEnquiryPeriod rdf:type owl:ObjectProperty ;
                       rdfs:domain ocds:Tender ;
                       rdfs:range ocds:Period ;
                       rdfs:isDefinedBy "OCDS schema v1.1: Tender <enquiryPeriod>." .
 
 
-###  http://www.sintef.no/ontology/ocds/hasEstimatedContractPeriod
+###  https://theybuyforyou.eu/ontology/ocds/hasEstimatedContractPeriod
 ocds:hasEstimatedContractPeriod rdf:type owl:ObjectProperty ;
                                 rdfs:domain ocds:Tender ;
                                 rdfs:range ocds:Period ;
                                 rdfs:isDefinedBy "OCDS schema v1.1: Tender <contractPeriod>." .
 
 
-###  http://www.sintef.no/ontology/ocds/hasItemToBeProcured
+###  https://theybuyforyou.eu/ontology/ocds/hasItemToBeProcured
 ocds:hasItemToBeProcured rdf:type owl:ObjectProperty ;
                          rdfs:domain ocds:Tender ;
                          rdfs:range ocds:Item ;
                          rdfs:isDefinedBy "OCDS schema v1.1: Tender <items>." .
 
 
-###  http://www.sintef.no/ontology/ocds/hasMaxEstimatedValue
+###  https://theybuyforyou.eu/ontology/ocds/hasMaxEstimatedValue
 ocds:hasMaxEstimatedValue rdf:type owl:ObjectProperty ;
                           rdfs:domain ocds:Tender ;
                           rdfs:range ocds:Value ;
                           rdfs:isDefinedBy "OCDS schema v1.1: Tender <value>." .
 
 
-###  http://www.sintef.no/ontology/ocds/hasMilestone
+###  https://theybuyforyou.eu/ontology/ocds/hasMilestone
 ocds:hasMilestone rdf:type owl:ObjectProperty ;
                   rdfs:domain [ rdf:type owl:Class ;
                                 owl:unionOf ( ocds:Contract
@@ -197,166 +197,166 @@ ocds:hasMilestone rdf:type owl:ObjectProperty ;
                   rdfs:isDefinedBy "OCDS schema v1.1: Plan, Tender, Contract, Implementation <milestones>." .
 
 
-###  http://www.sintef.no/ontology/ocds/hasMinEstimatedValue
+###  https://theybuyforyou.eu/ontology/ocds/hasMinEstimatedValue
 ocds:hasMinEstimatedValue rdf:type owl:ObjectProperty ;
                           rdfs:domain ocds:Tender ;
                           rdfs:range ocds:Value ;
                           rdfs:isDefinedBy "OCDS schema v1.1: Tender <minValue>." .
 
 
-###  http://www.sintef.no/ontology/ocds/hasPlan
+###  https://theybuyforyou.eu/ontology/ocds/hasPlan
 ocds:hasPlan rdf:type owl:ObjectProperty ;
              rdfs:domain ocds:ContractingProcess ;
              rdfs:range ocds:Plan ;
              rdfs:isDefinedBy "OCDS schema v1.1." .
 
 
-###  http://www.sintef.no/ontology/ocds/hasRelatedFrameworkProcess
+###  https://theybuyforyou.eu/ontology/ocds/hasRelatedFrameworkProcess
 ocds:hasRelatedFrameworkProcess rdf:type owl:ObjectProperty ;
                                 rdfs:subPropertyOf ocds:hasRelatedProcess .
 
 
-###  http://www.sintef.no/ontology/ocds/hasRelatedParentProcess
+###  https://theybuyforyou.eu/ontology/ocds/hasRelatedParentProcess
 ocds:hasRelatedParentProcess rdf:type owl:ObjectProperty ;
                              rdfs:subPropertyOf ocds:hasRelatedProcess .
 
 
-###  http://www.sintef.no/ontology/ocds/hasRelatedPlanningProcess
+###  https://theybuyforyou.eu/ontology/ocds/hasRelatedPlanningProcess
 ocds:hasRelatedPlanningProcess rdf:type owl:ObjectProperty ;
                                rdfs:subPropertyOf ocds:hasRelatedProcess .
 
 
-###  http://www.sintef.no/ontology/ocds/hasRelatedPriorProcess
+###  https://theybuyforyou.eu/ontology/ocds/hasRelatedPriorProcess
 ocds:hasRelatedPriorProcess rdf:type owl:ObjectProperty ;
                             rdfs:subPropertyOf ocds:hasRelatedProcess .
 
 
-###  http://www.sintef.no/ontology/ocds/hasRelatedProcess
+###  https://theybuyforyou.eu/ontology/ocds/hasRelatedProcess
 ocds:hasRelatedProcess rdf:type owl:ObjectProperty ;
                        rdfs:domain ocds:ContractingProcess ;
                        rdfs:range ocds:ContractingProcess ;
                        rdfs:isDefinedBy "OCDS schema v1.1: Contract <relatedProcesses>." .
 
 
-###  http://www.sintef.no/ontology/ocds/hasRelatedRenewalProcess
+###  https://theybuyforyou.eu/ontology/ocds/hasRelatedRenewalProcess
 ocds:hasRelatedRenewalProcess rdf:type owl:ObjectProperty ;
                               rdfs:subPropertyOf ocds:hasRelatedProcess .
 
 
-###  http://www.sintef.no/ontology/ocds/hasRelatedReplacementProcess
+###  https://theybuyforyou.eu/ontology/ocds/hasRelatedReplacementProcess
 ocds:hasRelatedReplacementProcess rdf:type owl:ObjectProperty ;
                                   rdfs:subPropertyOf ocds:hasRelatedProcess .
 
 
-###  http://www.sintef.no/ontology/ocds/hasRelatedSubContract
+###  https://theybuyforyou.eu/ontology/ocds/hasRelatedSubContract
 ocds:hasRelatedSubContract rdf:type owl:ObjectProperty ;
                            rdfs:subPropertyOf ocds:hasRelatedProcess .
 
 
-###  http://www.sintef.no/ontology/ocds/hasRelatedUnsuccessfulProcess
+###  https://theybuyforyou.eu/ontology/ocds/hasRelatedUnsuccessfulProcess
 ocds:hasRelatedUnsuccessfulProcess rdf:type owl:ObjectProperty ;
                                    rdfs:subPropertyOf ocds:hasRelatedProcess .
 
 
-###  http://www.sintef.no/ontology/ocds/hasReservedValue
+###  https://theybuyforyou.eu/ontology/ocds/hasReservedValue
 ocds:hasReservedValue rdf:type owl:ObjectProperty ;
                       rdfs:domain ocds:Budget ;
                       rdfs:range ocds:Value ;
                       rdfs:isDefinedBy "OCDS schema v1.1: Budget <amount>." .
 
 
-###  http://www.sintef.no/ontology/ocds/hasTender
+###  https://theybuyforyou.eu/ontology/ocds/hasTender
 ocds:hasTender rdf:type owl:ObjectProperty ;
                rdfs:domain ocds:ContractingProcess ;
                rdfs:range ocds:Tender ;
                rdfs:isDefinedBy "OCDS schema v1.1." .
 
 
-###  http://www.sintef.no/ontology/ocds/hasTenderPeriod
+###  https://theybuyforyou.eu/ontology/ocds/hasTenderPeriod
 ocds:hasTenderPeriod rdf:type owl:ObjectProperty ;
                      rdfs:domain ocds:Tender ;
                      rdfs:range ocds:Period ;
                      rdfs:isDefinedBy "OCDS schema v1.1: Tender <tenderPeriod>." .
 
 
-###  http://www.sintef.no/ontology/ocds/hasTransaction
+###  https://theybuyforyou.eu/ontology/ocds/hasTransaction
 ocds:hasTransaction rdf:type owl:ObjectProperty ;
                     rdfs:domain ocds:Implementation ;
                     rdfs:range ocds:Transaction ;
                     rdfs:isDefinedBy "OCDS schema v1.1: Implementation <transactions>." .
 
 
-###  http://www.sintef.no/ontology/ocds/hasTransactionValue
+###  https://theybuyforyou.eu/ontology/ocds/hasTransactionValue
 ocds:hasTransactionValue rdf:type owl:ObjectProperty ;
                          rdfs:domain ocds:Transaction ;
                          rdfs:range ocds:Value ;
                          rdfs:isDefinedBy "OCDS schema v1.1: Transaction <value>." .
 
 
-###  http://www.sintef.no/ontology/ocds/isBuyerFor
+###  https://theybuyforyou.eu/ontology/ocds/isBuyerFor
 ocds:isBuyerFor rdf:type owl:ObjectProperty ;
                 rdfs:domain ocds:Organisation ;
-                rdfs:range ocds:Tender ;
+                rdfs:range ocds:ContractingProcess ;
                 rdfs:isDefinedBy "OCDS schema v1.1: Release <buyer>." .
 
 
-###  http://www.sintef.no/ontology/ocds/isFundedBy
+###  https://theybuyforyou.eu/ontology/ocds/isFundedBy
 ocds:isFundedBy rdf:type owl:ObjectProperty ;
                 rdfs:domain ocds:ContractingProcess ;
                 rdfs:range ocds:Project ;
                 rdfs:isDefinedBy "OCDS schema v1.1." .
 
 
-###  http://www.sintef.no/ontology/ocds/isIssuedForAward
+###  https://theybuyforyou.eu/ontology/ocds/isIssuedForAward
 ocds:isIssuedForAward rdf:type owl:ObjectProperty ;
                       rdfs:domain ocds:Contract ;
                       rdfs:range ocds:Award ;
                       rdfs:isDefinedBy "OCDS schema v1.1: Contract <awardID>." .
 
 
-###  http://www.sintef.no/ontology/ocds/isIssuedForTender
+###  https://theybuyforyou.eu/ontology/ocds/isIssuedForTender
 ocds:isIssuedForTender rdf:type owl:ObjectProperty ;
                        rdfs:domain ocds:Award ;
                        rdfs:range ocds:Tender ;
                        rdfs:isDefinedBy "OCDS schema v1.1." .
 
 
-###  http://www.sintef.no/ontology/ocds/isPayeeFor
+###  https://theybuyforyou.eu/ontology/ocds/isPayeeFor
 ocds:isPayeeFor rdf:type owl:ObjectProperty ;
                 rdfs:domain ocds:Organisation ;
                 rdfs:range ocds:Transaction ;
                 rdfs:isDefinedBy "OCDS schema v1.1: Transaction <payee>." .
 
 
-###  http://www.sintef.no/ontology/ocds/isPayerFor
+###  https://theybuyforyou.eu/ontology/ocds/isPayerFor
 ocds:isPayerFor rdf:type owl:ObjectProperty ;
                 rdfs:domain ocds:Organisation ;
                 rdfs:range ocds:Transaction ;
                 rdfs:isDefinedBy "OCDS schema v1.1: Transaction <payer>." .
 
 
-###  http://www.sintef.no/ontology/ocds/isProcuringEntityFor
+###  https://theybuyforyou.eu/ontology/ocds/isProcuringEntityFor
 ocds:isProcuringEntityFor rdf:type owl:ObjectProperty ;
                           rdfs:domain ocds:Organisation ;
                           rdfs:range ocds:Tender ;
                           rdfs:isDefinedBy "OCDS schema v1.1: Tender <procuringEntity>." .
 
 
-###  http://www.sintef.no/ontology/ocds/isSupplierFor
+###  https://theybuyforyou.eu/ontology/ocds/isSupplierFor
 ocds:isSupplierFor rdf:type owl:ObjectProperty ;
                    rdfs:domain ocds:Organisation ;
                    rdfs:range ocds:Award ;
                    rdfs:isDefinedBy "OCDS schema v1.1: Award <suppliers>." .
 
 
-###  http://www.sintef.no/ontology/ocds/isTendererFor
+###  https://theybuyforyou.eu/ontology/ocds/isTendererFor
 ocds:isTendererFor rdf:type owl:ObjectProperty ;
                    rdfs:domain ocds:Organisation ;
                    rdfs:range ocds:Tender ;
                    rdfs:isDefinedBy "OCDS schema v1.1: Tender <tenderers>." .
 
 
-###  http://www.sintef.no/ontology/ocds/playsRoleIn
+###  https://theybuyforyou.eu/ontology/ocds/playsRoleIn
 ocds:playsRoleIn rdf:type owl:ObjectProperty ;
                  rdfs:domain ocds:Organisation ;
                  rdfs:range ocds:ContractingProcess ;
@@ -466,14 +466,23 @@ dc:title rdf:type owl:DatatypeProperty ;
                               rdfs:isDefinedBy "http://schema.org/telephone" .
 
 
-###  http://www.sintef.no/ontology/ocds/URI
+###  http://www.w3.org/ns/org#identifier
+org:identifier rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#notation> ;
+               rdfs:domain ocds:Organisation ;
+               rdfs:comment "Many different national and international identifier schemes are available from other vocabularies. The ORG ontology is neutral to which schemes are used. The particular identifier scheme should be indicated by the datatype of the identifier value. Using datatypes to distinguish the notation scheme used is consistent with recommended best practice for skos:notation of which this property is a specialization." ;
+               rdfs:isDefinedBy "OCDS schema v1.1: Parties <identifier>, i.e., Primary identifier." ,
+                                "https://www.w3.org/TR/vocab-org/#org:identifier" .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/URI
 ocds:URI rdf:type owl:DatatypeProperty ;
          rdfs:range xsd:anyURI ;
          rdfs:comment "Use in OCDS ontology: Organization, Budget, Transaction." ;
          rdfs:isDefinedBy "OCDS schema v1.1." .
 
 
-###  http://www.sintef.no/ontology/ocds/additionalIdentifier
+###  https://theybuyforyou.eu/ontology/ocds/additionalIdentifier
 ocds:additionalIdentifier rdf:type owl:DatatypeProperty ;
                           rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#notation> ;
                           rdfs:domain ocds:Organisation ;
@@ -482,42 +491,42 @@ ocds:additionalIdentifier rdf:type owl:DatatypeProperty ;
                           rdfs:isDefinedBy "OCDS schema v1.1: Parties <additionalIdentifier>, i.e., Additional identifier." .
 
 
-###  http://www.sintef.no/ontology/ocds/additionalItemClassification
+###  https://theybuyforyou.eu/ontology/ocds/additionalItemClassification
 ocds:additionalItemClassification rdf:type owl:DatatypeProperty ;
                                   rdfs:domain ocds:Item ;
                                   rdfs:range xsd:string ;
                                   rdfs:isDefinedBy "OCDS schema v1.1: Item <additionalClassification>." .
 
 
-###  http://www.sintef.no/ontology/ocds/additionalProcurementCategory
+###  https://theybuyforyou.eu/ontology/ocds/additionalProcurementCategory
 ocds:additionalProcurementCategory rdf:type owl:DatatypeProperty ;
                                    rdfs:domain ocds:Tender ;
                                    rdfs:range xsd:string ;
                                    rdfs:isDefinedBy "OCDS schema v1.1: Tender <additionalProcurementCategories>." .
 
 
-###  http://www.sintef.no/ontology/ocds/amendmentDate
+###  https://theybuyforyou.eu/ontology/ocds/amendmentDate
 ocds:amendmentDate rdf:type owl:DatatypeProperty ;
                    rdfs:domain ocds:Amendment ;
                    rdfs:range xsd:dateTime ;
                    rdfs:isDefinedBy "OCDS schema v1.1: Amendment <date>." .
 
 
-###  http://www.sintef.no/ontology/ocds/amendmentId
+###  https://theybuyforyou.eu/ontology/ocds/amendmentId
 ocds:amendmentId rdf:type owl:DatatypeProperty ;
                  rdfs:domain ocds:Amendment ;
                  rdfs:range xsd:string ;
                  rdfs:isDefinedBy "OCDS schema v1.1: Amendment <id>." .
 
 
-###  http://www.sintef.no/ontology/ocds/amendmentRationale
+###  https://theybuyforyou.eu/ontology/ocds/amendmentRationale
 ocds:amendmentRationale rdf:type owl:DatatypeProperty ;
                         rdfs:domain ocds:Amendment ;
                         rdfs:range xsd:string ;
                         rdfs:isDefinedBy "OCDS schema v1.1: Amendment <rationale>." .
 
 
-###  http://www.sintef.no/ontology/ocds/awardCriteria
+###  https://theybuyforyou.eu/ontology/ocds/awardCriteria
 ocds:awardCriteria rdf:type owl:DatatypeProperty ;
                    rdfs:domain ocds:Tender ;
                    rdfs:range [ rdf:type rdfs:Datatype ;
@@ -551,28 +560,28 @@ ocds:awardCriteria rdf:type owl:DatatypeProperty ;
                                     "http://standard.open-contracting.org/latest/en/schema/codelists/#award-criteria" .
 
 
-###  http://www.sintef.no/ontology/ocds/awardCriteriaDetails
+###  https://theybuyforyou.eu/ontology/ocds/awardCriteriaDetails
 ocds:awardCriteriaDetails rdf:type owl:DatatypeProperty ;
                           rdfs:domain ocds:Tender ;
                           rdfs:range xsd:string ;
                           rdfs:isDefinedBy "OCDS schema v1.1: Tender <awardCriteriaDetails>." .
 
 
-###  http://www.sintef.no/ontology/ocds/awardDate
+###  https://theybuyforyou.eu/ontology/ocds/awardDate
 ocds:awardDate rdf:type owl:DatatypeProperty ;
                rdfs:domain ocds:Award ;
                rdfs:range xsd:string ;
                rdfs:isDefinedBy "OCDS schema v1.1: Award <date>." .
 
 
-###  http://www.sintef.no/ontology/ocds/awardId
+###  https://theybuyforyou.eu/ontology/ocds/awardId
 ocds:awardId rdf:type owl:DatatypeProperty ;
              rdfs:domain ocds:Award ;
              rdfs:range xsd:string ;
              rdfs:isDefinedBy "OCDS schema v1.1: Award <awardId>." .
 
 
-###  http://www.sintef.no/ontology/ocds/awardStatus
+###  https://theybuyforyou.eu/ontology/ocds/awardStatus
 ocds:awardStatus rdf:type owl:DatatypeProperty ;
                  rdfs:domain ocds:Award ;
                  rdfs:range [ rdf:type rdfs:Datatype ;
@@ -594,21 +603,21 @@ ocds:awardStatus rdf:type owl:DatatypeProperty ;
                                   "http://standard.open-contracting.org/latest/en/schema/codelists/#award-status" .
 
 
-###  http://www.sintef.no/ontology/ocds/budgetId
+###  https://theybuyforyou.eu/ontology/ocds/budgetId
 ocds:budgetId rdf:type owl:DatatypeProperty ;
               rdfs:domain ocds:Budget ;
               rdfs:range xsd:string ;
               rdfs:isDefinedBy "OCDS ontology: Budget <id>." .
 
 
-###  http://www.sintef.no/ontology/ocds/contractId
+###  https://theybuyforyou.eu/ontology/ocds/contractId
 ocds:contractId rdf:type owl:DatatypeProperty ;
                 rdfs:domain ocds:Contract ;
                 rdfs:range xsd:string ;
                 rdfs:isDefinedBy "OCDS schema v1.1: Contract <id>." .
 
 
-###  http://www.sintef.no/ontology/ocds/contractStatus
+###  https://theybuyforyou.eu/ontology/ocds/contractStatus
 ocds:contractStatus rdf:type owl:DatatypeProperty ;
                     rdfs:domain ocds:Contract ;
                     rdfs:range [ rdf:type rdfs:Datatype ;
@@ -630,35 +639,35 @@ ocds:contractStatus rdf:type owl:DatatypeProperty ;
                                      "http://standard.open-contracting.org/latest/en/schema/codelists/#contract-status" .
 
 
-###  http://www.sintef.no/ontology/ocds/dateContractSigned
+###  https://theybuyforyou.eu/ontology/ocds/dateContractSigned
 ocds:dateContractSigned rdf:type owl:DatatypeProperty ;
                         rdfs:domain ocds:Contract ;
                         rdfs:range xsd:dateTime ;
                         rdfs:isDefinedBy "OCDS schema v1.1: Contract <dateSigned>." .
 
 
-###  http://www.sintef.no/ontology/ocds/dateDocumentModified
+###  https://theybuyforyou.eu/ontology/ocds/dateDocumentModified
 ocds:dateDocumentModified rdf:type owl:DatatypeProperty ;
                           rdfs:domain ocds:Document ;
                           rdfs:range xsd:dateTime ;
                           rdfs:isDefinedBy "OCDS schema v1.1: Document <dateModified>." .
 
 
-###  http://www.sintef.no/ontology/ocds/dateDocumentPublished
+###  https://theybuyforyou.eu/ontology/ocds/dateDocumentPublished
 ocds:dateDocumentPublished rdf:type owl:DatatypeProperty ;
                            rdfs:domain ocds:Document ;
                            rdfs:range xsd:dateTime ;
                            rdfs:isDefinedBy "OCDS schema v1.1: Document <datePublished>." .
 
 
-###  http://www.sintef.no/ontology/ocds/documentId
+###  https://theybuyforyou.eu/ontology/ocds/documentId
 ocds:documentId rdf:type owl:DatatypeProperty ;
                 rdfs:domain ocds:Document ;
                 rdfs:range xsd:string ;
                 rdfs:isDefinedBy "OCDS schema v1.1: Document <id>." .
 
 
-###  http://www.sintef.no/ontology/ocds/documentType
+###  https://theybuyforyou.eu/ontology/ocds/documentType
 ocds:documentType rdf:type owl:DatatypeProperty ;
                   rdfs:domain ocds:Document ;
                   rdfs:range [ rdf:type rdfs:Datatype ;
@@ -788,35 +797,35 @@ ocds:documentType rdf:type owl:DatatypeProperty ;
                                    "http://standard.open-contracting.org/latest/en/schema/codelists/#document-type" .
 
 
-###  http://www.sintef.no/ontology/ocds/eligibilityCriteria
+###  https://theybuyforyou.eu/ontology/ocds/eligibilityCriteria
 ocds:eligibilityCriteria rdf:type owl:DatatypeProperty ;
                          rdfs:domain ocds:Tender ;
                          rdfs:range xsd:string ;
                          rdfs:isDefinedBy "OCDS schema v1.1: Tender <eligibilityCriteria>." .
 
 
-###  http://www.sintef.no/ontology/ocds/enquiry
+###  https://theybuyforyou.eu/ontology/ocds/enquiry
 ocds:enquiry rdf:type owl:DatatypeProperty ;
              rdfs:domain ocds:Tender ;
              rdfs:range xsd:boolean ;
              rdfs:isDefinedBy "OCDS schema v1.1: Tender <hasEnquiries>." .
 
 
-###  http://www.sintef.no/ontology/ocds/itemId
+###  https://theybuyforyou.eu/ontology/ocds/itemId
 ocds:itemId rdf:type owl:DatatypeProperty ;
             rdfs:domain ocds:Item ;
             rdfs:range xsd:string ;
             rdfs:isDefinedBy "OCDS schema v1.1: Item <id>." .
 
 
-###  http://www.sintef.no/ontology/ocds/legalName
+###  https://theybuyforyou.eu/ontology/ocds/legalName
 ocds:legalName rdf:type owl:DatatypeProperty ;
                rdfs:range xsd:string ;
                rdfs:comment "Use in OCDS ontology: Organization." ;
                rdfs:isDefinedBy "OCDS schema v1.1: Identifier <legalName>." .
 
 
-###  http://www.sintef.no/ontology/ocds/mainProcurementCategory
+###  https://theybuyforyou.eu/ontology/ocds/mainProcurementCategory
 ocds:mainProcurementCategory rdf:type owl:DatatypeProperty ;
                              rdfs:domain ocds:Tender ;
                              rdfs:range [ rdf:type rdfs:Datatype ;
@@ -835,7 +844,7 @@ ocds:mainProcurementCategory rdf:type owl:DatatypeProperty ;
                                               "http://standard.open-contracting.org/latest/en/schema/codelists/#procurement-category" .
 
 
-###  http://www.sintef.no/ontology/ocds/mileStoneStatus
+###  https://theybuyforyou.eu/ontology/ocds/mileStoneStatus
 ocds:mileStoneStatus rdf:type owl:DatatypeProperty ;
                      rdfs:domain ocds:Milestone ;
                      rdfs:range [ rdf:type rdfs:Datatype ;
@@ -857,42 +866,42 @@ ocds:mileStoneStatus rdf:type owl:DatatypeProperty ;
                                       "http://standard.open-contracting.org/latest/en/schema/codelists/#milestone-status" .
 
 
-###  http://www.sintef.no/ontology/ocds/milestoneCode
+###  https://theybuyforyou.eu/ontology/ocds/milestoneCode
 ocds:milestoneCode rdf:type owl:DatatypeProperty ;
                    rdfs:domain ocds:Milestone ;
                    rdfs:range xsd:string ;
                    rdfs:isDefinedBy "OCDS schema v1.1: Milestone <code>." .
 
 
-###  http://www.sintef.no/ontology/ocds/milestoneDateMet
+###  https://theybuyforyou.eu/ontology/ocds/milestoneDateMet
 ocds:milestoneDateMet rdf:type owl:DatatypeProperty ;
                       rdfs:domain ocds:Milestone ;
                       rdfs:range xsd:dateTime ;
                       rdfs:isDefinedBy "OCDS schema v1.1: Milestone <dateMet>." .
 
 
-###  http://www.sintef.no/ontology/ocds/milestoneDateModified
+###  https://theybuyforyou.eu/ontology/ocds/milestoneDateModified
 ocds:milestoneDateModified rdf:type owl:DatatypeProperty ;
                            rdfs:domain ocds:Milestone ;
                            rdfs:range xsd:dateTime ;
                            rdfs:isDefinedBy "OCDS schema v1.1: Milestone <dateModified>." .
 
 
-###  http://www.sintef.no/ontology/ocds/milestoneDueDate
+###  https://theybuyforyou.eu/ontology/ocds/milestoneDueDate
 ocds:milestoneDueDate rdf:type owl:DatatypeProperty ;
                       rdfs:domain ocds:Milestone ;
                       rdfs:range xsd:dateTime ;
                       rdfs:isDefinedBy "OCDS schema v1.1: Milestone <dueDate>." .
 
 
-###  http://www.sintef.no/ontology/ocds/milestoneId
+###  https://theybuyforyou.eu/ontology/ocds/milestoneId
 ocds:milestoneId rdf:type owl:DatatypeProperty ;
                  rdfs:domain ocds:Milestone ;
                  rdfs:range xsd:string ;
                  rdfs:isDefinedBy "OCDS schema v1.1: Milestone <id>." .
 
 
-###  http://www.sintef.no/ontology/ocds/milestoneType
+###  https://theybuyforyou.eu/ontology/ocds/milestoneType
 ocds:milestoneType rdf:type owl:DatatypeProperty ;
                    rdfs:domain ocds:Milestone ;
                    rdfs:range [ rdf:type rdfs:Datatype ;
@@ -923,42 +932,42 @@ ocds:milestoneType rdf:type owl:DatatypeProperty ;
                                     "http://standard.open-contracting.org/latest/en/schema/codelists/#milestone-type" .
 
 
-###  http://www.sintef.no/ontology/ocds/numberOfTenderers
+###  https://theybuyforyou.eu/ontology/ocds/numberOfTenderers
 ocds:numberOfTenderers rdf:type owl:DatatypeProperty ;
                        rdfs:domain ocds:Tender ;
                        rdfs:range xsd:integer ;
                        rdfs:isDefinedBy "OCDS schema v1.1: Tender <numberOfTenderers>." .
 
 
-###  http://www.sintef.no/ontology/ocds/periodDurationInDays
+###  https://theybuyforyou.eu/ontology/ocds/periodDurationInDays
 ocds:periodDurationInDays rdf:type owl:DatatypeProperty ;
                           rdfs:domain ocds:Period ;
                           rdfs:range xsd:integer ;
                           rdfs:isDefinedBy "OCDS schema v1.1: Period <durationInDays>." .
 
 
-###  http://www.sintef.no/ontology/ocds/periodEndDate
+###  https://theybuyforyou.eu/ontology/ocds/periodEndDate
 ocds:periodEndDate rdf:type owl:DatatypeProperty ;
                    rdfs:domain ocds:Period ;
                    rdfs:range xsd:dateTime ;
                    rdfs:isDefinedBy "OCDS schema v1.1: periodEndDate." .
 
 
-###  http://www.sintef.no/ontology/ocds/periodMaxExtentDate
+###  https://theybuyforyou.eu/ontology/ocds/periodMaxExtentDate
 ocds:periodMaxExtentDate rdf:type owl:DatatypeProperty ;
                          rdfs:domain ocds:Period ;
                          rdfs:range xsd:dateTime ;
                          rdfs:isDefinedBy "OCDS schema v1.1: Period <maxExtentDate>." .
 
 
-###  http://www.sintef.no/ontology/ocds/periodStartDate
+###  https://theybuyforyou.eu/ontology/ocds/periodStartDate
 ocds:periodStartDate rdf:type owl:DatatypeProperty ;
                      rdfs:domain ocds:Period ;
                      rdfs:range xsd:dateTime ;
                      rdfs:isDefinedBy "OCDS schema v1.1: Period <startDate>." .
 
 
-###  http://www.sintef.no/ontology/ocds/procurementMethod
+###  https://theybuyforyou.eu/ontology/ocds/procurementMethod
 ocds:procurementMethod rdf:type owl:DatatypeProperty ;
                        rdfs:domain ocds:Tender ;
                        rdfs:range [ rdf:type rdfs:Datatype ;
@@ -980,49 +989,49 @@ ocds:procurementMethod rdf:type owl:DatatypeProperty ;
                                         "http://standard.open-contracting.org/latest/en/schema/codelists/#method" .
 
 
-###  http://www.sintef.no/ontology/ocds/procurementMethodDetails
+###  https://theybuyforyou.eu/ontology/ocds/procurementMethodDetails
 ocds:procurementMethodDetails rdf:type owl:DatatypeProperty ;
                               rdfs:domain ocds:Tender ;
                               rdfs:range xsd:string ;
                               rdfs:isDefinedBy "OCDS schema v1.1: Tender <procurementMethodDetails>." .
 
 
-###  http://www.sintef.no/ontology/ocds/procurementMethodRationale
+###  https://theybuyforyou.eu/ontology/ocds/procurementMethodRationale
 ocds:procurementMethodRationale rdf:type owl:DatatypeProperty ;
                                 rdfs:domain ocds:Tender ;
                                 rdfs:range xsd:string ;
                                 rdfs:isDefinedBy "OCDS schema v1.1: Tender <procurementMethodRationale>." .
 
 
-###  http://www.sintef.no/ontology/ocds/procurementRationale
+###  https://theybuyforyou.eu/ontology/ocds/procurementRationale
 ocds:procurementRationale rdf:type owl:DatatypeProperty ;
                           rdfs:domain ocds:Plan ;
                           rdfs:range xsd:string ;
                           rdfs:isDefinedBy "OCDS schema v1.1: Plan <rationale>" .
 
 
-###  http://www.sintef.no/ontology/ocds/projectId
+###  https://theybuyforyou.eu/ontology/ocds/projectId
 ocds:projectId rdf:type owl:DatatypeProperty ;
                rdfs:domain ocds:Project ;
                rdfs:range xsd:string ;
                rdfs:isDefinedBy "OCDS schema v1.1: Budget <projectId>." .
 
 
-###  http://www.sintef.no/ontology/ocds/quantity
+###  https://theybuyforyou.eu/ontology/ocds/quantity
 ocds:quantity rdf:type owl:DatatypeProperty ;
               rdfs:range xsd:integer ;
               rdfs:comment "Use in OCDS ontology: Item." ;
               rdfs:isDefinedBy "OCDS schema: Item <qauntity>." .
 
 
-###  http://www.sintef.no/ontology/ocds/region
+###  https://theybuyforyou.eu/ontology/ocds/region
 ocds:region rdf:type owl:DatatypeProperty ;
             rdfs:range xsd:string ;
             rdfs:comment "Use in OCDS ontology: Address." ;
             rdfs:isDefinedBy "OCDS schema: Address <region>." .
 
 
-###  http://www.sintef.no/ontology/ocds/submissionMethod
+###  https://theybuyforyou.eu/ontology/ocds/submissionMethod
 ocds:submissionMethod rdf:type owl:DatatypeProperty ;
                       rdfs:domain ocds:Tender ;
                       rdfs:range [ rdf:type rdfs:Datatype ;
@@ -1044,21 +1053,21 @@ ocds:submissionMethod rdf:type owl:DatatypeProperty ;
                                        "http://standard.open-contracting.org/latest/en/schema/codelists/#submission-method" .
 
 
-###  http://www.sintef.no/ontology/ocds/submissionMethodDetails
+###  https://theybuyforyou.eu/ontology/ocds/submissionMethodDetails
 ocds:submissionMethodDetails rdf:type owl:DatatypeProperty ;
                              rdfs:domain ocds:Tender ;
                              rdfs:range xsd:string ;
                              rdfs:isDefinedBy "OCDS schema v1.1: Tender <submissionMethodDetails>." .
 
 
-###  http://www.sintef.no/ontology/ocds/tenderId
+###  https://theybuyforyou.eu/ontology/ocds/tenderId
 ocds:tenderId rdf:type owl:DatatypeProperty ;
               rdfs:domain ocds:Tender ;
               rdfs:range xsd:string ;
               rdfs:isDefinedBy "OCDS schema v1.1: Tender <id>." .
 
 
-###  http://www.sintef.no/ontology/ocds/tenderStatus
+###  https://theybuyforyou.eu/ontology/ocds/tenderStatus
 ocds:tenderStatus rdf:type owl:DatatypeProperty ;
                   rdfs:domain ocds:Tender ;
                   rdfs:range [ rdf:type rdfs:Datatype ;
@@ -1089,97 +1098,122 @@ ocds:tenderStatus rdf:type owl:DatatypeProperty ;
                                    "http://standard.open-contracting.org/latest/en/schema/codelists/#tender-status" .
 
 
-###  http://www.sintef.no/ontology/ocds/transactionDataSource
+###  https://theybuyforyou.eu/ontology/ocds/transactionDataSource
 ocds:transactionDataSource rdf:type owl:DatatypeProperty ;
                            rdfs:domain ocds:Transaction ;
                            rdfs:range xsd:string ;
                            rdfs:isDefinedBy "OCDS schema v1.1: Transaction <source>." .
 
 
-###  http://www.sintef.no/ontology/ocds/transactionDate
+###  https://theybuyforyou.eu/ontology/ocds/transactionDate
 ocds:transactionDate rdf:type owl:DatatypeProperty ;
                      rdfs:domain ocds:Transaction ;
                      rdfs:range xsd:dateTime ;
                      rdfs:isDefinedBy "OCDS schema v1.1: Transaction <date>." .
 
 
-###  http://www.sintef.no/ontology/ocds/transactionId
+###  https://theybuyforyou.eu/ontology/ocds/transactionId
 ocds:transactionId rdf:type owl:DatatypeProperty ;
                    rdfs:domain ocds:Transaction ;
                    rdfs:range xsd:string ;
                    rdfs:isDefinedBy "OCDS schema v1.1: Transaction <id>." .
 
 
-###  http://www.sintef.no/ontology/ocds/unit
+###  https://theybuyforyou.eu/ontology/ocds/unit
 ocds:unit rdf:type owl:DatatypeProperty ;
           rdfs:range xsd:string ;
           rdfs:comment "Use in OCDS ontology: Item." ;
           rdfs:isDefinedBy "OCDS schema: Item <unit>." .
 
 
-###  http://www.sintef.no/ontology/ocds/valueAmount
+###  https://theybuyforyou.eu/ontology/ocds/valueAmount
 ocds:valueAmount rdf:type owl:DatatypeProperty ;
                  rdfs:domain ocds:Value ;
                  rdfs:range xsd:decimal ;
                  rdfs:isDefinedBy "OCDS schema v1.1: Value <amount>." .
 
 
-###  http://www.sintef.no/ontology/ocds/valueCurrency
+###  https://theybuyforyou.eu/ontology/ocds/valueCurrency
 ocds:valueCurrency rdf:type owl:DatatypeProperty ;
                    rdfs:domain ocds:Value ;
                    rdfs:range xsd:string ;
                    rdfs:isDefinedBy "OCDS schema v1.1: Value <currency>." .
 
 
-###  http://www.w3.org/ns/org#identifier
-org:identifier rdf:type owl:DatatypeProperty ;
-               rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#notation> ;
-               rdfs:domain ocds:Organisation ;
-               rdfs:comment "Many different national and international identifier schemes are available from other vocabularies. The ORG ontology is neutral to which schemes are used. The particular identifier scheme should be indicated by the datatype of the identifier value. Using datatypes to distinguish the notation scheme used is consistent with recommended best practice for skos:notation of which this property is a specialization." ;
-               rdfs:isDefinedBy "OCDS schema v1.1: Parties <identifier>, i.e., Primary identifier." ,
-                                "https://www.w3.org/TR/vocab-org/#org:identifier" .
-
-
 #################################################################
 #    Classes
 #################################################################
 
-###  http://www.sintef.no/ontology/ocds/Address
+###  https://theybuyforyou.eu/ontology/ocds/Address
 ocds:Address rdf:type owl:Class ;
+             rdfs:comment "Uses also the following data type properties: addressCountry, addressLocality, postalCode, streeAddress, region." ;
+             rdfs:isDefinedBy "OCDS schema v1.1: Adress." ;
              ocds:usesDataProperty <http://schema.org/addressCountry> ,
                                    <http://schema.org/addressLocality> ,
                                    <http://schema.org/postalCode> ,
                                    <http://schema.org/streetAddress> ,
-                                   ocds:region ;
-             rdfs:comment "Uses also the following data type properties: addressCountry, addressLocality, postalCode, streeAddress, region." ;
-             rdfs:isDefinedBy "OCDS schema v1.1: Adress." .
+                                   ocds:region .
 
 
-###  http://www.sintef.no/ontology/ocds/Amendment
+###  https://theybuyforyou.eu/ontology/ocds/Amendment
 ocds:Amendment rdf:type owl:Class ;
-               ocds:usesDataProperty dc:description ;
+               rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                 owl:onProperty ocds:hasAmendment ;
+                                 owl:allValuesFrom ocds:Amendment
+                               ] ;
                rdfs:comment "Uses also the following data type properties: description." ;
-               rdfs:isDefinedBy "OCDS schema v1.1: Amendment." .
+               rdfs:isDefinedBy "OCDS schema v1.1: Amendment." ;
+               ocds:usesDataProperty dc:description .
 
 
-###  http://www.sintef.no/ontology/ocds/Award
+###  https://theybuyforyou.eu/ontology/ocds/Award
 ocds:Award rdf:type owl:Class ;
-           ocds:usesDataProperty dc:description ,
-                                 dc:title ;
+           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                             owl:onProperty ocds:hasAmendment ;
+                             owl:allValuesFrom ocds:Amendment
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty ocds:hasAwardValue ;
+                             owl:allValuesFrom ocds:Value
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty ocds:hasAwardedContractPeriod ;
+                             owl:allValuesFrom ocds:Period
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty ocds:hasAwardedItem ;
+                             owl:allValuesFrom ocds:Item
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty ocds:hasDocument ;
+                             owl:allValuesFrom ocds:Document
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty ocds:isIssuedForTender ;
+                             owl:allValuesFrom ocds:Tender
+                           ] ;
            rdfs:comment "Uses also the following data type properties: title, description." ;
-           rdfs:isDefinedBy "OCDS schema v1.1: Award." .
+           rdfs:isDefinedBy "OCDS schema v1.1: Award." ;
+           ocds:usesDataProperty dc:description ,
+                                 dc:title .
 
 
-###  http://www.sintef.no/ontology/ocds/Budget
+###  https://theybuyforyou.eu/ontology/ocds/Budget
 ocds:Budget rdf:type owl:Class ;
-            ocds:usesDataProperty dc:description ,
-                                  ocds:URI ;
+            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                              owl:onProperty ocds:hasReservedValue ;
+                              owl:allValuesFrom ocds:Value
+                            ] ;
             rdfs:comment "Uses also the following data type properties: description, URI." ;
-            rdfs:isDefinedBy "OCDS schema v1.1: Budget." .
+            rdfs:isDefinedBy "OCDS schema v1.1: Budget." ;
+            ocds:usesDataProperty dc:description ,
+                                  ocds:URI .
 
 
-###  http://www.sintef.no/ontology/ocds/ContactPoint
+###  https://theybuyforyou.eu/ontology/ocds/ContactPoint
 ocds:ContactPoint rdf:type owl:Class ;
+                  rdfs:comment "Uses also the following data type properties: faxNumber, telephone, email, addressCountry, postalCode, addressLocality, streetAddress, name, url." ;
+                  rdfs:isDefinedBy "OCDS schema v1.1: ContactPoint." ;
                   ocds:usesDataProperty <http://schema.org/URL> ,
                                         <http://schema.org/addressCountry> ,
                                         <http://schema.org/addressLocality> ,
@@ -1188,99 +1222,261 @@ ocds:ContactPoint rdf:type owl:Class ;
                                         <http://schema.org/name> ,
                                         <http://schema.org/postalCode> ,
                                         <http://schema.org/streetAddress> ,
-                                        <http://schema.org/telephone> ;
-                  rdfs:comment "Uses also the following data type properties: faxNumber, telephone, email, addressCountry, postalCode, addressLocality, streetAddress, name, url." ;
-                  rdfs:isDefinedBy "OCDS schema v1.1: ContactPoint." .
+                                        <http://schema.org/telephone> .
 
 
-###  http://www.sintef.no/ontology/ocds/Contract
+###  https://theybuyforyou.eu/ontology/ocds/Contract
 ocds:Contract rdf:type owl:Class ;
-              ocds:usesDataProperty dc:description ,
-                                    dc:title ;
+              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                owl:onProperty ocds:hasAmendment ;
+                                owl:allValuesFrom ocds:Amendment
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty ocds:hasContractImplementation ;
+                                owl:allValuesFrom ocds:Implementation
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty ocds:hasContractPeriod ;
+                                owl:allValuesFrom ocds:Period
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty ocds:hasContractValue ;
+                                owl:allValuesFrom ocds:Value
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty ocds:hasContractedItem ;
+                                owl:allValuesFrom ocds:Item
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty ocds:hasDocument ;
+                                owl:allValuesFrom ocds:Document
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty ocds:hasMilestone ;
+                                owl:allValuesFrom ocds:Milestone
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty ocds:isIssuedForAward ;
+                                owl:allValuesFrom ocds:Award
+                              ] ;
               rdfs:comment "Uses also the following data type properties: title, description." ;
-              rdfs:isDefinedBy "OCDS schema v1.1: Contact." .
+              rdfs:isDefinedBy "OCDS schema v1.1: Contact." ;
+              ocds:usesDataProperty dc:description ,
+                                    dc:title .
 
 
-###  http://www.sintef.no/ontology/ocds/ContractingProcess
+###  https://theybuyforyou.eu/ontology/ocds/ContractingProcess
 ocds:ContractingProcess rdf:type owl:Class ;
+                        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                          owl:onProperty ocds:hasAward ;
+                                          owl:allValuesFrom ocds:Award
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty ocds:hasContract ;
+                                          owl:allValuesFrom ocds:Contract
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty ocds:hasPlan ;
+                                          owl:allValuesFrom ocds:Plan
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty ocds:hasRelatedProcess ;
+                                          owl:allValuesFrom ocds:ContractingProcess
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty ocds:hasTender ;
+                                          owl:allValuesFrom ocds:Tender
+                                        ] ;
                         rdfs:isDefinedBy "OCDS schema v1.1." .
 
 
-###  http://www.sintef.no/ontology/ocds/Document
+###  https://theybuyforyou.eu/ontology/ocds/Document
 ocds:Document rdf:type owl:Class ;
+              rdfs:comment "Uses also the following data type properties: language, format, title, description, url." ;
+              rdfs:isDefinedBy "OCDS schema v1.1: Document." ;
               ocds:usesDataProperty dc:description ,
                                     dc:format ,
                                     dc:language ,
                                     dc:title ,
-                                    <http://schema.org/URL> ;
-              rdfs:comment "Uses also the following data type properties: language, format, title, description, url." ;
-              rdfs:isDefinedBy "OCDS schema v1.1: Document." .
+                                    <http://schema.org/URL> .
 
 
-###  http://www.sintef.no/ontology/ocds/Implementation
+###  https://theybuyforyou.eu/ontology/ocds/Implementation
 ocds:Implementation rdf:type owl:Class ;
+                    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                      owl:onProperty ocds:hasDocument ;
+                                      owl:allValuesFrom ocds:Document
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty ocds:hasMilestone ;
+                                      owl:allValuesFrom ocds:Milestone
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty ocds:hasTransaction ;
+                                      owl:allValuesFrom ocds:Transaction
+                                    ] ;
                     rdfs:isDefinedBy "OCDS schema v1.1: Implementation." .
 
 
-###  http://www.sintef.no/ontology/ocds/Item
+###  https://theybuyforyou.eu/ontology/ocds/Item
 ocds:Item rdf:type owl:Class ;
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty ocds:hasAdditionalClassification ;
+                            owl:allValuesFrom <http://www.w3.org/2004/02/skos/core#Concept>
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty ocds:hasClassification ;
+                            owl:allValuesFrom <http://www.w3.org/2004/02/skos/core#Concept>
+                          ] ;
+          rdfs:comment "Uses also following data properties: quantity, unit, description." ;
+          rdfs:isDefinedBy "OCDS schema v1.1: Item." ;
           ocds:usesDataProperty dc:description ,
                                 ocds:quantity ,
-                                ocds:unit ;
-          rdfs:comment "Uses also following data properties: quantity, unit, description." ;
-          rdfs:isDefinedBy "OCDS schema v1.1: Item." .
+                                ocds:unit .
 
 
-###  http://www.sintef.no/ontology/ocds/Milestone
+###  https://theybuyforyou.eu/ontology/ocds/Milestone
 ocds:Milestone rdf:type owl:Class ;
-               ocds:usesDataProperty dc:description ,
-                                     dc:title ;
+               rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                 owl:onProperty ocds:hasDocument ;
+                                 owl:allValuesFrom ocds:Document
+                               ] ;
                rdfs:comment "Uses also the following data type properties: title, description." ;
-               rdfs:isDefinedBy "OCDS schema v1.1: Milestone." .
+               rdfs:isDefinedBy "OCDS schema v1.1: Milestone." ;
+               ocds:usesDataProperty dc:description ,
+                                     dc:title .
 
 
-###  http://www.sintef.no/ontology/ocds/Organisation
+###  https://theybuyforyou.eu/ontology/ocds/Organisation
 ocds:Organisation rdf:type owl:Class ;
+                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                    owl:onProperty ocds:hasAddress ;
+                                    owl:allValuesFrom ocds:Address
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty ocds:hasContactPoint ;
+                                    owl:allValuesFrom ocds:ContactPoint
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty ocds:isBuyerFor ;
+                                    owl:allValuesFrom ocds:ContractingProcess
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty ocds:isPayeeFor ;
+                                    owl:allValuesFrom ocds:Transaction
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty ocds:isPayerFor ;
+                                    owl:allValuesFrom ocds:Transaction
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty ocds:isProcuringEntityFor ;
+                                    owl:allValuesFrom ocds:Tender
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty ocds:isSupplierFor ;
+                                    owl:allValuesFrom ocds:Award
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty ocds:isTendererFor ;
+                                    owl:allValuesFrom ocds:Tender
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty ocds:playsRoleIn ;
+                                    owl:allValuesFrom ocds:ContractingProcess
+                                  ] ;
+                  rdfs:comment "Uses also the following data type properties: legalName, name, URI." ;
+                  rdfs:isDefinedBy "OCDS schema v1.1: Organization." ;
                   ocds:usesDataProperty <http://schema.org/name> ,
                                         ocds:URI ,
-                                        ocds:legalName ;
-                  rdfs:comment "Uses also the following data type properties: legalName, name, URI." ;
-                  rdfs:isDefinedBy "OCDS schema v1.1: Organization." .
+                                        ocds:legalName .
 
 
-###  http://www.sintef.no/ontology/ocds/Period
+###  https://theybuyforyou.eu/ontology/ocds/Period
 ocds:Period rdf:type owl:Class ;
             rdfs:isDefinedBy "OCDS schema v1.1: Period." .
 
 
-###  http://www.sintef.no/ontology/ocds/Plan
+###  https://theybuyforyou.eu/ontology/ocds/Plan
 ocds:Plan rdf:type owl:Class ;
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty ocds:hasBudget ;
+                            owl:allValuesFrom ocds:Budget
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty ocds:hasDocument ;
+                            owl:allValuesFrom ocds:Document
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty ocds:hasMilestone ;
+                            owl:allValuesFrom ocds:Milestone
+                          ] ;
           rdfs:isDefinedBy "OCDS schema v1.1: Planning." .
 
 
-###  http://www.sintef.no/ontology/ocds/Project
+###  https://theybuyforyou.eu/ontology/ocds/Project
 ocds:Project rdf:type owl:Class ;
-             ocds:usesDataProperty dc:title ;
              rdfs:comment "Uses also the following data type properties: title." ;
-             rdfs:isDefinedBy "OCDS schema v1.1: Budget." .
+             rdfs:isDefinedBy "OCDS schema v1.1: Budget." ;
+             ocds:usesDataProperty dc:title .
 
 
-###  http://www.sintef.no/ontology/ocds/Tender
+###  https://theybuyforyou.eu/ontology/ocds/Tender
 ocds:Tender rdf:type owl:Class ;
-            ocds:usesDataProperty dc:description ,
-                                  dc:title ;
+            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                              owl:onProperty ocds:hasAmendment ;
+                              owl:allValuesFrom ocds:Amendment
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty ocds:hasAwardPeriod ;
+                              owl:allValuesFrom ocds:Period
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty ocds:hasDocument ;
+                              owl:allValuesFrom ocds:Document
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty ocds:hasEstimatedContractPeriod ;
+                              owl:allValuesFrom ocds:Period
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty ocds:hasItemToBeProcured ;
+                              owl:allValuesFrom ocds:Item
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty ocds:hasMaxEstimatedValue ;
+                              owl:allValuesFrom ocds:Value
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty ocds:hasMilestone ;
+                              owl:allValuesFrom ocds:Milestone
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty ocds:hasMinEstimatedValue ;
+                              owl:allValuesFrom ocds:Value
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty ocds:hasTenderPeriod ;
+                              owl:allValuesFrom ocds:Period
+                            ] ;
             rdfs:comment "Uses also the following data type properties: title, description." ;
-            rdfs:isDefinedBy "OCDS schema v1.1: Tender." .
+            rdfs:isDefinedBy "OCDS schema v1.1: Tender." ;
+            ocds:usesDataProperty dc:description ,
+                                  dc:title .
 
 
-###  http://www.sintef.no/ontology/ocds/Transaction
+###  https://theybuyforyou.eu/ontology/ocds/Transaction
 ocds:Transaction rdf:type owl:Class ;
-                 ocds:usesDataProperty ocds:URI ;
+                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                   owl:onProperty ocds:hasTransactionValue ;
+                                   owl:allValuesFrom ocds:Transaction
+                                 ] ;
                  rdfs:comment "Uses also the following data type properties: URI." ;
-                 rdfs:isDefinedBy "OCDS schema v1.1: Transaction." .
+                 rdfs:isDefinedBy "OCDS schema v1.1: Transaction." ;
+                 ocds:usesDataProperty ocds:URI .
 
 
-###  http://www.sintef.no/ontology/ocds/Value
+###  https://theybuyforyou.eu/ontology/ocds/Value
 ocds:Value rdf:type owl:Class ;
            rdfs:isDefinedBy "OCDS schema v1.1: Value." .
 

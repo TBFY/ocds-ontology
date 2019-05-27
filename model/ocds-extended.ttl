@@ -9,10 +9,10 @@
 @prefix ocds: <https://theybuyforyou.eu/ontology/ocds/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
-@base <http://www.sintef.no/ontology/ocds/> .
+@base <https://theybuyforyou.eu/ontology/ocds/> .
 
-<http://www.sintef.no/ontology/ocds/> rdf:type owl:Ontology ;
-                                       owl:imports <http://www.w3.org/2004/02/skos/core> .
+<https://theybuyforyou.eu/ontology/ocds/> rdf:type owl:Ontology ;
+                                           owl:imports <http://www.w3.org/2004/02/skos/core> .
 
 #################################################################
 #    Annotation properties

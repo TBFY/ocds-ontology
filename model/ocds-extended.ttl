@@ -122,6 +122,13 @@ ocds:hasBudget rdf:type owl:ObjectProperty ;
                rdfs:isDefinedBy "OCDS schema v1.1: Plan <budget>." .
 
 
+###  https://theybuyforyou.eu/ontology/ocds/hasBuyer
+ocds:hasBuyer rdf:type owl:ObjectProperty ;
+              owl:inverseOf ocds:isBuyerFor ;
+              rdfs:domain ocds:ContractingProcess ;
+              rdfs:range ocds:Organisation .
+
+
 ###  https://theybuyforyou.eu/ontology/ocds/hasClassification
 ocds:hasClassification rdf:type owl:ObjectProperty ;
                        rdfs:domain ocds:Item ;
@@ -218,6 +225,7 @@ ocds:hasEstimatedContractPeriod rdf:type owl:ObjectProperty ;
 
 ###  https://theybuyforyou.eu/ontology/ocds/hasItemToBeProcured
 ocds:hasItemToBeProcured rdf:type owl:ObjectProperty ;
+                         owl:inverseOf ocds:isProcuredInTender ;
                          rdfs:domain ocds:Tender ;
                          rdfs:range ocds:Item ;
                          rdfs:isDefinedBy "OCDS schema v1.1: Tender <items>." .
@@ -357,8 +365,22 @@ ocds:hasSubmittedBid rdf:type owl:ObjectProperty ;
                      rdfs:isDefinedBy "OCDS schema v1.1: Bid statistics extension." .
 
 
+###  https://theybuyforyou.eu/ontology/ocds/hasSupplier
+ocds:hasSupplier rdf:type owl:ObjectProperty ;
+                 owl:inverseOf ocds:isSupplierFor ;
+                 rdfs:domain [ rdf:type owl:Class ;
+                               owl:unionOf ( ocds:Award
+                                             ocds:Contract
+                                             ocds:Lot
+                                           )
+                             ] ;
+                 rdfs:range ocds:Organisation ;
+                 rdfs:label "has supplier"@en .
+
+
 ###  https://theybuyforyou.eu/ontology/ocds/hasTender
 ocds:hasTender rdf:type owl:ObjectProperty ;
+               owl:inverseOf ocds:isTenderFor ;
                rdfs:domain ocds:ContractingProcess ;
                rdfs:range ocds:Tender ;
                rdfs:isDefinedBy "OCDS schema v1.1." .
@@ -383,6 +405,13 @@ ocds:hasTransactionValue rdf:type owl:ObjectProperty ;
                          rdfs:domain ocds:Transaction ;
                          rdfs:range ocds:Value ;
                          rdfs:isDefinedBy "OCDS schema v1.1: Transaction <value>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/involvesOrganisation
+ocds:involvesOrganisation rdf:type owl:ObjectProperty ;
+                          owl:inverseOf ocds:playsRoleIn ;
+                          rdfs:domain ocds:ContractingProcess ;
+                          rdfs:range ocds:Organisation .
 
 
 ###  https://theybuyforyou.eu/ontology/ocds/isBuyerFor
@@ -432,6 +461,12 @@ ocds:isPayerFor rdf:type owl:ObjectProperty ;
                 rdfs:isDefinedBy "OCDS schema v1.1: Transaction <payer>." .
 
 
+###  https://theybuyforyou.eu/ontology/ocds/isProcuredInTender
+ocds:isProcuredInTender rdf:type owl:ObjectProperty ;
+                        rdfs:domain ocds:Item ;
+                        rdfs:range ocds:Tender .
+
+
 ###  https://theybuyforyou.eu/ontology/ocds/isProcuringEntityFor
 ocds:isProcuringEntityFor rdf:type owl:ObjectProperty ;
                           rdfs:domain ocds:Organisation ;
@@ -465,10 +500,17 @@ ocds:isSupplierFor rdf:type owl:ObjectProperty ;
                    rdfs:range [ rdf:type owl:Class ;
                                 owl:unionOf ( ocds:Award
                                               ocds:Contract
+                                              ocds:Lot
                                             )
                               ] ;
                    rdfs:isDefinedBy "OCDS schema v1.1:  Contract suppliers extension." ,
                                     "OCDS schema v1.1: Award <suppliers>." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/isTenderFor
+ocds:isTenderFor rdf:type owl:ObjectProperty ;
+                 rdfs:domain ocds:Tender ;
+                 rdfs:range ocds:ContractingProcess .
 
 
 ###  https://theybuyforyou.eu/ontology/ocds/isTendererFor
@@ -1379,6 +1421,10 @@ ocds:valueCurrency rdf:type owl:DatatypeProperty ;
 #    Classes
 #################################################################
 
+###  http://www.w3.org/ns/org#Organization
+org:Organization rdf:type owl:Class .
+
+
 ###  http://xmlns.com/foaf/0.1/Person
 foaf:Person rdf:type owl:Class ;
             rdfs:isDefinedBy "OCDS schema v1.1: Enquiries extension." ,
@@ -1428,6 +1474,10 @@ ocds:Award rdf:type owl:Class ;
                            [ rdf:type owl:Restriction ;
                              owl:onProperty ocds:hasDocument ;
                              owl:allValuesFrom ocds:Document
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty ocds:hasSupplier ;
+                             owl:allValuesFrom ocds:Organisation
                            ] ,
                            [ rdf:type owl:Restriction ;
                              owl:onProperty ocds:isIssuedForTender ;
@@ -1516,6 +1566,10 @@ ocds:Contract rdf:type owl:Class ;
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty ocds:hasMilestone ;
                                 owl:allValuesFrom ocds:Milestone
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty ocds:hasSupplier ;
+                                owl:allValuesFrom ocds:Organisation
                               ] ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty ocds:isIssuedForAward ;
@@ -1639,6 +1693,10 @@ ocds:Lot rdf:type owl:Class ;
                          [ rdf:type owl:Restriction ;
                            owl:onProperty ocds:hasRelatedEnquiry ;
                            owl:allValuesFrom ocds:Enquiry
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty ocds:hasSupplier ;
+                           owl:allValuesFrom ocds:Organisation
                          ] ;
          rdfs:comment "Uses also the following data types: title, description." ;
          rdfs:isDefinedBy "OCDS schema v1.1: Lots extension." ;
@@ -1664,7 +1722,8 @@ ocds:Milestone rdf:type owl:Class ;
 
 ###  https://theybuyforyou.eu/ontology/ocds/Organisation
 ocds:Organisation rdf:type owl:Class ;
-                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                  rdfs:subClassOf org:Organization ,
+                                  [ rdf:type owl:Restriction ;
                                     owl:onProperty ocds:hasAdditionalContactPoint ;
                                     owl:allValuesFrom ocds:ContactPoint
                                   ] ,
@@ -1709,6 +1768,7 @@ ocds:Organisation rdf:type owl:Class ;
                                     owl:allValuesFrom [ rdf:type owl:Class ;
                                                         owl:unionOf ( ocds:Award
                                                                       ocds:Contract
+                                                                      ocds:Lot
                                                                     )
                                                       ]
                                   ] ,

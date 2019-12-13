@@ -244,6 +244,15 @@ ocds:hasLotValue rdf:type owl:ObjectProperty ;
                  rdfs:range ocds:Value ;
                  rdfs:isDefinedBy "OCDS schema v1.1: Lots extension." .
 
+###  https://theybuyforyou.eu/ontology/ocds/hasRelatedTender
+ocds:hasRelatedTender rdf:type owl:ObjectProperty ;
+            rdfs:domain ocds:Lot ;
+            rdfs:range ocds:Tender .
+
+###  https://theybuyforyou.eu/ontology/ocds/hasRelatedAward
+ocds:hasRelatedAward rdf:type owl:ObjectProperty ;
+            rdfs:domain ocds:Lot ;
+            rdfs:range ocds:Award .
 
 ###  https://theybuyforyou.eu/ontology/ocds/hasMaxEstimatedValue
 ocds:hasMaxEstimatedValue rdf:type owl:ObjectProperty ;

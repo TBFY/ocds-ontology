@@ -244,15 +244,6 @@ ocds:hasLotValue rdf:type owl:ObjectProperty ;
                  rdfs:range ocds:Value ;
                  rdfs:isDefinedBy "OCDS schema v1.1: Lots extension." .
 
-###  https://theybuyforyou.eu/ontology/ocds/hasRelatedTender
-ocds:hasRelatedTender rdf:type owl:ObjectProperty ;
-            rdfs:domain ocds:Lot ;
-            rdfs:range ocds:Tender .
-
-###  https://theybuyforyou.eu/ontology/ocds/hasRelatedAward
-ocds:hasRelatedAward rdf:type owl:ObjectProperty ;
-            rdfs:domain ocds:Lot ;
-            rdfs:range ocds:Award .
 
 ###  https://theybuyforyou.eu/ontology/ocds/hasMaxEstimatedValue
 ocds:hasMaxEstimatedValue rdf:type owl:ObjectProperty ;
@@ -293,6 +284,12 @@ ocds:hasReceivedBid rdf:type owl:ObjectProperty ;
                     rdfs:domain ocds:Tender ;
                     rdfs:range ocds:Bid ;
                     rdfs:isDefinedBy "OCDS schema v1.1: Bids statistics extension." .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/hasRelatedAward
+ocds:hasRelatedAward rdf:type owl:ObjectProperty ;
+                     rdfs:domain ocds:Lot ;
+                     rdfs:range ocds:Award .
 
 
 ###  https://theybuyforyou.eu/ontology/ocds/hasRelatedEnquiry
@@ -346,6 +343,12 @@ ocds:hasRelatedReplacementProcess rdf:type owl:ObjectProperty ;
 ###  https://theybuyforyou.eu/ontology/ocds/hasRelatedSubContract
 ocds:hasRelatedSubContract rdf:type owl:ObjectProperty ;
                            rdfs:subPropertyOf ocds:hasRelatedProcess .
+
+
+###  https://theybuyforyou.eu/ontology/ocds/hasRelatedTender
+ocds:hasRelatedTender rdf:type owl:ObjectProperty ;
+                      rdfs:domain ocds:Lot ;
+                      rdfs:range ocds:Tender .
 
 
 ###  https://theybuyforyou.eu/ontology/ocds/hasRelatedUnsuccessfulProcess
@@ -1431,19 +1434,22 @@ ocds:valueCurrency rdf:type owl:DatatypeProperty ;
 #################################################################
 
 ###  http://www.w3.org/ns/org#Organization
-org:Organization rdf:type owl:Class .
+org:Organization rdf:type owl:Class ;
+                 rdfs:label "Organization" .
 
 
 ###  http://xmlns.com/foaf/0.1/Person
 foaf:Person rdf:type owl:Class ;
             rdfs:isDefinedBy "OCDS schema v1.1: Enquiries extension." ,
-                             "http://xmlns.com/foaf/0.1/Person" .
+                             "http://xmlns.com/foaf/0.1/Person" ;
+            rdfs:label "Person" .
 
 
 ###  https://theybuyforyou.eu/ontology/ocds/Address
 ocds:Address rdf:type owl:Class ;
              rdfs:comment "Uses also the following data type properties: addressCountry, addressLocality, postalCode, streeAddress, region." ;
              rdfs:isDefinedBy "OCDS schema v1.1: Adress." ;
+             rdfs:label "Address" ;
              ocds:usesDataProperty <http://schema.org/addressCountry> ,
                                    <http://schema.org/addressLocality> ,
                                    <http://schema.org/postalCode> ,
@@ -1459,6 +1465,7 @@ ocds:Amendment rdf:type owl:Class ;
                                ] ;
                rdfs:comment "Uses also the following data type properties: description." ;
                rdfs:isDefinedBy "OCDS schema v1.1: Amendment." ;
+               rdfs:label "Amendment" ;
                ocds:usesDataProperty dc:description .
 
 
@@ -1498,6 +1505,7 @@ ocds:Award rdf:type owl:Class ;
                            ] ;
            rdfs:comment "Uses also the following data type properties: title, description." ;
            rdfs:isDefinedBy "OCDS schema v1.1: Award." ;
+           rdfs:label "Award" ;
            ocds:usesDataProperty dc:description ,
                                  dc:title .
 
@@ -1512,7 +1520,8 @@ ocds:Bid rdf:type owl:Class ;
                            owl:onProperty ocds:hasDocument ;
                            owl:allValuesFrom ocds:Document
                          ] ;
-         rdfs:isDefinedBy "OCDS schema v1.1: Bid statistics extension." .
+         rdfs:isDefinedBy "OCDS schema v1.1: Bid statistics extension." ;
+         rdfs:label "Bid" .
 
 
 ###  https://theybuyforyou.eu/ontology/ocds/Budget
@@ -1523,6 +1532,7 @@ ocds:Budget rdf:type owl:Class ;
                             ] ;
             rdfs:comment "Uses also the following data type properties: description, URI." ;
             rdfs:isDefinedBy "OCDS schema v1.1: Budget." ;
+            rdfs:label "Budget" ;
             ocds:usesDataProperty dc:description ,
                                   ocds:URI .
 
@@ -1531,6 +1541,7 @@ ocds:Budget rdf:type owl:Class ;
 ocds:ContactPoint rdf:type owl:Class ;
                   rdfs:comment "Uses also the following data type properties: faxNumber, telephone, email, addressCountry, postalCode, addressLocality, streetAddress, name, url." ;
                   rdfs:isDefinedBy "OCDS schema v1.1: ContactPoint." ;
+                  rdfs:label "ContactPoint" ;
                   ocds:usesDataProperty <http://schema.org/URL> ,
                                         <http://schema.org/addressCountry> ,
                                         <http://schema.org/addressLocality> ,
@@ -1586,6 +1597,7 @@ ocds:Contract rdf:type owl:Class ;
                               ] ;
               rdfs:comment "Uses also the following data type properties: title, description." ;
               rdfs:isDefinedBy "OCDS schema v1.1: Contact." ;
+              rdfs:label "Contract" ;
               ocds:usesDataProperty dc:description ,
                                     dc:title .
 
@@ -1615,13 +1627,15 @@ ocds:ContractingProcess rdf:type owl:Class ;
                         rdfs:comment "Title and description properties is extracted from the following extension: OCDS v1.1. Process level title and description." ,
                                      "Uses also the following data type properties: title, description." ;
                         rdfs:isDefinedBy "OCDS schema v1.1." ;
+                        rdfs:label "ContractingProcess" ;
                         ocds:usesDataProperty dc:description ,
                                               dc:title .
 
 
 ###  https://theybuyforyou.eu/ontology/ocds/Discussion
 ocds:Discussion rdf:type owl:Class ;
-                rdfs:comment "OCDS schema v1.1: Enquiries extension." .
+                rdfs:comment "OCDS schema v1.1: Enquiries extension." ;
+                rdfs:label "Discussion" .
 
 
 ###  https://theybuyforyou.eu/ontology/ocds/Document
@@ -1632,6 +1646,7 @@ ocds:Document rdf:type owl:Class ;
                               ] ;
               rdfs:comment "Uses also the following data type properties: language, format, title, description, url." ;
               rdfs:isDefinedBy "OCDS schema v1.1: Document." ;
+              rdfs:label "Document" ;
               ocds:usesDataProperty dc:description ,
                                     dc:format ,
                                     dc:language ,
@@ -1647,6 +1662,7 @@ ocds:Enquiry rdf:type owl:Class ;
                              ] ;
              rdfs:comment "Uses also the following data type properties: title, description." ;
              rdfs:isDefinedBy "OCDS schema v1.1: Enquiries extension." ;
+             rdfs:label "Enquiry" ;
              ocds:usesDataProperty dc:description ,
                                    dc:title .
 
@@ -1665,7 +1681,8 @@ ocds:Implementation rdf:type owl:Class ;
                                       owl:onProperty ocds:hasTransaction ;
                                       owl:allValuesFrom ocds:Transaction
                                     ] ;
-                    rdfs:isDefinedBy "OCDS schema v1.1: Implementation." .
+                    rdfs:isDefinedBy "OCDS schema v1.1: Implementation." ;
+                    rdfs:label "Implementation" .
 
 
 ###  https://theybuyforyou.eu/ontology/ocds/Item
@@ -1688,6 +1705,7 @@ ocds:Item rdf:type owl:Class ;
                           ] ;
           rdfs:comment "Uses also following data properties: quantity, unit, description." ;
           rdfs:isDefinedBy "OCDS schema v1.1: Item." ;
+          rdfs:label "Item" ;
           ocds:usesDataProperty dc:description ,
                                 ocds:quantity ,
                                 ocds:unit .
@@ -1709,6 +1727,7 @@ ocds:Lot rdf:type owl:Class ;
                          ] ;
          rdfs:comment "Uses also the following data types: title, description." ;
          rdfs:isDefinedBy "OCDS schema v1.1: Lots extension." ;
+         rdfs:label "Lot" ;
          ocds:usesDataProperty dc:description ,
                                dc:title .
 
@@ -1725,6 +1744,7 @@ ocds:Milestone rdf:type owl:Class ;
                                ] ;
                rdfs:comment "Uses also the following data type properties: title, description." ;
                rdfs:isDefinedBy "OCDS schema v1.1: Milestone." ;
+               rdfs:label "Milestone" ;
                ocds:usesDataProperty dc:description ,
                                      dc:title .
 
@@ -1798,7 +1818,8 @@ ocds:Organisation rdf:type owl:Class ;
 
 ###  https://theybuyforyou.eu/ontology/ocds/Period
 ocds:Period rdf:type owl:Class ;
-            rdfs:isDefinedBy "OCDS schema v1.1: Period." .
+            rdfs:isDefinedBy "OCDS schema v1.1: Period." ;
+            rdfs:label "Period" .
 
 
 ###  https://theybuyforyou.eu/ontology/ocds/Plan
@@ -1815,13 +1836,15 @@ ocds:Plan rdf:type owl:Class ;
                             owl:onProperty ocds:hasMilestone ;
                             owl:allValuesFrom ocds:Milestone
                           ] ;
-          rdfs:isDefinedBy "OCDS schema v1.1: Planning." .
+          rdfs:isDefinedBy "OCDS schema v1.1: Planning." ;
+          rdfs:label "Plan" .
 
 
 ###  https://theybuyforyou.eu/ontology/ocds/Project
 ocds:Project rdf:type owl:Class ;
              rdfs:comment "Uses also the following data type properties: title." ;
              rdfs:isDefinedBy "OCDS schema v1.1: Budget." ;
+             rdfs:label "Project" ;
              ocds:usesDataProperty dc:title .
 
 
@@ -1829,6 +1852,7 @@ ocds:Project rdf:type owl:Class ;
 ocds:Requirement rdf:type owl:Class ;
                  rdfs:comment "Uses also the following data type properties: description." ;
                  rdfs:isDefinedBy "OCDS schema v1.1: Requirements extension." ;
+                 rdfs:label "Requirement" ;
                  ocds:usesDataProperty dc:description .
 
 
@@ -1892,6 +1916,7 @@ ocds:Tender rdf:type owl:Class ;
                             ] ;
             rdfs:comment "Uses also the following data type properties: title, description." ;
             rdfs:isDefinedBy "OCDS schema v1.1: Tender." ;
+            rdfs:label "Tender" ;
             ocds:usesDataProperty dc:description ,
                                   dc:title .
 
@@ -1904,12 +1929,14 @@ ocds:Transaction rdf:type owl:Class ;
                                  ] ;
                  rdfs:comment "Uses also the following data type properties: URI." ;
                  rdfs:isDefinedBy "OCDS schema v1.1: Transaction." ;
+                 rdfs:label "Transaction" ;
                  ocds:usesDataProperty ocds:URI .
 
 
 ###  https://theybuyforyou.eu/ontology/ocds/Value
 ocds:Value rdf:type owl:Class ;
-           rdfs:isDefinedBy "OCDS schema v1.1: Value." .
+           rdfs:isDefinedBy "OCDS schema v1.1: Value." ;
+           rdfs:label "Value" .
 
 
 ###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi

@@ -1582,8 +1582,7 @@ ocds:valueCurrency rdf:type owl:DatatypeProperty ;
 #################################################################
 
 ###  http://www.w3.org/ns/org#Organization
-org:Organization rdf:type owl:Class ;
-                 rdfs:label "Organization" .
+org:Organization rdf:type owl:Class .
 
 
 ###  http://xmlns.com/foaf/0.1/Person

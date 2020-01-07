@@ -1959,6 +1959,7 @@ ocds:Organisation rdf:type owl:Class ;
                                   ] ;
                   rdfs:comment "Uses also the following data type properties: legalName, name, URI." ;
                   rdfs:isDefinedBy "OCDS schema v1.1: Organization." ;
+                  rdfs:label "Organization" ;
                   ocds:usesDataProperty <http://schema.org/name> ,
                                         ocds:URI ,
                                         ocds:legalName .

@@ -317,7 +317,7 @@ ocds:hasSupplier rdf:type owl:ObjectProperty ;
                                            )
                              ] ;
                  rdfs:range ocds:Organisation ;
-                 rdfs:label "has supplier"@en .
+                 rdfs:label "has supplier" .
 
 
 ###  https://theybuyforyou.eu/ontology/ocds/hasTender

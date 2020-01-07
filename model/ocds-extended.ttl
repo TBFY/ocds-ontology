@@ -1,4 +1,4 @@
-@prefix : <https://theybuyforyou.eu/ontology/ocds#> .
+@prefix : <http://data.tbfy.eu/ontology/ocds#> .
 @prefix dc: <http://purl.org/dc/terms/> .
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -6,19 +6,19 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix ocds: <https://theybuyforyou.eu/ontology/ocds#> .
+@prefix ocds: <http://data.tbfy.eu/ontology/ocds#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
-@base <https://theybuyforyou.eu/ontology/ocds#> .
+@base <http://data.tbfy.eu/ontology/ocds#> .
 
-<https://theybuyforyou.eu/ontology/ocds#> rdf:type owl:Ontology ;
+<http://data.tbfy.eu/ontology/ocds#> rdf:type owl:Ontology ;
                                            owl:imports <http://www.w3.org/2004/02/skos/core> .
 
 #################################################################
 #    Annotation properties
 #################################################################
 
-###  https://theybuyforyou.eu/ontology/ocds#usesDataProperty
+###  http://data.tbfy.eu/ontology/ocds#usesDataProperty
 ocds:usesDataProperty rdf:type owl:AnnotationProperty .
 
 
@@ -26,7 +26,7 @@ ocds:usesDataProperty rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
-###  https://theybuyforyou.eu/ontology/ocds#belongsToDiscussion
+###  http://data.tbfy.eu/ontology/ocds#belongsToDiscussion
 ocds:belongsToDiscussion rdf:type owl:ObjectProperty ;
                          rdfs:domain ocds:Enquiry ;
                          rdfs:range ocds:Discussion ;
@@ -34,7 +34,7 @@ ocds:belongsToDiscussion rdf:type owl:ObjectProperty ;
                          rdfs:label "belongs to discussion" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#extendsContract
+###  http://data.tbfy.eu/ontology/ocds#extendsContract
 ocds:extendsContract rdf:type owl:ObjectProperty ;
                      rdfs:domain ocds:Contract ;
                      rdfs:range ocds:Contract ;
@@ -42,7 +42,7 @@ ocds:extendsContract rdf:type owl:ObjectProperty ;
                      rdfs:label "extends contract" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#hasAdditionalClassification
+###  http://data.tbfy.eu/ontology/ocds#hasAdditionalClassification
 ocds:hasAdditionalClassification rdf:type owl:ObjectProperty ;
                                  rdfs:domain ocds:Item ;
                                  rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> ;
@@ -50,7 +50,7 @@ ocds:hasAdditionalClassification rdf:type owl:ObjectProperty ;
                                  rdfs:label "has additional classification" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#hasAdditionalContactPoint
+###  http://data.tbfy.eu/ontology/ocds#hasAdditionalContactPoint
 ocds:hasAdditionalContactPoint rdf:type owl:ObjectProperty ;
                                rdfs:domain ocds:Organisation ;
                                rdfs:range ocds:ContactPoint ;
@@ -58,7 +58,7 @@ ocds:hasAdditionalContactPoint rdf:type owl:ObjectProperty ;
                                rdfs:label "has additional contact point" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#hasAddress
+###  http://data.tbfy.eu/ontology/ocds#hasAddress
 ocds:hasAddress rdf:type owl:ObjectProperty ;
                 rdfs:domain ocds:Organisation ;
                 rdfs:range ocds:Address ;
@@ -66,7 +66,7 @@ ocds:hasAddress rdf:type owl:ObjectProperty ;
                 rdfs:label "has address" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#hasAmendment
+###  http://data.tbfy.eu/ontology/ocds#hasAmendment
 ocds:hasAmendment rdf:type owl:ObjectProperty ;
                   rdfs:domain [ rdf:type owl:Class ;
                                 owl:unionOf ( ocds:Award
@@ -79,7 +79,7 @@ ocds:hasAmendment rdf:type owl:ObjectProperty ;
                   rdfs:label "has amendment" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#hasAward
+###  http://data.tbfy.eu/ontology/ocds#hasAward
 ocds:hasAward rdf:type owl:ObjectProperty ;
               rdfs:domain ocds:ContractingProcess ;
               rdfs:range ocds:Award ;
@@ -87,7 +87,7 @@ ocds:hasAward rdf:type owl:ObjectProperty ;
               rdfs:label "has award" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#hasAwardPeriod
+###  http://data.tbfy.eu/ontology/ocds#hasAwardPeriod
 ocds:hasAwardPeriod rdf:type owl:ObjectProperty ;
                     rdfs:domain ocds:Tender ;
                     rdfs:range ocds:Period ;
@@ -95,7 +95,7 @@ ocds:hasAwardPeriod rdf:type owl:ObjectProperty ;
                     rdfs:label "has award period" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#hasAwardValue
+###  http://data.tbfy.eu/ontology/ocds#hasAwardValue
 ocds:hasAwardValue rdf:type owl:ObjectProperty ;
                    rdfs:domain ocds:Award ;
                    rdfs:range ocds:Value ;
@@ -103,7 +103,7 @@ ocds:hasAwardValue rdf:type owl:ObjectProperty ;
                    rdfs:label "has award value" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#hasAwardedContractPeriod
+###  http://data.tbfy.eu/ontology/ocds#hasAwardedContractPeriod
 ocds:hasAwardedContractPeriod rdf:type owl:ObjectProperty ;
                               rdfs:domain ocds:Award ;
                               rdfs:range ocds:Period ;
@@ -111,7 +111,7 @@ ocds:hasAwardedContractPeriod rdf:type owl:ObjectProperty ;
                               rdfs:label "has awarded contract period" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#hasAwardedItem
+###  http://data.tbfy.eu/ontology/ocds#hasAwardedItem
 ocds:hasAwardedItem rdf:type owl:ObjectProperty ;
                     rdfs:domain ocds:Award ;
                     rdfs:range ocds:Item ;
@@ -119,7 +119,7 @@ ocds:hasAwardedItem rdf:type owl:ObjectProperty ;
                     rdfs:label "has awarded item" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#hasBidValue
+###  http://data.tbfy.eu/ontology/ocds#hasBidValue
 ocds:hasBidValue rdf:type owl:ObjectProperty ;
                  rdfs:domain ocds:Bid ;
                  rdfs:range ocds:Value ;
@@ -127,7 +127,7 @@ ocds:hasBidValue rdf:type owl:ObjectProperty ;
                  rdfs:label "has bid value" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#hasBudget
+###  http://data.tbfy.eu/ontology/ocds#hasBudget
 ocds:hasBudget rdf:type owl:ObjectProperty ;
                rdfs:domain ocds:Plan ;
                rdfs:range ocds:Budget ;
@@ -135,7 +135,7 @@ ocds:hasBudget rdf:type owl:ObjectProperty ;
                rdfs:label "has budget" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#hasBuyer
+###  http://data.tbfy.eu/ontology/ocds#hasBuyer
 ocds:hasBuyer rdf:type owl:ObjectProperty ;
               owl:inverseOf ocds:isBuyerFor ;
               rdfs:domain ocds:ContractingProcess ;
@@ -143,7 +143,7 @@ ocds:hasBuyer rdf:type owl:ObjectProperty ;
               rdfs:label "has buyer" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#hasClassification
+###  http://data.tbfy.eu/ontology/ocds#hasClassification
 ocds:hasClassification rdf:type owl:ObjectProperty ;
                        rdfs:domain ocds:Item ;
                        rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> ;
@@ -151,7 +151,7 @@ ocds:hasClassification rdf:type owl:ObjectProperty ;
                        rdfs:label "has classification" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#hasContactPoint
+###  http://data.tbfy.eu/ontology/ocds#hasContactPoint
 ocds:hasContactPoint rdf:type owl:ObjectProperty ;
                      rdfs:domain ocds:Organisation ;
                      rdfs:range ocds:ContactPoint ;
@@ -159,7 +159,7 @@ ocds:hasContactPoint rdf:type owl:ObjectProperty ;
                      rdfs:label "has contact point" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#hasContract
+###  http://data.tbfy.eu/ontology/ocds#hasContract
 ocds:hasContract rdf:type owl:ObjectProperty ;
                  rdfs:domain ocds:ContractingProcess ;
                  rdfs:range ocds:Contract ;
@@ -167,7 +167,7 @@ ocds:hasContract rdf:type owl:ObjectProperty ;
                  rdfs:label "has contract" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#hasContractImplementation
+###  http://data.tbfy.eu/ontology/ocds#hasContractImplementation
 ocds:hasContractImplementation rdf:type owl:ObjectProperty ;
                                rdfs:domain ocds:Contract ;
                                rdfs:range ocds:Implementation ;
@@ -175,7 +175,7 @@ ocds:hasContractImplementation rdf:type owl:ObjectProperty ;
                                rdfs:label "has contract implementation" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#hasContractPeriod
+###  http://data.tbfy.eu/ontology/ocds#hasContractPeriod
 ocds:hasContractPeriod rdf:type owl:ObjectProperty ;
                        rdfs:domain ocds:Contract ;
                        rdfs:range ocds:Period ;
@@ -183,7 +183,7 @@ ocds:hasContractPeriod rdf:type owl:ObjectProperty ;
                        rdfs:label "has contract period" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#hasContractValue
+###  http://data.tbfy.eu/ontology/ocds#hasContractValue
 ocds:hasContractValue rdf:type owl:ObjectProperty ;
                       rdfs:domain ocds:Contract ;
                       rdfs:range ocds:Value ;
@@ -191,7 +191,7 @@ ocds:hasContractValue rdf:type owl:ObjectProperty ;
                       rdfs:label "has contract value" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#hasContractedItem
+###  http://data.tbfy.eu/ontology/ocds#hasContractedItem
 ocds:hasContractedItem rdf:type owl:ObjectProperty ;
                        rdfs:domain ocds:Contract ;
                        rdfs:range ocds:Item ;
@@ -199,7 +199,7 @@ ocds:hasContractedItem rdf:type owl:ObjectProperty ;
                        rdfs:label "has contracted item" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#hasDocument
+###  http://data.tbfy.eu/ontology/ocds#hasDocument
 ocds:hasDocument rdf:type owl:ObjectProperty ;
                  rdfs:domain [ rdf:type owl:Class ;
                                owl:unionOf ( ocds:Award
@@ -217,7 +217,7 @@ ocds:hasDocument rdf:type owl:ObjectProperty ;
                  rdfs:label "has document" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#hasEnquiry
+###  http://data.tbfy.eu/ontology/ocds#hasEnquiry
 ocds:hasEnquiry rdf:type owl:ObjectProperty ;
                 rdfs:domain ocds:Tender ;
                 rdfs:range ocds:Enquiry ;
@@ -225,7 +225,7 @@ ocds:hasEnquiry rdf:type owl:ObjectProperty ;
                 rdfs:label "has enquiry" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#hasEnquiryAuthor
+###  http://data.tbfy.eu/ontology/ocds#hasEnquiryAuthor
 ocds:hasEnquiryAuthor rdf:type owl:ObjectProperty ;
                       rdfs:domain ocds:Enquiry ;
                       rdfs:range foaf:Person ;
@@ -233,7 +233,7 @@ ocds:hasEnquiryAuthor rdf:type owl:ObjectProperty ;
                       rdfs:label "has enquiry author" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#hasEnquiryPeriod
+###  http://data.tbfy.eu/ontology/ocds#hasEnquiryPeriod
 ocds:hasEnquiryPeriod rdf:type owl:ObjectProperty ;
                       rdfs:domain ocds:Tender ;
                       rdfs:range ocds:Period ;
@@ -241,7 +241,7 @@ ocds:hasEnquiryPeriod rdf:type owl:ObjectProperty ;
                       rdfs:label "has enquiry period" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#hasEstimatedContractPeriod
+###  http://data.tbfy.eu/ontology/ocds#hasEstimatedContractPeriod
 ocds:hasEstimatedContractPeriod rdf:type owl:ObjectProperty ;
                                 rdfs:domain ocds:Tender ;
                                 rdfs:range ocds:Period ;
@@ -249,7 +249,7 @@ ocds:hasEstimatedContractPeriod rdf:type owl:ObjectProperty ;
                                 rdfs:label "has estimated contract period" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#hasItemToBeProcured
+###  http://data.tbfy.eu/ontology/ocds#hasItemToBeProcured
 ocds:hasItemToBeProcured rdf:type owl:ObjectProperty ;
                          owl:inverseOf ocds:isProcuredInTender ;
                          rdfs:domain ocds:Tender ;
@@ -258,7 +258,7 @@ ocds:hasItemToBeProcured rdf:type owl:ObjectProperty ;
                          rdfs:label "has item to be procured" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#hasLot
+###  http://data.tbfy.eu/ontology/ocds#hasLot
 ocds:hasLot rdf:type owl:ObjectProperty ;
             rdfs:domain ocds:Tender ;
             rdfs:range ocds:Lot ;
@@ -266,7 +266,7 @@ ocds:hasLot rdf:type owl:ObjectProperty ;
             rdfs:label "has lot" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#hasLotValue
+###  http://data.tbfy.eu/ontology/ocds#hasLotValue
 ocds:hasLotValue rdf:type owl:ObjectProperty ;
                  rdfs:domain ocds:Lot ;
                  rdfs:range ocds:Value ;
@@ -274,7 +274,7 @@ ocds:hasLotValue rdf:type owl:ObjectProperty ;
                  rdfs:label "has lot value" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#hasMaxEstimatedValue
+###  http://data.tbfy.eu/ontology/ocds#hasMaxEstimatedValue
 ocds:hasMaxEstimatedValue rdf:type owl:ObjectProperty ;
                           rdfs:domain ocds:Tender ;
                           rdfs:range ocds:Value ;
@@ -282,7 +282,7 @@ ocds:hasMaxEstimatedValue rdf:type owl:ObjectProperty ;
                           rdfs:label "has max estimated value" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#hasMilestone
+###  http://data.tbfy.eu/ontology/ocds#hasMilestone
 ocds:hasMilestone rdf:type owl:ObjectProperty ;
                   rdfs:domain [ rdf:type owl:Class ;
                                 owl:unionOf ( ocds:Contract
@@ -296,7 +296,7 @@ ocds:hasMilestone rdf:type owl:ObjectProperty ;
                   rdfs:label "has milestone" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#hasMinEstimatedValue
+###  http://data.tbfy.eu/ontology/ocds#hasMinEstimatedValue
 ocds:hasMinEstimatedValue rdf:type owl:ObjectProperty ;
                           rdfs:domain ocds:Tender ;
                           rdfs:range ocds:Value ;
@@ -304,7 +304,7 @@ ocds:hasMinEstimatedValue rdf:type owl:ObjectProperty ;
                           rdfs:label "has min estimated value" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#hasPlan
+###  http://data.tbfy.eu/ontology/ocds#hasPlan
 ocds:hasPlan rdf:type owl:ObjectProperty ;
              rdfs:domain ocds:ContractingProcess ;
              rdfs:range ocds:Plan ;
@@ -312,7 +312,7 @@ ocds:hasPlan rdf:type owl:ObjectProperty ;
              rdfs:label "has plan" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#hasReceivedBid
+###  http://data.tbfy.eu/ontology/ocds#hasReceivedBid
 ocds:hasReceivedBid rdf:type owl:ObjectProperty ;
                     rdfs:domain ocds:Tender ;
                     rdfs:range ocds:Bid ;
@@ -320,14 +320,14 @@ ocds:hasReceivedBid rdf:type owl:ObjectProperty ;
                     rdfs:label "has received bid" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#hasRelatedAward
+###  http://data.tbfy.eu/ontology/ocds#hasRelatedAward
 ocds:hasRelatedAward rdf:type owl:ObjectProperty ;
                      rdfs:domain ocds:Lot ;
                      rdfs:range ocds:Award ;
                      rdfs:label "has related award" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#hasRelatedEnquiry
+###  http://data.tbfy.eu/ontology/ocds#hasRelatedEnquiry
 ocds:hasRelatedEnquiry rdf:type owl:ObjectProperty ;
                        rdfs:domain [ rdf:type owl:Class ;
                                      owl:unionOf ( ocds:Item
@@ -339,31 +339,31 @@ ocds:hasRelatedEnquiry rdf:type owl:ObjectProperty ;
                        rdfs:label "has related enquiry" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#hasRelatedFrameworkProcess
+###  http://data.tbfy.eu/ontology/ocds#hasRelatedFrameworkProcess
 ocds:hasRelatedFrameworkProcess rdf:type owl:ObjectProperty ;
                                 rdfs:subPropertyOf ocds:hasRelatedProcess ;
                                 rdfs:label "has related framework process" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#hasRelatedParentProcess
+###  http://data.tbfy.eu/ontology/ocds#hasRelatedParentProcess
 ocds:hasRelatedParentProcess rdf:type owl:ObjectProperty ;
                              rdfs:subPropertyOf ocds:hasRelatedProcess ;
                              rdfs:label "has related parent process" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#hasRelatedPlanningProcess
+###  http://data.tbfy.eu/ontology/ocds#hasRelatedPlanningProcess
 ocds:hasRelatedPlanningProcess rdf:type owl:ObjectProperty ;
                                rdfs:subPropertyOf ocds:hasRelatedProcess ;
                                rdfs:label "has related planning process" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#hasRelatedPriorProcess
+###  http://data.tbfy.eu/ontology/ocds#hasRelatedPriorProcess
 ocds:hasRelatedPriorProcess rdf:type owl:ObjectProperty ;
                             rdfs:subPropertyOf ocds:hasRelatedProcess ;
                             rdfs:label "has related prior process" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#hasRelatedProcess
+###  http://data.tbfy.eu/ontology/ocds#hasRelatedProcess
 ocds:hasRelatedProcess rdf:type owl:ObjectProperty ;
                        rdfs:domain ocds:ContractingProcess ;
                        rdfs:range ocds:ContractingProcess ;
@@ -371,38 +371,38 @@ ocds:hasRelatedProcess rdf:type owl:ObjectProperty ;
                        rdfs:label "has related process" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#hasRelatedRenewalProcess
+###  http://data.tbfy.eu/ontology/ocds#hasRelatedRenewalProcess
 ocds:hasRelatedRenewalProcess rdf:type owl:ObjectProperty ;
                               rdfs:subPropertyOf ocds:hasRelatedProcess ;
                               rdfs:label "has related renewal process" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#hasRelatedReplacementProcess
+###  http://data.tbfy.eu/ontology/ocds#hasRelatedReplacementProcess
 ocds:hasRelatedReplacementProcess rdf:type owl:ObjectProperty ;
                                   rdfs:subPropertyOf ocds:hasRelatedProcess ;
                                   rdfs:label "has related replacement process" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#hasRelatedSubContract
+###  http://data.tbfy.eu/ontology/ocds#hasRelatedSubContract
 ocds:hasRelatedSubContract rdf:type owl:ObjectProperty ;
                            rdfs:subPropertyOf ocds:hasRelatedProcess ;
                            rdfs:label "has related sub contract" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#hasRelatedTender
+###  http://data.tbfy.eu/ontology/ocds#hasRelatedTender
 ocds:hasRelatedTender rdf:type owl:ObjectProperty ;
                       rdfs:domain ocds:Lot ;
                       rdfs:range ocds:Tender ;
                       rdfs:label "has related tender" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#hasRelatedUnsuccessfulProcess
+###  http://data.tbfy.eu/ontology/ocds#hasRelatedUnsuccessfulProcess
 ocds:hasRelatedUnsuccessfulProcess rdf:type owl:ObjectProperty ;
                                    rdfs:subPropertyOf ocds:hasRelatedProcess ;
                                    rdfs:label "has related unsucessful process" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#hasRequirement
+###  http://data.tbfy.eu/ontology/ocds#hasRequirement
 ocds:hasRequirement rdf:type owl:ObjectProperty ;
                     rdfs:domain ocds:Tender ;
                     rdfs:range ocds:Requirement ;
@@ -410,7 +410,7 @@ ocds:hasRequirement rdf:type owl:ObjectProperty ;
                     rdfs:label "has requirement" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#hasReservedValue
+###  http://data.tbfy.eu/ontology/ocds#hasReservedValue
 ocds:hasReservedValue rdf:type owl:ObjectProperty ;
                       rdfs:domain ocds:Budget ;
                       rdfs:range ocds:Value ;
@@ -418,7 +418,7 @@ ocds:hasReservedValue rdf:type owl:ObjectProperty ;
                       rdfs:label "has reserved value" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#hasSubmittedBid
+###  http://data.tbfy.eu/ontology/ocds#hasSubmittedBid
 ocds:hasSubmittedBid rdf:type owl:ObjectProperty ;
                      rdfs:domain ocds:Organisation ;
                      rdfs:range ocds:Bid ;
@@ -426,7 +426,7 @@ ocds:hasSubmittedBid rdf:type owl:ObjectProperty ;
                      rdfs:label "has submitted bid" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#hasSupplier
+###  http://data.tbfy.eu/ontology/ocds#hasSupplier
 ocds:hasSupplier rdf:type owl:ObjectProperty ;
                  owl:inverseOf ocds:isSupplierFor ;
                  rdfs:domain [ rdf:type owl:Class ;
@@ -439,7 +439,7 @@ ocds:hasSupplier rdf:type owl:ObjectProperty ;
                  rdfs:label "has supplier" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#hasTender
+###  http://data.tbfy.eu/ontology/ocds#hasTender
 ocds:hasTender rdf:type owl:ObjectProperty ;
                owl:inverseOf ocds:isTenderFor ;
                rdfs:domain ocds:ContractingProcess ;
@@ -448,7 +448,7 @@ ocds:hasTender rdf:type owl:ObjectProperty ;
                rdfs:label "has tender" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#hasTenderPeriod
+###  http://data.tbfy.eu/ontology/ocds#hasTenderPeriod
 ocds:hasTenderPeriod rdf:type owl:ObjectProperty ;
                      rdfs:domain ocds:Tender ;
                      rdfs:range ocds:Period ;
@@ -456,7 +456,7 @@ ocds:hasTenderPeriod rdf:type owl:ObjectProperty ;
                      rdfs:label "has tender period" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#hasTransaction
+###  http://data.tbfy.eu/ontology/ocds#hasTransaction
 ocds:hasTransaction rdf:type owl:ObjectProperty ;
                     rdfs:domain ocds:Implementation ;
                     rdfs:range ocds:Transaction ;
@@ -464,7 +464,7 @@ ocds:hasTransaction rdf:type owl:ObjectProperty ;
                     rdfs:label "has transaction" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#hasTransactionValue
+###  http://data.tbfy.eu/ontology/ocds#hasTransactionValue
 ocds:hasTransactionValue rdf:type owl:ObjectProperty ;
                          rdfs:domain ocds:Transaction ;
                          rdfs:range ocds:Value ;
@@ -472,7 +472,7 @@ ocds:hasTransactionValue rdf:type owl:ObjectProperty ;
                          rdfs:label "has transaction value" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#involvesOrganisation
+###  http://data.tbfy.eu/ontology/ocds#involvesOrganisation
 ocds:involvesOrganisation rdf:type owl:ObjectProperty ;
                           owl:inverseOf ocds:playsRoleIn ;
                           rdfs:domain ocds:ContractingProcess ;
@@ -480,7 +480,7 @@ ocds:involvesOrganisation rdf:type owl:ObjectProperty ;
                           rdfs:label "involves organisation" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#isBuyerFor
+###  http://data.tbfy.eu/ontology/ocds#isBuyerFor
 ocds:isBuyerFor rdf:type owl:ObjectProperty ;
                 rdfs:domain ocds:Organisation ;
                 rdfs:range [ rdf:type owl:Class ;
@@ -493,7 +493,7 @@ ocds:isBuyerFor rdf:type owl:ObjectProperty ;
                 rdfs:label "is buyer for" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#isFundedBy
+###  http://data.tbfy.eu/ontology/ocds#isFundedBy
 ocds:isFundedBy rdf:type owl:ObjectProperty ;
                 rdfs:domain ocds:ContractingProcess ;
                 rdfs:range ocds:Project ;
@@ -501,7 +501,7 @@ ocds:isFundedBy rdf:type owl:ObjectProperty ;
                 rdfs:label "is funded by" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#isIssuedForAward
+###  http://data.tbfy.eu/ontology/ocds#isIssuedForAward
 ocds:isIssuedForAward rdf:type owl:ObjectProperty ;
                       rdfs:domain ocds:Contract ;
                       rdfs:range ocds:Award ;
@@ -509,7 +509,7 @@ ocds:isIssuedForAward rdf:type owl:ObjectProperty ;
                       rdfs:label "is issued for award" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#isIssuedForTender
+###  http://data.tbfy.eu/ontology/ocds#isIssuedForTender
 ocds:isIssuedForTender rdf:type owl:ObjectProperty ;
                        rdfs:domain ocds:Award ;
                        rdfs:range ocds:Tender ;
@@ -517,7 +517,7 @@ ocds:isIssuedForTender rdf:type owl:ObjectProperty ;
                        rdfs:label "is issued for tender" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#isPayeeFor
+###  http://data.tbfy.eu/ontology/ocds#isPayeeFor
 ocds:isPayeeFor rdf:type owl:ObjectProperty ;
                 rdfs:domain ocds:Organisation ;
                 rdfs:range ocds:Transaction ;
@@ -525,7 +525,7 @@ ocds:isPayeeFor rdf:type owl:ObjectProperty ;
                 rdfs:label "is payee for" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#isPayerFor
+###  http://data.tbfy.eu/ontology/ocds#isPayerFor
 ocds:isPayerFor rdf:type owl:ObjectProperty ;
                 rdfs:domain ocds:Organisation ;
                 rdfs:range ocds:Transaction ;
@@ -533,14 +533,14 @@ ocds:isPayerFor rdf:type owl:ObjectProperty ;
                 rdfs:label "is payer for" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#isProcuredInTender
+###  http://data.tbfy.eu/ontology/ocds#isProcuredInTender
 ocds:isProcuredInTender rdf:type owl:ObjectProperty ;
                         rdfs:domain ocds:Item ;
                         rdfs:range ocds:Tender ;
                         rdfs:label "is procured in tender" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#isProcuringEntityFor
+###  http://data.tbfy.eu/ontology/ocds#isProcuringEntityFor
 ocds:isProcuringEntityFor rdf:type owl:ObjectProperty ;
                           rdfs:domain ocds:Organisation ;
                           rdfs:range ocds:Tender ;
@@ -548,7 +548,7 @@ ocds:isProcuringEntityFor rdf:type owl:ObjectProperty ;
                           rdfs:label "is procuring entity for" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#isRelatedToLot
+###  http://data.tbfy.eu/ontology/ocds#isRelatedToLot
 ocds:isRelatedToLot rdf:type owl:ObjectProperty ;
                     rdfs:domain [ rdf:type owl:Class ;
                                   owl:unionOf ( ocds:Award
@@ -562,7 +562,7 @@ ocds:isRelatedToLot rdf:type owl:ObjectProperty ;
                     rdfs:label "is related to lot" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#isSignatoryForContract
+###  http://data.tbfy.eu/ontology/ocds#isSignatoryForContract
 ocds:isSignatoryForContract rdf:type owl:ObjectProperty ;
                             rdfs:domain ocds:Organisation ;
                             rdfs:range ocds:Contract ;
@@ -570,7 +570,7 @@ ocds:isSignatoryForContract rdf:type owl:ObjectProperty ;
                             rdfs:label "is signatory for contract" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#isSupplierFor
+###  http://data.tbfy.eu/ontology/ocds#isSupplierFor
 ocds:isSupplierFor rdf:type owl:ObjectProperty ;
                    rdfs:domain ocds:Organisation ;
                    rdfs:range [ rdf:type owl:Class ;
@@ -584,14 +584,14 @@ ocds:isSupplierFor rdf:type owl:ObjectProperty ;
                    rdfs:label "is supplier for" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#isTenderFor
+###  http://data.tbfy.eu/ontology/ocds#isTenderFor
 ocds:isTenderFor rdf:type owl:ObjectProperty ;
                  rdfs:domain ocds:Tender ;
                  rdfs:range ocds:ContractingProcess ;
                  rdfs:label "is tender for" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#isTendererFor
+###  http://data.tbfy.eu/ontology/ocds#isTendererFor
 ocds:isTendererFor rdf:type owl:ObjectProperty ;
                    rdfs:domain ocds:Organisation ;
                    rdfs:range ocds:Tender ;
@@ -599,7 +599,7 @@ ocds:isTendererFor rdf:type owl:ObjectProperty ;
                    rdfs:label "is tenderer for" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#playsRoleIn
+###  http://data.tbfy.eu/ontology/ocds#playsRoleIn
 ocds:playsRoleIn rdf:type owl:ObjectProperty ;
                  rdfs:domain ocds:Organisation ;
                  rdfs:range ocds:ContractingProcess ;
@@ -748,7 +748,7 @@ foaf:lastName rdf:type owl:DatatypeProperty ;
               rdfs:label "last name" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#URI
+###  http://data.tbfy.eu/ontology/ocds#URI
 ocds:URI rdf:type owl:DatatypeProperty ;
          rdfs:range xsd:anyURI ;
          rdfs:comment "Use in OCDS ontology: Organization, Budget, Transaction." ;
@@ -756,7 +756,7 @@ ocds:URI rdf:type owl:DatatypeProperty ;
          rdfs:label "uri" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#additionalIdentifier
+###  http://data.tbfy.eu/ontology/ocds#additionalIdentifier
 ocds:additionalIdentifier rdf:type owl:DatatypeProperty ;
                           rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#notation> ;
                           rdfs:domain ocds:Organisation ;
@@ -765,7 +765,7 @@ ocds:additionalIdentifier rdf:type owl:DatatypeProperty ;
                           rdfs:isDefinedBy "OCDS schema v1.1: Parties <additionalIdentifier>, i.e., Additional identifier." .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#additionalItemClassification
+###  http://data.tbfy.eu/ontology/ocds#additionalItemClassification
 ocds:additionalItemClassification rdf:type owl:DatatypeProperty ;
                                   rdfs:domain ocds:Item ;
                                   rdfs:range xsd:string ;
@@ -773,7 +773,7 @@ ocds:additionalItemClassification rdf:type owl:DatatypeProperty ;
                                   rdfs:label "additional item classification" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#additionalProcurementCategory
+###  http://data.tbfy.eu/ontology/ocds#additionalProcurementCategory
 ocds:additionalProcurementCategory rdf:type owl:DatatypeProperty ;
                                    rdfs:domain ocds:Tender ;
                                    rdfs:range xsd:string ;
@@ -781,7 +781,7 @@ ocds:additionalProcurementCategory rdf:type owl:DatatypeProperty ;
                                    rdfs:label "additional procurement category" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#amendmentDate
+###  http://data.tbfy.eu/ontology/ocds#amendmentDate
 ocds:amendmentDate rdf:type owl:DatatypeProperty ;
                    rdfs:domain ocds:Amendment ;
                    rdfs:range xsd:dateTime ;
@@ -789,7 +789,7 @@ ocds:amendmentDate rdf:type owl:DatatypeProperty ;
                    rdfs:label "amendment date" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#amendmentId
+###  http://data.tbfy.eu/ontology/ocds#amendmentId
 ocds:amendmentId rdf:type owl:DatatypeProperty ;
                  rdfs:domain ocds:Amendment ;
                  rdfs:range xsd:string ;
@@ -797,7 +797,7 @@ ocds:amendmentId rdf:type owl:DatatypeProperty ;
                  rdfs:label "amendment id" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#amendmentRationale
+###  http://data.tbfy.eu/ontology/ocds#amendmentRationale
 ocds:amendmentRationale rdf:type owl:DatatypeProperty ;
                         rdfs:domain ocds:Amendment ;
                         rdfs:range xsd:string ;
@@ -805,14 +805,14 @@ ocds:amendmentRationale rdf:type owl:DatatypeProperty ;
                         rdfs:label "amendment rationale" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#authorId
+###  http://data.tbfy.eu/ontology/ocds#authorId
 ocds:authorId rdf:type owl:DatatypeProperty ;
               rdfs:range xsd:string ;
               rdfs:isDefinedBy "OCDS schema v1.1: Enquiries extension." ;
               rdfs:label "author id" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#awardCriteria
+###  http://data.tbfy.eu/ontology/ocds#awardCriteria
 ocds:awardCriteria rdf:type owl:DatatypeProperty ;
                    rdfs:domain ocds:Tender ;
                    rdfs:range [ rdf:type rdfs:Datatype ;
@@ -847,7 +847,7 @@ ocds:awardCriteria rdf:type owl:DatatypeProperty ;
                    rdfs:label "award criteria" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#awardCriteriaDetails
+###  http://data.tbfy.eu/ontology/ocds#awardCriteriaDetails
 ocds:awardCriteriaDetails rdf:type owl:DatatypeProperty ;
                           rdfs:domain ocds:Tender ;
                           rdfs:range xsd:string ;
@@ -855,7 +855,7 @@ ocds:awardCriteriaDetails rdf:type owl:DatatypeProperty ;
                           rdfs:label "award criteria details" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#awardDate
+###  http://data.tbfy.eu/ontology/ocds#awardDate
 ocds:awardDate rdf:type owl:DatatypeProperty ;
                rdfs:domain ocds:Award ;
                rdfs:range xsd:string ;
@@ -863,7 +863,7 @@ ocds:awardDate rdf:type owl:DatatypeProperty ;
                rdfs:label "award date" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#awardId
+###  http://data.tbfy.eu/ontology/ocds#awardId
 ocds:awardId rdf:type owl:DatatypeProperty ;
              rdfs:domain ocds:Award ;
              rdfs:range xsd:string ;
@@ -871,7 +871,7 @@ ocds:awardId rdf:type owl:DatatypeProperty ;
              rdfs:label "award id" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#awardStatus
+###  http://data.tbfy.eu/ontology/ocds#awardStatus
 ocds:awardStatus rdf:type owl:DatatypeProperty ;
                  rdfs:domain ocds:Award ;
                  rdfs:range [ rdf:type rdfs:Datatype ;
@@ -894,7 +894,7 @@ ocds:awardStatus rdf:type owl:DatatypeProperty ;
                  rdfs:label "award status" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#bidDate
+###  http://data.tbfy.eu/ontology/ocds#bidDate
 ocds:bidDate rdf:type owl:DatatypeProperty ;
              rdfs:domain ocds:Bid ;
              rdfs:range xsd:dateTime ;
@@ -902,7 +902,7 @@ ocds:bidDate rdf:type owl:DatatypeProperty ;
              rdfs:label "bid date" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#bidId
+###  http://data.tbfy.eu/ontology/ocds#bidId
 ocds:bidId rdf:type owl:DatatypeProperty ;
            rdfs:domain ocds:Bid ;
            rdfs:range xsd:string ;
@@ -910,7 +910,7 @@ ocds:bidId rdf:type owl:DatatypeProperty ;
            rdfs:label "bid id" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#bidStatus
+###  http://data.tbfy.eu/ontology/ocds#bidStatus
 ocds:bidStatus rdf:type owl:DatatypeProperty ;
                rdfs:domain ocds:Bid ;
                rdfs:range [ rdf:type rdfs:Datatype ;
@@ -935,7 +935,7 @@ ocds:bidStatus rdf:type owl:DatatypeProperty ;
                rdfs:label "bid status" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#budgetId
+###  http://data.tbfy.eu/ontology/ocds#budgetId
 ocds:budgetId rdf:type owl:DatatypeProperty ;
               rdfs:domain ocds:Budget ;
               rdfs:range xsd:string ;
@@ -943,7 +943,7 @@ ocds:budgetId rdf:type owl:DatatypeProperty ;
               rdfs:label "budget id" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#contractId
+###  http://data.tbfy.eu/ontology/ocds#contractId
 ocds:contractId rdf:type owl:DatatypeProperty ;
                 rdfs:domain ocds:Contract ;
                 rdfs:range xsd:string ;
@@ -951,7 +951,7 @@ ocds:contractId rdf:type owl:DatatypeProperty ;
                 rdfs:label "contract id" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#contractStatus
+###  http://data.tbfy.eu/ontology/ocds#contractStatus
 ocds:contractStatus rdf:type owl:DatatypeProperty ;
                     rdfs:domain ocds:Contract ;
                     rdfs:range [ rdf:type rdfs:Datatype ;
@@ -974,7 +974,7 @@ ocds:contractStatus rdf:type owl:DatatypeProperty ;
                     rdfs:label "contract status" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#dateContractSigned
+###  http://data.tbfy.eu/ontology/ocds#dateContractSigned
 ocds:dateContractSigned rdf:type owl:DatatypeProperty ;
                         rdfs:domain ocds:Contract ;
                         rdfs:range xsd:dateTime ;
@@ -982,7 +982,7 @@ ocds:dateContractSigned rdf:type owl:DatatypeProperty ;
                         rdfs:label "date contract signed" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#dateDocumentModified
+###  http://data.tbfy.eu/ontology/ocds#dateDocumentModified
 ocds:dateDocumentModified rdf:type owl:DatatypeProperty ;
                           rdfs:domain ocds:Document ;
                           rdfs:range xsd:dateTime ;
@@ -990,7 +990,7 @@ ocds:dateDocumentModified rdf:type owl:DatatypeProperty ;
                           rdfs:label "date document modified" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#dateDocumentPublished
+###  http://data.tbfy.eu/ontology/ocds#dateDocumentPublished
 ocds:dateDocumentPublished rdf:type owl:DatatypeProperty ;
                            rdfs:domain ocds:Document ;
                            rdfs:range xsd:dateTime ;
@@ -998,7 +998,7 @@ ocds:dateDocumentPublished rdf:type owl:DatatypeProperty ;
                            rdfs:label "date document published" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#dateEnquiryAnswered
+###  http://data.tbfy.eu/ontology/ocds#dateEnquiryAnswered
 ocds:dateEnquiryAnswered rdf:type owl:DatatypeProperty ;
                          rdfs:domain ocds:Enquiry ;
                          rdfs:range xsd:dateTime ;
@@ -1006,7 +1006,7 @@ ocds:dateEnquiryAnswered rdf:type owl:DatatypeProperty ;
                          rdfs:label "date enquiry answered" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#discussionThreadId
+###  http://data.tbfy.eu/ontology/ocds#discussionThreadId
 ocds:discussionThreadId rdf:type owl:DatatypeProperty ;
                         rdfs:domain ocds:Discussion ;
                         rdfs:range xsd:string ;
@@ -1014,7 +1014,7 @@ ocds:discussionThreadId rdf:type owl:DatatypeProperty ;
                         rdfs:label "discussion thread id" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#documentId
+###  http://data.tbfy.eu/ontology/ocds#documentId
 ocds:documentId rdf:type owl:DatatypeProperty ;
                 rdfs:domain ocds:Document ;
                 rdfs:range xsd:string ;
@@ -1022,7 +1022,7 @@ ocds:documentId rdf:type owl:DatatypeProperty ;
                 rdfs:label "document id" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#documentType
+###  http://data.tbfy.eu/ontology/ocds#documentType
 ocds:documentType rdf:type owl:DatatypeProperty ;
                   rdfs:domain ocds:Document ;
                   rdfs:range [ rdf:type rdfs:Datatype ;
@@ -1153,7 +1153,7 @@ ocds:documentType rdf:type owl:DatatypeProperty ;
                   rdfs:label "document type" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#eligibilityCriteria
+###  http://data.tbfy.eu/ontology/ocds#eligibilityCriteria
 ocds:eligibilityCriteria rdf:type owl:DatatypeProperty ;
                          rdfs:domain ocds:Tender ;
                          rdfs:range xsd:string ;
@@ -1161,7 +1161,7 @@ ocds:eligibilityCriteria rdf:type owl:DatatypeProperty ;
                          rdfs:label "eligibility criteria" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#enquiry
+###  http://data.tbfy.eu/ontology/ocds#enquiry
 ocds:enquiry rdf:type owl:DatatypeProperty ;
              rdfs:domain ocds:Tender ;
              rdfs:range xsd:boolean ;
@@ -1169,7 +1169,7 @@ ocds:enquiry rdf:type owl:DatatypeProperty ;
              rdfs:label "enquiry" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#enquiryAnswer
+###  http://data.tbfy.eu/ontology/ocds#enquiryAnswer
 ocds:enquiryAnswer rdf:type owl:DatatypeProperty ;
                    rdfs:domain ocds:Enquiry ;
                    rdfs:range xsd:string ;
@@ -1177,7 +1177,7 @@ ocds:enquiryAnswer rdf:type owl:DatatypeProperty ;
                    rdfs:label "enquiry answer" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#enquiryDate
+###  http://data.tbfy.eu/ontology/ocds#enquiryDate
 ocds:enquiryDate rdf:type owl:DatatypeProperty ;
                  rdfs:domain ocds:Enquiry ;
                  rdfs:range xsd:dateTime ;
@@ -1185,7 +1185,7 @@ ocds:enquiryDate rdf:type owl:DatatypeProperty ;
                  rdfs:label "enquiry date" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#enquiryId
+###  http://data.tbfy.eu/ontology/ocds#enquiryId
 ocds:enquiryId rdf:type owl:DatatypeProperty ;
                rdfs:domain ocds:Enquiry ;
                rdfs:range xsd:string ;
@@ -1193,7 +1193,7 @@ ocds:enquiryId rdf:type owl:DatatypeProperty ;
                rdfs:label "enquiry id" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#itemId
+###  http://data.tbfy.eu/ontology/ocds#itemId
 ocds:itemId rdf:type owl:DatatypeProperty ;
             rdfs:domain ocds:Item ;
             rdfs:range xsd:string ;
@@ -1201,7 +1201,7 @@ ocds:itemId rdf:type owl:DatatypeProperty ;
             rdfs:label "item id" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#legalName
+###  http://data.tbfy.eu/ontology/ocds#legalName
 ocds:legalName rdf:type owl:DatatypeProperty ;
                rdfs:range xsd:string ;
                rdfs:comment "Use in OCDS ontology: Organization." ;
@@ -1209,7 +1209,7 @@ ocds:legalName rdf:type owl:DatatypeProperty ;
                rdfs:label "legal name" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#lotId
+###  http://data.tbfy.eu/ontology/ocds#lotId
 ocds:lotId rdf:type owl:DatatypeProperty ;
            rdfs:domain ocds:Lot ;
            rdfs:range xsd:string ;
@@ -1217,7 +1217,7 @@ ocds:lotId rdf:type owl:DatatypeProperty ;
            rdfs:label "lot id" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#lotStatus
+###  http://data.tbfy.eu/ontology/ocds#lotStatus
 ocds:lotStatus rdf:type owl:DatatypeProperty ;
                rdfs:domain ocds:Lot ;
                rdfs:range xsd:string ;
@@ -1225,7 +1225,7 @@ ocds:lotStatus rdf:type owl:DatatypeProperty ;
                rdfs:label "lot status" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#mainProcurementCategory
+###  http://data.tbfy.eu/ontology/ocds#mainProcurementCategory
 ocds:mainProcurementCategory rdf:type owl:DatatypeProperty ;
                              rdfs:domain ocds:Tender ;
                              rdfs:range [ rdf:type rdfs:Datatype ;
@@ -1245,7 +1245,7 @@ ocds:mainProcurementCategory rdf:type owl:DatatypeProperty ;
                              rdfs:label "main procurement category" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#mileStoneStatus
+###  http://data.tbfy.eu/ontology/ocds#mileStoneStatus
 ocds:mileStoneStatus rdf:type owl:DatatypeProperty ;
                      rdfs:domain ocds:Milestone ;
                      rdfs:range [ rdf:type rdfs:Datatype ;
@@ -1268,7 +1268,7 @@ ocds:mileStoneStatus rdf:type owl:DatatypeProperty ;
                      rdfs:label "milestone status" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#milestoneCode
+###  http://data.tbfy.eu/ontology/ocds#milestoneCode
 ocds:milestoneCode rdf:type owl:DatatypeProperty ;
                    rdfs:domain ocds:Milestone ;
                    rdfs:range xsd:string ;
@@ -1276,7 +1276,7 @@ ocds:milestoneCode rdf:type owl:DatatypeProperty ;
                    rdfs:label "milestone code" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#milestoneDateMet
+###  http://data.tbfy.eu/ontology/ocds#milestoneDateMet
 ocds:milestoneDateMet rdf:type owl:DatatypeProperty ;
                       rdfs:domain ocds:Milestone ;
                       rdfs:range xsd:dateTime ;
@@ -1284,7 +1284,7 @@ ocds:milestoneDateMet rdf:type owl:DatatypeProperty ;
                       rdfs:label "milestone date met" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#milestoneDateModified
+###  http://data.tbfy.eu/ontology/ocds#milestoneDateModified
 ocds:milestoneDateModified rdf:type owl:DatatypeProperty ;
                            rdfs:domain ocds:Milestone ;
                            rdfs:range xsd:dateTime ;
@@ -1292,7 +1292,7 @@ ocds:milestoneDateModified rdf:type owl:DatatypeProperty ;
                            rdfs:label "milestone date modified" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#milestoneDueDate
+###  http://data.tbfy.eu/ontology/ocds#milestoneDueDate
 ocds:milestoneDueDate rdf:type owl:DatatypeProperty ;
                       rdfs:domain ocds:Milestone ;
                       rdfs:range xsd:dateTime ;
@@ -1300,7 +1300,7 @@ ocds:milestoneDueDate rdf:type owl:DatatypeProperty ;
                       rdfs:label "milestone due date" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#milestoneId
+###  http://data.tbfy.eu/ontology/ocds#milestoneId
 ocds:milestoneId rdf:type owl:DatatypeProperty ;
                  rdfs:domain ocds:Milestone ;
                  rdfs:range xsd:string ;
@@ -1308,7 +1308,7 @@ ocds:milestoneId rdf:type owl:DatatypeProperty ;
                  rdfs:label "milestone id" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#milestoneType
+###  http://data.tbfy.eu/ontology/ocds#milestoneType
 ocds:milestoneType rdf:type owl:DatatypeProperty ;
                    rdfs:domain ocds:Milestone ;
                    rdfs:range [ rdf:type rdfs:Datatype ;
@@ -1340,7 +1340,7 @@ ocds:milestoneType rdf:type owl:DatatypeProperty ;
                    rdfs:label "milestone type" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#numberOfTenderers
+###  http://data.tbfy.eu/ontology/ocds#numberOfTenderers
 ocds:numberOfTenderers rdf:type owl:DatatypeProperty ;
                        rdfs:domain ocds:Tender ;
                        rdfs:range xsd:integer ;
@@ -1348,7 +1348,7 @@ ocds:numberOfTenderers rdf:type owl:DatatypeProperty ;
                        rdfs:label "number of tenderers" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#periodDurationInDays
+###  http://data.tbfy.eu/ontology/ocds#periodDurationInDays
 ocds:periodDurationInDays rdf:type owl:DatatypeProperty ;
                           rdfs:domain ocds:Period ;
                           rdfs:range xsd:integer ;
@@ -1356,7 +1356,7 @@ ocds:periodDurationInDays rdf:type owl:DatatypeProperty ;
                           rdfs:label "period duration in days" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#periodEndDate
+###  http://data.tbfy.eu/ontology/ocds#periodEndDate
 ocds:periodEndDate rdf:type owl:DatatypeProperty ;
                    rdfs:domain ocds:Period ;
                    rdfs:range xsd:dateTime ;
@@ -1364,7 +1364,7 @@ ocds:periodEndDate rdf:type owl:DatatypeProperty ;
                    rdfs:label "period end date" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#periodMaxExtentDate
+###  http://data.tbfy.eu/ontology/ocds#periodMaxExtentDate
 ocds:periodMaxExtentDate rdf:type owl:DatatypeProperty ;
                          rdfs:domain ocds:Period ;
                          rdfs:range xsd:dateTime ;
@@ -1372,7 +1372,7 @@ ocds:periodMaxExtentDate rdf:type owl:DatatypeProperty ;
                          rdfs:label "period max extent date" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#periodStartDate
+###  http://data.tbfy.eu/ontology/ocds#periodStartDate
 ocds:periodStartDate rdf:type owl:DatatypeProperty ;
                      rdfs:domain ocds:Period ;
                      rdfs:range xsd:dateTime ;
@@ -1380,7 +1380,7 @@ ocds:periodStartDate rdf:type owl:DatatypeProperty ;
                      rdfs:label "period start date" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#procurementMethod
+###  http://data.tbfy.eu/ontology/ocds#procurementMethod
 ocds:procurementMethod rdf:type owl:DatatypeProperty ;
                        rdfs:domain ocds:Tender ;
                        rdfs:range [ rdf:type rdfs:Datatype ;
@@ -1403,7 +1403,7 @@ ocds:procurementMethod rdf:type owl:DatatypeProperty ;
                        rdfs:label "procurement method" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#procurementMethodDetails
+###  http://data.tbfy.eu/ontology/ocds#procurementMethodDetails
 ocds:procurementMethodDetails rdf:type owl:DatatypeProperty ;
                               rdfs:domain ocds:Tender ;
                               rdfs:range xsd:string ;
@@ -1411,7 +1411,7 @@ ocds:procurementMethodDetails rdf:type owl:DatatypeProperty ;
                               rdfs:label "procurement method details" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#procurementMethodRationale
+###  http://data.tbfy.eu/ontology/ocds#procurementMethodRationale
 ocds:procurementMethodRationale rdf:type owl:DatatypeProperty ;
                                 rdfs:domain ocds:Tender ;
                                 rdfs:range xsd:string ;
@@ -1419,7 +1419,7 @@ ocds:procurementMethodRationale rdf:type owl:DatatypeProperty ;
                                 rdfs:label "procurement method rationale" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#procurementRationale
+###  http://data.tbfy.eu/ontology/ocds#procurementRationale
 ocds:procurementRationale rdf:type owl:DatatypeProperty ;
                           rdfs:domain ocds:Plan ;
                           rdfs:range xsd:string ;
@@ -1427,7 +1427,7 @@ ocds:procurementRationale rdf:type owl:DatatypeProperty ;
                           rdfs:label "procurement rationale" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#projectId
+###  http://data.tbfy.eu/ontology/ocds#projectId
 ocds:projectId rdf:type owl:DatatypeProperty ;
                rdfs:domain ocds:Project ;
                rdfs:range xsd:string ;
@@ -1435,7 +1435,7 @@ ocds:projectId rdf:type owl:DatatypeProperty ;
                rdfs:label "project id" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#quantity
+###  http://data.tbfy.eu/ontology/ocds#quantity
 ocds:quantity rdf:type owl:DatatypeProperty ;
               rdfs:range xsd:integer ;
               rdfs:comment "Use in OCDS ontology: Item." ;
@@ -1443,7 +1443,7 @@ ocds:quantity rdf:type owl:DatatypeProperty ;
               rdfs:label "quantity" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#region
+###  http://data.tbfy.eu/ontology/ocds#region
 ocds:region rdf:type owl:DatatypeProperty ;
             rdfs:range xsd:string ;
             rdfs:comment "Use in OCDS ontology: Address." ;
@@ -1451,14 +1451,14 @@ ocds:region rdf:type owl:DatatypeProperty ;
             rdfs:label "region" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#requirementId
+###  http://data.tbfy.eu/ontology/ocds#requirementId
 ocds:requirementId rdf:type owl:DatatypeProperty ;
                    rdfs:domain ocds:Requirement ;
                    rdfs:range xsd:string ;
                    rdfs:label "requirement id" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#submissionMethod
+###  http://data.tbfy.eu/ontology/ocds#submissionMethod
 ocds:submissionMethod rdf:type owl:DatatypeProperty ;
                       rdfs:domain ocds:Tender ;
                       rdfs:range [ rdf:type rdfs:Datatype ;
@@ -1481,7 +1481,7 @@ ocds:submissionMethod rdf:type owl:DatatypeProperty ;
                       rdfs:label "submission method" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#submissionMethodDetails
+###  http://data.tbfy.eu/ontology/ocds#submissionMethodDetails
 ocds:submissionMethodDetails rdf:type owl:DatatypeProperty ;
                              rdfs:domain ocds:Tender ;
                              rdfs:range xsd:string ;
@@ -1489,7 +1489,7 @@ ocds:submissionMethodDetails rdf:type owl:DatatypeProperty ;
                              rdfs:label "submission method" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#tenderId
+###  http://data.tbfy.eu/ontology/ocds#tenderId
 ocds:tenderId rdf:type owl:DatatypeProperty ;
               rdfs:domain ocds:Tender ;
               rdfs:range xsd:string ;
@@ -1497,7 +1497,7 @@ ocds:tenderId rdf:type owl:DatatypeProperty ;
               rdfs:label "tender id" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#tenderStatus
+###  http://data.tbfy.eu/ontology/ocds#tenderStatus
 ocds:tenderStatus rdf:type owl:DatatypeProperty ;
                   rdfs:domain ocds:Tender ;
                   rdfs:range [ rdf:type rdfs:Datatype ;
@@ -1529,7 +1529,7 @@ ocds:tenderStatus rdf:type owl:DatatypeProperty ;
                   rdfs:label "tender status" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#transactionDataSource
+###  http://data.tbfy.eu/ontology/ocds#transactionDataSource
 ocds:transactionDataSource rdf:type owl:DatatypeProperty ;
                            rdfs:domain ocds:Transaction ;
                            rdfs:range xsd:string ;
@@ -1537,7 +1537,7 @@ ocds:transactionDataSource rdf:type owl:DatatypeProperty ;
                            rdfs:label "transaction data source" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#transactionDate
+###  http://data.tbfy.eu/ontology/ocds#transactionDate
 ocds:transactionDate rdf:type owl:DatatypeProperty ;
                      rdfs:domain ocds:Transaction ;
                      rdfs:range xsd:dateTime ;
@@ -1545,7 +1545,7 @@ ocds:transactionDate rdf:type owl:DatatypeProperty ;
                      rdfs:label "transaction date" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#transactionId
+###  http://data.tbfy.eu/ontology/ocds#transactionId
 ocds:transactionId rdf:type owl:DatatypeProperty ;
                    rdfs:domain ocds:Transaction ;
                    rdfs:range xsd:string ;
@@ -1553,7 +1553,7 @@ ocds:transactionId rdf:type owl:DatatypeProperty ;
                    rdfs:label "transaction id" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#unit
+###  http://data.tbfy.eu/ontology/ocds#unit
 ocds:unit rdf:type owl:DatatypeProperty ;
           rdfs:range xsd:string ;
           rdfs:comment "Use in OCDS ontology: Item." ;
@@ -1561,7 +1561,7 @@ ocds:unit rdf:type owl:DatatypeProperty ;
           rdfs:label "unit" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#valueAmount
+###  http://data.tbfy.eu/ontology/ocds#valueAmount
 ocds:valueAmount rdf:type owl:DatatypeProperty ;
                  rdfs:domain ocds:Value ;
                  rdfs:range xsd:decimal ;
@@ -1569,7 +1569,7 @@ ocds:valueAmount rdf:type owl:DatatypeProperty ;
                  rdfs:label "value amount" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#valueCurrency
+###  http://data.tbfy.eu/ontology/ocds#valueCurrency
 ocds:valueCurrency rdf:type owl:DatatypeProperty ;
                    rdfs:domain ocds:Value ;
                    rdfs:range xsd:string ;
@@ -1592,7 +1592,7 @@ foaf:Person rdf:type owl:Class ;
             rdfs:label "Person" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#Address
+###  http://data.tbfy.eu/ontology/ocds#Address
 ocds:Address rdf:type owl:Class ;
              rdfs:comment "Uses also the following data type properties: addressCountry, addressLocality, postalCode, streeAddress, region." ;
              rdfs:isDefinedBy "OCDS schema v1.1: Adress." ;
@@ -1604,7 +1604,7 @@ ocds:Address rdf:type owl:Class ;
                                    ocds:region .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#Amendment
+###  http://data.tbfy.eu/ontology/ocds#Amendment
 ocds:Amendment rdf:type owl:Class ;
                rdfs:subClassOf [ rdf:type owl:Restriction ;
                                  owl:onProperty ocds:hasAmendment ;
@@ -1616,7 +1616,7 @@ ocds:Amendment rdf:type owl:Class ;
                ocds:usesDataProperty dc:description .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#Award
+###  http://data.tbfy.eu/ontology/ocds#Award
 ocds:Award rdf:type owl:Class ;
            rdfs:subClassOf [ rdf:type owl:Restriction ;
                              owl:onProperty ocds:hasAmendment ;
@@ -1657,7 +1657,7 @@ ocds:Award rdf:type owl:Class ;
                                  dc:title .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#Bid
+###  http://data.tbfy.eu/ontology/ocds#Bid
 ocds:Bid rdf:type owl:Class ;
          rdfs:subClassOf [ rdf:type owl:Restriction ;
                            owl:onProperty ocds:hasBidValue ;
@@ -1671,7 +1671,7 @@ ocds:Bid rdf:type owl:Class ;
          rdfs:label "Bid" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#Budget
+###  http://data.tbfy.eu/ontology/ocds#Budget
 ocds:Budget rdf:type owl:Class ;
             rdfs:subClassOf [ rdf:type owl:Restriction ;
                               owl:onProperty ocds:hasReservedValue ;
@@ -1684,7 +1684,7 @@ ocds:Budget rdf:type owl:Class ;
                                   ocds:URI .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#ContactPoint
+###  http://data.tbfy.eu/ontology/ocds#ContactPoint
 ocds:ContactPoint rdf:type owl:Class ;
                   rdfs:comment "Uses also the following data type properties: faxNumber, telephone, email, addressCountry, postalCode, addressLocality, streetAddress, name, url." ;
                   rdfs:isDefinedBy "OCDS schema v1.1: ContactPoint." ;
@@ -1700,7 +1700,7 @@ ocds:ContactPoint rdf:type owl:Class ;
                                         <http://schema.org/telephone> .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#Contract
+###  http://data.tbfy.eu/ontology/ocds#Contract
 ocds:Contract rdf:type owl:Class ;
               rdfs:subClassOf [ rdf:type owl:Restriction ;
                                 owl:onProperty ocds:extendsContract ;
@@ -1749,7 +1749,7 @@ ocds:Contract rdf:type owl:Class ;
                                     dc:title .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#ContractingProcess
+###  http://data.tbfy.eu/ontology/ocds#ContractingProcess
 ocds:ContractingProcess rdf:type owl:Class ;
                         rdfs:subClassOf [ rdf:type owl:Restriction ;
                                           owl:onProperty ocds:hasAward ;
@@ -1779,13 +1779,13 @@ ocds:ContractingProcess rdf:type owl:Class ;
                                               dc:title .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#Discussion
+###  http://data.tbfy.eu/ontology/ocds#Discussion
 ocds:Discussion rdf:type owl:Class ;
                 rdfs:comment "OCDS schema v1.1: Enquiries extension." ;
                 rdfs:label "Discussion" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#Document
+###  http://data.tbfy.eu/ontology/ocds#Document
 ocds:Document rdf:type owl:Class ;
               rdfs:subClassOf [ rdf:type owl:Restriction ;
                                 owl:onProperty ocds:isRelatedToLot ;
@@ -1801,7 +1801,7 @@ ocds:Document rdf:type owl:Class ;
                                     <http://schema.org/URL> .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#Enquiry
+###  http://data.tbfy.eu/ontology/ocds#Enquiry
 ocds:Enquiry rdf:type owl:Class ;
              rdfs:subClassOf [ rdf:type owl:Restriction ;
                                owl:onProperty ocds:hasEnquiryAuthor ;
@@ -1814,7 +1814,7 @@ ocds:Enquiry rdf:type owl:Class ;
                                    dc:title .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#Implementation
+###  http://data.tbfy.eu/ontology/ocds#Implementation
 ocds:Implementation rdf:type owl:Class ;
                     rdfs:subClassOf [ rdf:type owl:Restriction ;
                                       owl:onProperty ocds:hasDocument ;
@@ -1832,7 +1832,7 @@ ocds:Implementation rdf:type owl:Class ;
                     rdfs:label "Implementation" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#Item
+###  http://data.tbfy.eu/ontology/ocds#Item
 ocds:Item rdf:type owl:Class ;
           rdfs:subClassOf [ rdf:type owl:Restriction ;
                             owl:onProperty ocds:hasAdditionalClassification ;
@@ -1858,7 +1858,7 @@ ocds:Item rdf:type owl:Class ;
                                 ocds:unit .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#Lot
+###  http://data.tbfy.eu/ontology/ocds#Lot
 ocds:Lot rdf:type owl:Class ;
          rdfs:subClassOf [ rdf:type owl:Restriction ;
                            owl:onProperty ocds:hasLotValue ;
@@ -1879,7 +1879,7 @@ ocds:Lot rdf:type owl:Class ;
                                dc:title .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#Milestone
+###  http://data.tbfy.eu/ontology/ocds#Milestone
 ocds:Milestone rdf:type owl:Class ;
                rdfs:subClassOf [ rdf:type owl:Restriction ;
                                  owl:onProperty ocds:hasDocument ;
@@ -1896,7 +1896,7 @@ ocds:Milestone rdf:type owl:Class ;
                                      dc:title .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#Organisation
+###  http://data.tbfy.eu/ontology/ocds#Organisation
 ocds:Organisation rdf:type owl:Class ;
                   rdfs:subClassOf org:Organization ,
                                   [ rdf:type owl:Restriction ;
@@ -1964,13 +1964,13 @@ ocds:Organisation rdf:type owl:Class ;
                                         ocds:legalName .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#Period
+###  http://data.tbfy.eu/ontology/ocds#Period
 ocds:Period rdf:type owl:Class ;
             rdfs:isDefinedBy "OCDS schema v1.1: Period." ;
             rdfs:label "Period" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#Plan
+###  http://data.tbfy.eu/ontology/ocds#Plan
 ocds:Plan rdf:type owl:Class ;
           rdfs:subClassOf [ rdf:type owl:Restriction ;
                             owl:onProperty ocds:hasBudget ;
@@ -1988,7 +1988,7 @@ ocds:Plan rdf:type owl:Class ;
           rdfs:label "Plan" .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#Project
+###  http://data.tbfy.eu/ontology/ocds#Project
 ocds:Project rdf:type owl:Class ;
              rdfs:comment "Uses also the following data type properties: title." ;
              rdfs:isDefinedBy "OCDS schema v1.1: Budget." ;
@@ -1996,7 +1996,7 @@ ocds:Project rdf:type owl:Class ;
              ocds:usesDataProperty dc:title .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#Requirement
+###  http://data.tbfy.eu/ontology/ocds#Requirement
 ocds:Requirement rdf:type owl:Class ;
                  rdfs:comment "Uses also the following data type properties: description." ;
                  rdfs:isDefinedBy "OCDS schema v1.1: Requirements extension." ;
@@ -2004,7 +2004,7 @@ ocds:Requirement rdf:type owl:Class ;
                  ocds:usesDataProperty dc:description .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#Tender
+###  http://data.tbfy.eu/ontology/ocds#Tender
 ocds:Tender rdf:type owl:Class ;
             rdfs:subClassOf [ rdf:type owl:Restriction ;
                               owl:onProperty ocds:hasAmendment ;
@@ -2069,7 +2069,7 @@ ocds:Tender rdf:type owl:Class ;
                                   dc:title .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#Transaction
+###  http://data.tbfy.eu/ontology/ocds#Transaction
 ocds:Transaction rdf:type owl:Class ;
                  rdfs:subClassOf [ rdf:type owl:Restriction ;
                                    owl:onProperty ocds:hasTransactionValue ;
@@ -2081,7 +2081,7 @@ ocds:Transaction rdf:type owl:Class ;
                  ocds:usesDataProperty ocds:URI .
 
 
-###  https://theybuyforyou.eu/ontology/ocds#Value
+###  http://data.tbfy.eu/ontology/ocds#Value
 ocds:Value rdf:type owl:Class ;
            rdfs:isDefinedBy "OCDS schema v1.1: Value." ;
            rdfs:label "Value" .

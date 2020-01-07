@@ -1303,8 +1303,7 @@ ocds:valueCurrency rdf:type owl:DatatypeProperty ;
 #################################################################
 
 ###  http://www.w3.org/ns/org#Organization
-org:Organization rdf:type owl:Class ;
-                 rdfs:label "Organization" .
+org:Organization rdf:type owl:Class .
 
 
 ###  https://theybuyforyou.eu/ontology/ocds/Address
@@ -1566,6 +1565,7 @@ ocds:Organisation rdf:type owl:Class ;
                                   ] ;
                   rdfs:comment "Uses also the following data type properties: legalName, name, URI." ;
                   rdfs:isDefinedBy "OCDS schema v1.1: Organization." ;
+                  rdfs:label "Organization" ;
                   ocds:usesDataProperty <http://schema.org/name> ,
                                         ocds:URI ,
                                         ocds:legalName .

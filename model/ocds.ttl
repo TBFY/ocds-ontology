@@ -11,7 +11,7 @@
 @base <http://data.tbfy.eu/ontology/ocds#> .
 
 <http://data.tbfy.eu/ontology/ocds#> rdf:type owl:Ontology ;
-                                           owl:imports <http://www.w3.org/2004/02/skos/core> .
+                                      owl:imports <http://www.w3.org/2004/02/skos/core> .
 
 #################################################################
 #    Annotation properties
@@ -459,127 +459,6 @@ ocds:playsRoleIn rdf:type owl:ObjectProperty ;
 #    Data properties
 #################################################################
 
-###  http://purl.org/dc/terms/description
-dc:description rdf:type owl:DatatypeProperty ;
-               rdfs:range xsd:string ;
-               rdfs:comment "Use in OCDS ontology: Budget, Tender, Award, Contract, Amendment, Document, Item, Milestone." ;
-               rdfs:isDefinedBy "http://purl.org/dc/terms/description" ;
-               rdfs:label "description" .
-
-
-###  http://purl.org/dc/terms/format
-dc:format rdf:type owl:DatatypeProperty ;
-          rdfs:range xsd:string ;
-          rdfs:isDefinedBy "Use in OCDS ontology: Document." ,
-                           "http://purl.org/dc/terms/format" ,
-                           "https://www.iana.org/assignments/media-types/media-types.xhtml" ;
-          rdfs:label "format" .
-
-
-###  http://purl.org/dc/terms/language
-dc:language rdf:type owl:DatatypeProperty ;
-            rdfs:range xsd:string ;
-            rdfs:isDefinedBy "Use in OCDS ontology: Document." ,
-                             "http://purl.org/dc/terms/language" ;
-            rdfs:label "language" .
-
-
-###  http://purl.org/dc/terms/title
-dc:title rdf:type owl:DatatypeProperty ;
-         rdfs:range xsd:string ;
-         rdfs:comment "Use in OCDS ontology: Project, Tender, Award, Contract, Document, Milestone." ;
-         rdfs:isDefinedBy "http://purl.org/dc/terms/title" ;
-         rdfs:label "title" .
-
-
-###  http://schema.org/URL
-<http://schema.org/URL> rdf:type owl:DatatypeProperty ;
-                        rdfs:range xsd:string ;
-                        rdfs:comment "Use in OCDS ontology: ContactPoint, Document." ;
-                        rdfs:isDefinedBy "https://schema.org/URL" ;
-                        rdfs:label "url" .
-
-
-###  http://schema.org/addressCountry
-<http://schema.org/addressCountry> rdf:type owl:DatatypeProperty ;
-                                   rdfs:range xsd:string ;
-                                   rdfs:comment "Use in OCDS ontology: Address." ;
-                                   rdfs:isDefinedBy "OCDS schema v1.1: Address <countryName>." ,
-                                                    "http://schema.org/addressCountry" ;
-                                   rdfs:label "country" .
-
-
-###  http://schema.org/addressLocality
-<http://schema.org/addressLocality> rdf:type owl:DatatypeProperty ;
-                                    rdfs:range xsd:string ;
-                                    rdfs:comment "Use in OCDS ontology: Address." ;
-                                    rdfs:isDefinedBy "OCDS schema v1.1: Address <locality>." ,
-                                                     "http://schema.org/addressLocality" ;
-                                    rdfs:label "locality" .
-
-
-###  http://schema.org/email
-<http://schema.org/email> rdf:type owl:DatatypeProperty ;
-                          rdfs:range xsd:string ;
-                          rdfs:comment "OCDS schema v1.1: ContactPoint <email>." ,
-                                       "Use in OCDS ontology: ContactPoint." ;
-                          rdfs:isDefinedBy "http://schema.org/email" ;
-                          rdfs:label "email" .
-
-
-###  http://schema.org/faxNumber
-<http://schema.org/faxNumber> rdf:type owl:DatatypeProperty ;
-                              rdfs:range xsd:string ;
-                              rdfs:isDefinedBy "OCDS schema v1.1: ContactPoint <faxNumber>." ,
-                                               "Use in OCDS ontology: ContactPoint." ,
-                                               "http://schema.org/faxNumber" ;
-                              rdfs:label "fax number" .
-
-
-###  http://schema.org/name
-<http://schema.org/name> rdf:type owl:DatatypeProperty ;
-                         rdfs:range xsd:string ;
-                         rdfs:comment "Use in OCDS ontology: Organization, ContactPoint." ;
-                         rdfs:isDefinedBy "https://schema.org/name" ;
-                         rdfs:label "name" .
-
-
-###  http://schema.org/postalCode
-<http://schema.org/postalCode> rdf:type owl:DatatypeProperty ;
-                               rdfs:range xsd:string ;
-                               rdfs:comment "Use in OCDS ontology: Address." ;
-                               rdfs:isDefinedBy "OCDS schema v1.1: Address <postalCode>." ,
-                                                "http://schema.org/postalCode" ;
-                               rdfs:label "postal code" .
-
-
-###  http://schema.org/streetAddress
-<http://schema.org/streetAddress> rdf:type owl:DatatypeProperty ;
-                                  rdfs:range xsd:string ;
-                                  rdfs:comment "Use in OCDS ontology: Address." ;
-                                  rdfs:isDefinedBy "OCDS schema v1.1: Address <streetAddress>." ,
-                                                   "http://schema.org/streetAddress" ;
-                                  rdfs:label "street address" .
-
-
-###  http://schema.org/telephone
-<http://schema.org/telephone> rdf:type owl:DatatypeProperty ;
-                              rdfs:range xsd:string ;
-                              rdfs:comment "OCDS schema v1.1: ContactPoint <telephone>." ,
-                                           "Use in OCDS ontology: ContactPoint." ;
-                              rdfs:isDefinedBy "http://schema.org/telephone" ;
-                              rdfs:label "telephone" .
-
-
-###  http://www.w3.org/ns/org#identifier
-org:identifier rdf:type owl:DatatypeProperty ;
-               rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#notation> ;
-               rdfs:domain ocds:Organisation ;
-               rdfs:comment "Many different national and international identifier schemes are available from other vocabularies. The ORG ontology is neutral to which schemes are used. The particular identifier scheme should be indicated by the datatype of the identifier value. Using datatypes to distinguish the notation scheme used is consistent with recommended best practice for skos:notation of which this property is a specialization." ;
-               rdfs:isDefinedBy "OCDS schema v1.1: Parties <identifier>, i.e., Primary identifier." ,
-                                "https://www.w3.org/TR/vocab-org/#org:identifier" .
-
-
 ###  http://data.tbfy.eu/ontology/ocds#URI
 ocds:URI rdf:type owl:DatatypeProperty ;
          rdfs:range xsd:anyURI ;
@@ -683,7 +562,7 @@ ocds:awardCriteriaDetails rdf:type owl:DatatypeProperty ;
 ###  http://data.tbfy.eu/ontology/ocds#awardDate
 ocds:awardDate rdf:type owl:DatatypeProperty ;
                rdfs:domain ocds:Award ;
-               rdfs:range xsd:string ;
+               rdfs:range xsd:dateTime ;
                rdfs:isDefinedBy "OCDS schema v1.1: Award <date>." ;
                rdfs:label "award date" .
 
@@ -1298,24 +1177,141 @@ ocds:valueCurrency rdf:type owl:DatatypeProperty ;
                    rdfs:label "value currency" .
 
 
+###  http://purl.org/dc/terms/description
+dc:description rdf:type owl:DatatypeProperty ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Use in OCDS ontology: Budget, Tender, Award, Contract, Amendment, Document, Item, Milestone." ;
+               rdfs:isDefinedBy "http://purl.org/dc/terms/description" ;
+               rdfs:label "description" .
+
+
+###  http://purl.org/dc/terms/format
+dc:format rdf:type owl:DatatypeProperty ;
+          rdfs:range xsd:string ;
+          rdfs:isDefinedBy "Use in OCDS ontology: Document." ,
+                           "http://purl.org/dc/terms/format" ,
+                           "https://www.iana.org/assignments/media-types/media-types.xhtml" ;
+          rdfs:label "format" .
+
+
+###  http://purl.org/dc/terms/language
+dc:language rdf:type owl:DatatypeProperty ;
+            rdfs:range xsd:string ;
+            rdfs:isDefinedBy "Use in OCDS ontology: Document." ,
+                             "http://purl.org/dc/terms/language" ;
+            rdfs:label "language" .
+
+
+###  http://purl.org/dc/terms/title
+dc:title rdf:type owl:DatatypeProperty ;
+         rdfs:range xsd:string ;
+         rdfs:comment "Use in OCDS ontology: Project, Tender, Award, Contract, Document, Milestone." ;
+         rdfs:isDefinedBy "http://purl.org/dc/terms/title" ;
+         rdfs:label "title" .
+
+
+###  http://schema.org/URL
+<http://schema.org/URL> rdf:type owl:DatatypeProperty ;
+                        rdfs:range xsd:string ;
+                        rdfs:comment "Use in OCDS ontology: ContactPoint, Document." ;
+                        rdfs:isDefinedBy "https://schema.org/URL" ;
+                        rdfs:label "url" .
+
+
+###  http://schema.org/addressCountry
+<http://schema.org/addressCountry> rdf:type owl:DatatypeProperty ;
+                                   rdfs:range xsd:string ;
+                                   rdfs:comment "Use in OCDS ontology: Address." ;
+                                   rdfs:isDefinedBy "OCDS schema v1.1: Address <countryName>." ,
+                                                    "http://schema.org/addressCountry" ;
+                                   rdfs:label "country" .
+
+
+###  http://schema.org/addressLocality
+<http://schema.org/addressLocality> rdf:type owl:DatatypeProperty ;
+                                    rdfs:range xsd:string ;
+                                    rdfs:comment "Use in OCDS ontology: Address." ;
+                                    rdfs:isDefinedBy "OCDS schema v1.1: Address <locality>." ,
+                                                     "http://schema.org/addressLocality" ;
+                                    rdfs:label "locality" .
+
+
+###  http://schema.org/email
+<http://schema.org/email> rdf:type owl:DatatypeProperty ;
+                          rdfs:range xsd:string ;
+                          rdfs:comment "OCDS schema v1.1: ContactPoint <email>." ,
+                                       "Use in OCDS ontology: ContactPoint." ;
+                          rdfs:isDefinedBy "http://schema.org/email" ;
+                          rdfs:label "email" .
+
+
+###  http://schema.org/faxNumber
+<http://schema.org/faxNumber> rdf:type owl:DatatypeProperty ;
+                              rdfs:range xsd:string ;
+                              rdfs:isDefinedBy "OCDS schema v1.1: ContactPoint <faxNumber>." ,
+                                               "Use in OCDS ontology: ContactPoint." ,
+                                               "http://schema.org/faxNumber" ;
+                              rdfs:label "fax number" .
+
+
+###  http://schema.org/name
+<http://schema.org/name> rdf:type owl:DatatypeProperty ;
+                         rdfs:range xsd:string ;
+                         rdfs:comment "Use in OCDS ontology: Organization, ContactPoint." ;
+                         rdfs:isDefinedBy "https://schema.org/name" ;
+                         rdfs:label "name" .
+
+
+###  http://schema.org/postalCode
+<http://schema.org/postalCode> rdf:type owl:DatatypeProperty ;
+                               rdfs:range xsd:string ;
+                               rdfs:comment "Use in OCDS ontology: Address." ;
+                               rdfs:isDefinedBy "OCDS schema v1.1: Address <postalCode>." ,
+                                                "http://schema.org/postalCode" ;
+                               rdfs:label "postal code" .
+
+
+###  http://schema.org/streetAddress
+<http://schema.org/streetAddress> rdf:type owl:DatatypeProperty ;
+                                  rdfs:range xsd:string ;
+                                  rdfs:comment "Use in OCDS ontology: Address." ;
+                                  rdfs:isDefinedBy "OCDS schema v1.1: Address <streetAddress>." ,
+                                                   "http://schema.org/streetAddress" ;
+                                  rdfs:label "street address" .
+
+
+###  http://schema.org/telephone
+<http://schema.org/telephone> rdf:type owl:DatatypeProperty ;
+                              rdfs:range xsd:string ;
+                              rdfs:comment "OCDS schema v1.1: ContactPoint <telephone>." ,
+                                           "Use in OCDS ontology: ContactPoint." ;
+                              rdfs:isDefinedBy "http://schema.org/telephone" ;
+                              rdfs:label "telephone" .
+
+
+###  http://www.w3.org/ns/org#identifier
+org:identifier rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#notation> ;
+               rdfs:domain ocds:Organisation ;
+               rdfs:comment "Many different national and international identifier schemes are available from other vocabularies. The ORG ontology is neutral to which schemes are used. The particular identifier scheme should be indicated by the datatype of the identifier value. Using datatypes to distinguish the notation scheme used is consistent with recommended best practice for skos:notation of which this property is a specialization." ;
+               rdfs:isDefinedBy "OCDS schema v1.1: Parties <identifier>, i.e., Primary identifier." ,
+                                "https://www.w3.org/TR/vocab-org/#org:identifier" .
+
+
 #################################################################
 #    Classes
 #################################################################
 
-###  http://www.w3.org/ns/org#Organization
-org:Organization rdf:type owl:Class .
-
-
 ###  http://data.tbfy.eu/ontology/ocds#Address
 ocds:Address rdf:type owl:Class ;
-             rdfs:comment "Uses also the following data type properties: addressCountry, addressLocality, postalCode, streeAddress, region." ;
-             rdfs:isDefinedBy "OCDS schema v1.1: Adress." ;
-             rdfs:label "Address" ;
-             ocds:usesDataProperty <http://schema.org/addressCountry> ,
+             ocds:usesDataProperty ocds:region ,
+                                   <http://schema.org/addressCountry> ,
                                    <http://schema.org/addressLocality> ,
                                    <http://schema.org/postalCode> ,
-                                   <http://schema.org/streetAddress> ,
-                                   ocds:region .
+                                   <http://schema.org/streetAddress> ;
+             rdfs:comment "Uses also the following data type properties: addressCountry, addressLocality, postalCode, streeAddress, region." ;
+             rdfs:isDefinedBy "OCDS schema v1.1: Adress." ;
+             rdfs:label "Address" .
 
 
 ###  http://data.tbfy.eu/ontology/ocds#Amendment
@@ -1324,10 +1320,10 @@ ocds:Amendment rdf:type owl:Class ;
                                  owl:onProperty ocds:hasAmendment ;
                                  owl:allValuesFrom ocds:Amendment
                                ] ;
+               ocds:usesDataProperty dc:description ;
                rdfs:comment "Uses also the following data type properties: description." ;
                rdfs:isDefinedBy "OCDS schema v1.1: Amendment." ;
-               rdfs:label "Amendment" ;
-               ocds:usesDataProperty dc:description .
+               rdfs:label "Amendment" .
 
 
 ###  http://data.tbfy.eu/ontology/ocds#Award
@@ -1356,11 +1352,11 @@ ocds:Award rdf:type owl:Class ;
                              owl:onProperty ocds:isIssuedForTender ;
                              owl:allValuesFrom ocds:Tender
                            ] ;
+           ocds:usesDataProperty dc:description ,
+                                 dc:title ;
            rdfs:comment "Uses also the following data type properties: title, description." ;
            rdfs:isDefinedBy "OCDS schema v1.1: Award." ;
-           rdfs:label "Award" ;
-           ocds:usesDataProperty dc:description ,
-                                 dc:title .
+           rdfs:label "Award" .
 
 
 ###  http://data.tbfy.eu/ontology/ocds#Budget
@@ -1369,18 +1365,15 @@ ocds:Budget rdf:type owl:Class ;
                               owl:onProperty ocds:hasReservedValue ;
                               owl:allValuesFrom ocds:Value
                             ] ;
+            ocds:usesDataProperty ocds:URI ,
+                                  dc:description ;
             rdfs:comment "Uses also the following data type properties: description, URI." ;
             rdfs:isDefinedBy "OCDS schema v1.1: Budget." ;
-            rdfs:label "Budget" ;
-            ocds:usesDataProperty dc:description ,
-                                  ocds:URI .
+            rdfs:label "Budget" .
 
 
 ###  http://data.tbfy.eu/ontology/ocds#ContactPoint
 ocds:ContactPoint rdf:type owl:Class ;
-                  rdfs:comment "Uses also the following data type properties: faxNumber, telephone, email, addressCountry, postalCode, addressLocality, streetAddress, name, url." ;
-                  rdfs:isDefinedBy "OCDS schema v1.1: ContactPoint." ;
-                  rdfs:label "ContactPoint" ;
                   ocds:usesDataProperty <http://schema.org/URL> ,
                                         <http://schema.org/addressCountry> ,
                                         <http://schema.org/addressLocality> ,
@@ -1389,7 +1382,10 @@ ocds:ContactPoint rdf:type owl:Class ;
                                         <http://schema.org/name> ,
                                         <http://schema.org/postalCode> ,
                                         <http://schema.org/streetAddress> ,
-                                        <http://schema.org/telephone> .
+                                        <http://schema.org/telephone> ;
+                  rdfs:comment "Uses also the following data type properties: faxNumber, telephone, email, addressCountry, postalCode, addressLocality, streetAddress, name, url." ;
+                  rdfs:isDefinedBy "OCDS schema v1.1: ContactPoint." ;
+                  rdfs:label "ContactPoint" .
 
 
 ###  http://data.tbfy.eu/ontology/ocds#Contract
@@ -1426,11 +1422,11 @@ ocds:Contract rdf:type owl:Class ;
                                 owl:onProperty ocds:isIssuedForAward ;
                                 owl:allValuesFrom ocds:Award
                               ] ;
+              ocds:usesDataProperty dc:description ,
+                                    dc:title ;
               rdfs:comment "Uses also the following data type properties: title, description." ;
               rdfs:isDefinedBy "OCDS schema v1.1: Contact." ;
-              rdfs:label "Contract" ;
-              ocds:usesDataProperty dc:description ,
-                                    dc:title .
+              rdfs:label "Contract" .
 
 
 ###  http://data.tbfy.eu/ontology/ocds#ContractingProcess
@@ -1455,20 +1451,22 @@ ocds:ContractingProcess rdf:type owl:Class ;
                                           owl:onProperty ocds:hasTender ;
                                           owl:allValuesFrom ocds:Tender
                                         ] ;
+                        ocds:usesDataProperty dc:description ,
+                                              dc:title ;
                         rdfs:isDefinedBy "OCDS schema v1.1." ;
                         rdfs:label "ContractingProcess" .
 
 
 ###  http://data.tbfy.eu/ontology/ocds#Document
 ocds:Document rdf:type owl:Class ;
-              rdfs:comment "Uses also the following data type properties: language, format, title, description, url." ;
-              rdfs:isDefinedBy "OCDS schema v1.1: Document." ;
-              rdfs:label "Document" ;
               ocds:usesDataProperty dc:description ,
                                     dc:format ,
                                     dc:language ,
                                     dc:title ,
-                                    <http://schema.org/URL> .
+                                    <http://schema.org/URL> ;
+              rdfs:comment "Uses also the following data type properties: language, format, title, description, url." ;
+              rdfs:isDefinedBy "OCDS schema v1.1: Document." ;
+              rdfs:label "Document" .
 
 
 ###  http://data.tbfy.eu/ontology/ocds#Implementation
@@ -1499,12 +1497,12 @@ ocds:Item rdf:type owl:Class ;
                             owl:onProperty ocds:hasClassification ;
                             owl:allValuesFrom <http://www.w3.org/2004/02/skos/core#Concept>
                           ] ;
+          ocds:usesDataProperty ocds:quantity ,
+                                ocds:unit ,
+                                dc:description ;
           rdfs:comment "Uses also following data properties: quantity, unit, description." ;
           rdfs:isDefinedBy "OCDS schema v1.1: Item." ;
-          rdfs:label "Item" ;
-          ocds:usesDataProperty dc:description ,
-                                ocds:quantity ,
-                                ocds:unit .
+          rdfs:label "Item" .
 
 
 ###  http://data.tbfy.eu/ontology/ocds#Milestone
@@ -1513,11 +1511,11 @@ ocds:Milestone rdf:type owl:Class ;
                                  owl:onProperty ocds:hasDocument ;
                                  owl:allValuesFrom ocds:Document
                                ] ;
+               ocds:usesDataProperty dc:description ,
+                                     dc:title ;
                rdfs:comment "Uses also the following data type properties: title, description." ;
                rdfs:isDefinedBy "OCDS schema v1.1: Milestone." ;
-               rdfs:label "Milestone" ;
-               ocds:usesDataProperty dc:description ,
-                                     dc:title .
+               rdfs:label "Milestone" .
 
 
 ###  http://data.tbfy.eu/ontology/ocds#Organisation
@@ -1563,12 +1561,12 @@ ocds:Organisation rdf:type owl:Class ;
                                     owl:onProperty ocds:playsRoleIn ;
                                     owl:allValuesFrom ocds:ContractingProcess
                                   ] ;
+                  ocds:usesDataProperty ocds:URI ,
+                                        ocds:legalName ,
+                                        <http://schema.org/name> ;
                   rdfs:comment "Uses also the following data type properties: legalName, name, URI." ;
                   rdfs:isDefinedBy "OCDS schema v1.1: Organization." ;
-                  rdfs:label "Organization" ;
-                  ocds:usesDataProperty <http://schema.org/name> ,
-                                        ocds:URI ,
-                                        ocds:legalName .
+                  rdfs:label "Organization" .
 
 
 ###  http://data.tbfy.eu/ontology/ocds#Period
@@ -1597,10 +1595,10 @@ ocds:Plan rdf:type owl:Class ;
 
 ###  http://data.tbfy.eu/ontology/ocds#Project
 ocds:Project rdf:type owl:Class ;
+             ocds:usesDataProperty dc:title ;
              rdfs:comment "Uses also the following data type properties: title." ;
              rdfs:isDefinedBy "OCDS schema v1.1: Budget." ;
-             rdfs:label "Project" ;
-             ocds:usesDataProperty dc:title .
+             rdfs:label "Project" .
 
 
 ###  http://data.tbfy.eu/ontology/ocds#Tender
@@ -1641,11 +1639,11 @@ ocds:Tender rdf:type owl:Class ;
                               owl:onProperty ocds:hasTenderPeriod ;
                               owl:allValuesFrom ocds:Period
                             ] ;
+            ocds:usesDataProperty dc:description ,
+                                  dc:title ;
             rdfs:comment "Uses also the following data type properties: title, description." ;
             rdfs:isDefinedBy "OCDS schema v1.1: Tender." ;
-            rdfs:label "Tender" ;
-            ocds:usesDataProperty dc:description ,
-                                  dc:title .
+            rdfs:label "Tender" .
 
 
 ###  http://data.tbfy.eu/ontology/ocds#Transaction
@@ -1654,16 +1652,20 @@ ocds:Transaction rdf:type owl:Class ;
                                    owl:onProperty ocds:hasTransactionValue ;
                                    owl:allValuesFrom ocds:Transaction
                                  ] ;
+                 ocds:usesDataProperty ocds:URI ;
                  rdfs:comment "Uses also the following data type properties: URI." ;
                  rdfs:isDefinedBy "OCDS schema v1.1: Transaction." ;
-                 rdfs:label "Transaction" ;
-                 ocds:usesDataProperty ocds:URI .
+                 rdfs:label "Transaction" .
 
 
 ###  http://data.tbfy.eu/ontology/ocds#Value
 ocds:Value rdf:type owl:Class ;
            rdfs:isDefinedBy "OCDS schema v1.1: Value." ;
            rdfs:label "Value" .
+
+
+###  http://www.w3.org/ns/org#Organization
+org:Organization rdf:type owl:Class .
 
 
 ###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi

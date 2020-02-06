@@ -1211,6 +1211,14 @@ ocds:numberOfTenderers rdf:type owl:DatatypeProperty ;
                        rdfs:label "number of tenderers" .
 
 
+###  http://data.tbfy.eu/ontology/ocds#ocid
+ocds:ocid rdf:type owl:DatatypeProperty ;
+                       rdfs:domain ocds:ContractingProcess ;
+                       rdfs:range xsd:string ;
+                       rdfs:isDefinedBy "OCDS schema v1.1: Open Contracting ID." ;
+                       rdfs:label "open contracting id (OCID)" .
+
+
 ###  http://data.tbfy.eu/ontology/ocds#periodDurationInDays
 ocds:periodDurationInDays rdf:type owl:DatatypeProperty ;
                           rdfs:domain ocds:Period ;

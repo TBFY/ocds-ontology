@@ -19,7 +19,7 @@ This is the repository where all the work towards the creation of the OCDS ontol
 * UML model with the main concepts of the OCDS extended ontology [ [.mdj file](https://github.com/TBFY/ocds-ontology/blob/master/documentation/ocds-ontology-model.mdj) ]
 * [Google Docs](https://docs.google.com/document/d/1xUkFq3y1CtZGppkliAIDXXGV5Ff3TwCVgu4yeN1wUOg/edit?usp=sharing) documenting the OCDS extended ontology terms
 
-# References
+## References
 
 * [Open Contracting Data Standard (OCDS) Documentation](http://standard.open-contracting.org/latest/en/)
 
